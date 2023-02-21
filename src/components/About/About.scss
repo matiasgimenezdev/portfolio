@@ -5,7 +5,7 @@
 	min-height: 100vh;
 	font-family: $textFont;
 	font-size: 1.5rem;
-	background-image: url('/background.png');
+	background-image: url('/background.jpg');
 	background-position: center;
 	background-size: cover;
 
@@ -16,12 +16,11 @@
 	.aboutContent {
 		display: flex;
 		margin: 1rem;
-		align-items: flex-start;
-		justify-content: center;
-		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
 
 		.aboutText {
-			width: 60%;
+			width: 70%;
 			color: white;
 			background-color: $darkPurple;
 			padding: 2rem;

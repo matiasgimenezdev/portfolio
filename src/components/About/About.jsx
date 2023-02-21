@@ -36,7 +36,6 @@ export function About() {
 						Buenos Aires, Argentina
 					</span>
 				</p>
-				<p className='location'></p>
 			</div>
 		</section>
 	);
