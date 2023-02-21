@@ -1,0 +1,26 @@
+@import './variables.scss';
+
+@mixin sectionTitle($title) {
+	font-family: $titleFont;
+	padding: 2rem;
+	font-size: 3rem;
+	color: $purple;
+	position: relative;
+
+	&::before {
+		content: $title;
+		color: transparent;
+		position: absolute;
+		display: inline-block;
+		height: 3px;
+		bottom: 25px;
+		left: 30px;
+		background-color: $purple;
+		transform: scaleX(0);
+		transition: transform 0.4s ease;
+	}
+
+	&:hover::before {
+		transform: scaleX(1);
+	}
+}

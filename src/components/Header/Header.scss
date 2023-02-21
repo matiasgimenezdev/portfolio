@@ -3,6 +3,7 @@
 .header {
 	padding: 1rem 0;
 	width: 100%;
+	min-height: 15vh;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -19,9 +20,23 @@
 			color: white;
 			font-family: $headerFont;
 			transition: transform 0.2s ease-in-out;
+			position: relative;
 
-			&:hover {
-				transform: scale(1.07);
+			&::before {
+				content: 'Matias Gimenez';
+				color: transparent;
+				position: absolute;
+				display: inline-block;
+				height: 3px;
+				bottom: 0;
+				left: 0;
+				background-color: white;
+				transform: scaleX(0);
+				transition: transform 0.5s ease;
+			}
+
+			&:hover::before {
+				transform: scaleX(1);
 			}
 		}
 

@@ -1,11 +1,18 @@
 import { ToastContainer, Zoom } from 'react-toastify';
-import { Header, Body } from './components';
+import { Header, Introduction, About } from './components';
+import { AiFillHome } from 'react-icons/ai';
 
 export function Portfolio() {
 	return (
-		<div>
+		<div id='Home'>
 			<Header />
-			<Body />
+			<Introduction />
+			<About />
+			<a href='#Home'>
+				<button className='home'>
+					<AiFillHome />
+				</button>
+			</a>
 			<ToastContainer
 				limit={3}
 				position='bottom-right'

@@ -1,0 +1,31 @@
+@import '../../utils/shared.scss';
+@import '../../utils/variables.scss';
+
+.about {
+	min-height: 100vh;
+	font-family: $textFont;
+	font-size: 1.5rem;
+
+	h2 {
+		@include sectionTitle('About me');
+	}
+
+	.aboutContent {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		.aboutText {
+			width: 60%;
+			color: white;
+			background-color: $darkPurple;
+			padding: 2rem;
+		}
+
+		.gif {
+			width: 300px;
+			height: 500px;
+			border-radius: 50px;
+		}
+	}
+}

@@ -7,7 +7,7 @@ export function Header() {
 		<header className='header'>
 			<section className='title-container'>
 				<img src='/logo.png' alt='logo' className='logo' />
-				<h1 className='title'>
+				<h1 className='title animate__shakeX'>
 					<span className='underline'>Matías Giménez</span>
 				</h1>
 			</section>
