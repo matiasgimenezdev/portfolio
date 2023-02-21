@@ -10,8 +10,9 @@
 	}
 
 	.contact-#{$color} {
+		width: 80%;
 		color: $textcolor;
-		margin: 0.8rem 1.2rem;
+		margin: 2rem 1.2rem;
 		font-size: 2rem;
 		padding: 1rem 1.5rem;
 		display: flex;
@@ -24,6 +25,9 @@
 			text-decoration: none;
 			color: $textcolor;
 			transition: transform 0.2s ease-in-out;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
 			&:hover {
 				transform: scale(1.1);
@@ -32,6 +36,9 @@
 
 		.mail {
 			background-color: transparent;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			border: none;
 			color: $textcolor;
 			font-size: 2rem;

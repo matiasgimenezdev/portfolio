@@ -1,5 +1,6 @@
 import './About.scss';
 import { Link } from '../';
+import { ImLocation } from 'react-icons/im';
 
 export function About() {
 	return (
@@ -28,8 +29,14 @@ export function About() {
 					academica con el trabajo, con el objetivo de desarrollar
 					conocimientos y potenciar los adquiridos durante mis
 					estudios.
+					<br />
+					<br />
+					<span className='location'>
+						<ImLocation />
+						Buenos Aires, Argentina
+					</span>
 				</p>
-				<img className='gif' src='/walking.gif' alt='Walking Code' />
+				<p className='location'></p>
 			</div>
 		</section>
 	);

@@ -5,6 +5,9 @@
 	min-height: 100vh;
 	font-family: $textFont;
 	font-size: 1.5rem;
+	background-image: url('/background.png');
+	background-position: center;
+	background-size: cover;
 
 	h2 {
 		@include sectionTitle('About me');
@@ -12,14 +15,28 @@
 
 	.aboutContent {
 		display: flex;
-		justify-content: space-around;
-		align-items: center;
+		margin: 1rem;
+		align-items: flex-start;
+		justify-content: center;
+		flex-direction: column;
 
 		.aboutText {
 			width: 60%;
 			color: white;
 			background-color: $darkPurple;
 			padding: 2rem;
+		}
+
+		.location {
+			font-family: $headerFont;
+			width: 100%;
+			display: flex;
+			justify-content: flex-start;
+			align-items: baseline;
+			gap: 1rem;
+			margin: 3rem 0;
+			font-size: 3rem;
+			color: white;
 		}
 
 		.gif {

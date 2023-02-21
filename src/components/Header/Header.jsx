@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.scss';
 import { Contact } from '../';
+import { Nav } from '../Nav/Nav';
 
 export function Header() {
 	return (
@@ -11,7 +12,7 @@ export function Header() {
 					<span className='underline'>Matías Giménez</span>
 				</h1>
 			</section>
-			<Contact color='white' />
+			<Nav />
 		</header>
 	);
 }
