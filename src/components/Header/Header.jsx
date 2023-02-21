@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.scss';
 import Contact from '../Contact/Contact';
-import logo from '../../assets/Logo.png';
+import logo from '../../assets/logo.png';
 
 export function Header() {
 	return (
