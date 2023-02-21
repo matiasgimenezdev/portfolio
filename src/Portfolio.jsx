@@ -2,6 +2,7 @@ import { ToastContainer, Zoom } from 'react-toastify';
 import { Header, Introduction, About } from './components';
 import { AiFillHome } from 'react-icons/ai';
 import { useEffect, useState } from 'react';
+import { Knowledge } from './components/Knowledge/Knowledge';
 
 export function Portfolio() {
 	const [scroll, setScroll] = useState(0);
@@ -18,6 +19,7 @@ export function Portfolio() {
 			<Header />
 			<Introduction />
 			<About />
+			<Knowledge />
 
 			{scroll > 0 && (
 				<a href='#Home'>

@@ -1,0 +1,8 @@
+@import '../../utils/shared.scss';
+@import '../../utils/shared.scss';
+.knowledge {
+	min-height: 100vh;
+	h2 {
+		@include sectionTitle('Knowledge');
+	}
+}
