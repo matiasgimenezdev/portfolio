@@ -1,0 +1,55 @@
+@import '../../utils/variables.scss';
+
+@mixin contact($color) {
+	$bgcolor: white;
+	$textcolor: $purple;
+
+	@if ($color == 'purple') {
+		$bgcolor: $purple;
+		$textcolor: white;
+	}
+
+	.contact-#{$color} {
+		color: $textcolor;
+		margin: 0.8rem 1.2rem;
+		font-size: 2rem;
+		padding: 1rem 1.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1.2rem;
+		background-color: $bgcolor;
+
+		a {
+			text-decoration: none;
+			color: $textcolor;
+			transition: transform 0.2s ease-in-out;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+
+		.mail {
+			background-color: transparent;
+			border: none;
+			color: $textcolor;
+			font-size: 2rem;
+			cursor: copy;
+			transition: transform 0.2s ease-in-out;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+
+@include contact('purple');
+@include contact('white');
+
+@media screen and (max-width: 800px) {
+	.contact-white {
+		display: none;
+	}
+}
