@@ -1,12 +1,12 @@
 import React, { useRef } from 'react';
 import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.min.css';
 import './Contact.scss';
 import ClipboardJS from 'clipboard';
 import { AiFillLinkedin, AiOutlineGithub } from 'react-icons/ai';
 import { SiGmail } from 'react-icons/si';
 
-function Contact({ color }) {
+export function Contact({ color }) {
 	new ClipboardJS('.mail');
 	const toastRef = useRef(null);
 
@@ -48,5 +48,3 @@ function Contact({ color }) {
 		</>
 	);
 }
-
-export default Contact;
