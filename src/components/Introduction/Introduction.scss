@@ -1,4 +1,5 @@
 @import '../../utils/variables.scss';
+@import '../../utils/shared.scss';
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 .introduction {
@@ -48,50 +49,12 @@
 			width: 40%;
 
 			.moreButton {
-				font-family: $textFont;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				gap: 0.8rem;
-				height: 3rem;
+				@include animatedButton;
 				width: 100%;
-				font-size: 1.3rem;
-				padding: 0.5rem;
-				text-align: center;
-				background-color: white;
-				color: $purple;
-				outline: none;
-				border: 1px solid $darkPurple;
-				cursor: pointer;
-				position: relative;
 
 				&:hover svg {
 					translate: 8px 0;
 					background: white;
-				}
-
-				&::before {
-					content: '';
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					z-index: -1;
-					background: linear-gradient(
-						45deg,
-						#f988ff,
-						#fc098b,
-						#3f007e,
-						#fc098b,
-						#f988ff,
-						#0fe9f8,
-						#3f007e,
-						#0fe9f8
-					);
-					background-size: 800%;
-					filter: blur(15px);
-					animation: glowing 25s linear infinite;
 				}
 			}
 		}
@@ -101,18 +64,6 @@
 		width: 500px;
 		height: 350px;
 		margin-bottom: 5%;
-	}
-}
-
-@keyframes glowing {
-	0% {
-		background-position: 0 0;
-	}
-	50% {
-		background-position: 400% 0;
-	}
-	100% {
-		background-position: 0 0;
 	}
 }
 

@@ -1,6 +1,6 @@
 import './About.scss';
 import { Link } from '../';
-import { ImLocation } from 'react-icons/im';
+import { BsDownload } from 'react-icons/bs';
 
 export function About() {
 	return (
@@ -28,10 +28,11 @@ export function About() {
 					conocimientos y potenciar los adquiridos durante mis
 					estudios.
 					<br />
-					<span className='location'>
-						<ImLocation />
-						Buenos Aires, Argentina
-					</span>
+					<a href='/CV.pdf' download='CV.pdf' className='cvLink'>
+						<button className='cvButton'>
+							Descargar CV <BsDownload />
+						</button>
+					</a>
 				</p>
 			</div>
 		</section>

@@ -1,5 +1,5 @@
-@import '../../utils/shared.scss';
 @import '../../utils/variables.scss';
+@import '../../utils/shared.scss';
 
 .about {
 	min-height: 100vh;
@@ -26,18 +26,24 @@
 			color: white;
 			background-color: $darkPurple;
 			padding: 2rem;
+			z-index: 0;
 		}
 
-		.location {
-			font-family: $headerFont;
-			width: 100%;
-			display: flex;
-			justify-content: flex-start;
-			align-items: baseline;
-			gap: 1rem;
-			margin: 3rem 0;
-			font-size: 3rem;
-			color: white;
+		.cvLink {
+			text-decoration: none;
+			font-family: $titleFont;
+
+			.cvButton {
+				@include animatedButton;
+				font-weight: bold;
+				width: 40%;
+				height: 4rem;
+				margin: 2rem auto;
+
+				&:hover svg {
+					transform: translate(0px, 5px);
+				}
+			}
 		}
 	}
 }
@@ -61,10 +67,6 @@
 				width: 95%;
 				height: 85%;
 			}
-
-			.location {
-				font-size: 2rem;
-			}
 		}
 	}
 }
@@ -79,11 +81,6 @@
 				height: 75%;
 				padding: 1.2rem;
 			}
-
-			.location {
-				font-size: 2rem;
-				margin: 2rem 0;
-			}
 		}
 	}
 }
@@ -97,11 +94,6 @@
 				width: 95%;
 				height: 90%;
 			}
-
-			.location {
-				font-size: 1.8rem;
-				margin: 2rem 0;
-			}
 		}
 	}
 }
@@ -111,10 +103,6 @@
 		.aboutContent {
 			.aboutText {
 				height: 90%;
-			}
-
-			.location {
-				display: none;
 			}
 		}
 	}
@@ -132,7 +120,22 @@
 @media screen and (max-width: 450px) {
 	.about {
 		.aboutContent {
-			height: 85vh;
+			height: 90vh;
+
+			.cvLink {
+				text-decoration: none;
+				font-family: $titleFont;
+
+				.cvButton {
+					width: 60%;
+					height: 4rem;
+					margin: 2rem auto;
+
+					&:hover svg {
+						transform: translate(0px, 5px);
+					}
+				}
+			}
 		}
 	}
 }
@@ -150,7 +153,7 @@
 	.about {
 		font-size: 1.1rem;
 		.aboutContent {
-			height: 80vh;
+			height: 85vh;
 		}
 	}
 }
@@ -158,8 +161,5 @@
 @media screen and (max-width: 330px) {
 	.about {
 		font-size: 1rem;
-		.aboutContent {
-			height: 80vh;
-		}
 	}
 }
