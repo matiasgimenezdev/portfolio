@@ -4,7 +4,7 @@ import { FcIdea } from 'react-icons/fc';
 export function Knowledge() {
 	return (
 		<section className='knowledge'>
-			<h2 id='Knowledge'>Knowledge</h2>
+			<h2 id='Knowledge'>Tecnologías</h2>
 			<ul className='knowledgeList'>
 				<li className='knowledgeItem'>
 					<img
@@ -54,14 +54,7 @@ export function Knowledge() {
 					<img className='icon' src='/icons/git.svg' alt='Git icon' />
 					<span className='text'>GIT</span>
 				</li>
-				<li className='knowledgeItem'>
-					<img
-						className='icon'
-						src='/icons/terminal.svg'
-						alt='Terminal icon'
-					/>
-					<span className='text'>Terminal</span>
-				</li>
+
 				<li className='knowledgeItem'>
 					<img className='icon' src='/icons/sql.svg' alt='SQL icon' />
 					<span className='text'>SQL</span>

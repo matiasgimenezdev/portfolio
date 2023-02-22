@@ -6,7 +6,7 @@ import projects from './projects.json';
 export function Projects() {
 	return (
 		<section className='projects'>
-			<h2 id='Projects'>Projects</h2>
+			<h2 id='Projects'>Proyectos</h2>
 			<div className='projectsContent'>
 				{projects.map((project) => {
 					return (

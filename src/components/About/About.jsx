@@ -5,7 +5,7 @@ import { ImLocation } from 'react-icons/im';
 export function About() {
 	return (
 		<section className='about'>
-			<h2 id='About'>About me</h2>
+			<h2 id='About'>Conóceme</h2>
 			<div className='aboutContent'>
 				<p className='aboutText'>
 					Mi nombre es Matías Giménez 😊, tengo 22 años y vivo en

@@ -1,12 +1,12 @@
 import React, { useRef } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
-import './Contact.scss';
+import './Socials.scss';
 import ClipboardJS from 'clipboard';
 import { AiFillLinkedin, AiOutlineGithub } from 'react-icons/ai';
 import { SiGmail } from 'react-icons/si';
 
-export function Contact({ color }) {
+export function Socials({ color }) {
 	new ClipboardJS('.mail');
 	const toastRef = useRef(null);
 
@@ -16,11 +16,11 @@ export function Contact({ color }) {
 		}
 	};
 
-	const contact = 'contact-' + color;
+	const socials = 'socials-' + color;
 
 	return (
 		<>
-			<div className={contact}>
+			<div className={socials}>
 				<a
 					href='https://www.linkedin.com/in/matiasgimenezdev/'
 					target='_blank'

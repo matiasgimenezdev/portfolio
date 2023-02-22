@@ -5,16 +5,16 @@ export function Nav() {
 		<nav className='nav'>
 			<ul className='navContainer'>
 				<a href='#About'>
-					<li className='navItem'>About</li>
+					<li className='navItem'>Conóceme</li>
 				</a>
 				<a href='#Knowledge'>
-					<li className='navItem'>Knowledge</li>
+					<li className='navItem'>Tecnologías</li>
 				</a>
 				<a href='#Projects'>
-					<li className='navItem'>Projects</li>
+					<li className='navItem'>Proyectos</li>
 				</a>
 				<a href='#Contact'>
-					<li className='navItem'>Contact</li>
+					<li className='navItem'>Contacto</li>
 				</a>
 			</ul>
 		</nav>

@@ -15,7 +15,8 @@
 	}
 
 	.knowledgeList {
-		height: 50vh;
+		height: 40vh;
+		margin-top: 4rem;
 		width: 95%;
 		display: flex;
 		align-items: center;
@@ -44,7 +45,7 @@
 
 			.text {
 				font-size: 1.5rem;
-				line-height: rem;
+				line-height: 1.7rem;
 				font-family: $textFont;
 				font-weight: bold;
 				color: $darkPurple;
@@ -52,8 +53,8 @@
 
 			.icon {
 				padding: 0;
-				width: 40px;
-				height: 40px;
+				width: 50px;
+				height: 50px;
 			}
 		}
 	}
@@ -67,6 +68,120 @@
 
 		div {
 			font-size: 3rem;
+		}
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	.knowledge {
+		align-items: fl;
+
+		.knowledgeList {
+			height: 45vh;
+
+			.knowledgeItem {
+				width: 25%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.knowledge {
+		align-items: center;
+
+		.knowledgeList {
+			height: 60vh;
+			align-items: flex-start;
+
+			.knowledgeItem {
+				width: 30%;
+			}
+		}
+
+		.phrase {
+			font-size: 1.5rem;
+
+			div {
+				font-size: 2rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.knowledge {
+		align-items: center;
+
+		.knowledgeList {
+			height: 60vh;
+			align-items: flex-start;
+
+			.knowledgeItem {
+				width: 35%;
+			}
+		}
+
+		.phrase {
+			font-size: 1.5rem;
+
+			div {
+				font-size: 2rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.knowledge {
+		align-items: center;
+
+		.knowledgeList {
+			height: 60vh;
+			align-items: flex-start;
+
+			.knowledgeItem {
+				width: 40%;
+				padding: 0.5rem;
+				height: 3rem;
+
+				.text {
+					font-size: 1.4rem;
+				}
+			}
+		}
+
+		.phrase {
+			font-size: 1.5rem;
+
+			div {
+				font-size: 2rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 460px) {
+	.knowledge {
+		align-items: center;
+
+		.knowledgeList {
+			height: 70vh;
+			align-items: flex-start;
+			margin-top: 1rem;
+
+			.knowledgeItem {
+				width: 95%;
+				padding: 0.5rem;
+				height: 2.5rem;
+
+				.text {
+					font-size: 1.2rem;
+				}
+			}
+		}
+		.phrase {
+			display: none;
 		}
 	}
 }

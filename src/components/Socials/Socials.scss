@@ -1,6 +1,6 @@
 @import '../../utils/variables.scss';
 
-@mixin contact($color) {
+@mixin socials($color) {
 	$bgcolor: white;
 	$textcolor: $purple;
 
@@ -9,7 +9,7 @@
 		$textcolor: white;
 	}
 
-	.contact-#{$color} {
+	.socials-#{$color} {
 		width: 80%;
 		color: $textcolor;
 		margin: 2rem 1.2rem;
@@ -49,14 +49,13 @@
 				transform: scale(1.1);
 			}
 		}
+
+		@media screen and (max-width: 400px) {
+			width: 60%;
+			margin: 3rem auto;
+		}
 	}
 }
 
-@include contact('purple');
-@include contact('white');
-
-@media screen and (max-width: 800px) {
-	.contact-white {
-		display: none;
-	}
-}
+@include socials('purple');
+@include socials('white');

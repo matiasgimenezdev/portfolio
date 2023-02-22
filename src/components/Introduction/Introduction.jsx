@@ -1,5 +1,5 @@
 import './Introduction.scss';
-import { Contact } from '../';
+import { Socials } from '../';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 
 export function Introduction() {
@@ -10,9 +10,10 @@ export function Introduction() {
 					Hi 👋! I am <span className='name'>Matias</span> <br />
 					<p className='occupation'>
 						Desarrollador de Software <br />
+						& <br />
 						Estudiante Lic. en Sistemas de Información
 					</p>
-					<Contact color='purple' />
+					<Socials color='purple' />
 				</div>
 				<a href='#About' className='moreLink'>
 					<button className='moreButton'>

@@ -66,6 +66,22 @@
 					}
 				}
 			}
+
+			@media screen and (max-width: 900px) {
+				width: 95%;
+				h6 {
+					font-size: 1.8rem;
+				}
+				.links {
+					bottom: 5%;
+					left: 2%;
+					.icon {
+						color: white;
+						margin: 0.5rem;
+						font-size: 2rem;
+					}
+				}
+			}
 		}
 
 		.twitterClone {

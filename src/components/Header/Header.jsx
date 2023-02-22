@@ -1,6 +1,5 @@
 import React from 'react';
 import './Header.scss';
-import { Contact } from '../';
 import { Nav } from '../Nav/Nav';
 
 export function Header() {
