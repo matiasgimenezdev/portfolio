@@ -18,13 +18,13 @@ export function About() {
 					<Link href='https://www.unlu.edu.ar/' value='UNLu' /> y me
 					encuentro finalizando el tercer año de la carrera.
 					<br />
-					Me considero un apasionado de la tecnologia y el desarrollo
+					Me considero un apasionado de la tecnología y el desarrollo
 					de software, por lo cual trato de seguir capacitandome día a
 					día. En este momento me encuentro en el proceso de aprender
-					React para poder agregarlo a mi stack de tecnologias.
+					React para poder agregarlo a mi stack de tecnologías.
 					<br />
-					Estoy buscando la oportunidad de combinar mi formacion
-					academica con el trabajo, con el objetivo de desarrollar
+					Estoy buscando la oportunidad de combinar mi formación
+					académica con el trabajo, con el objetivo de desarrollar
 					conocimientos y potenciar los adquiridos durante mis
 					estudios.
 					<br />
