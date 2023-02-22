@@ -166,9 +166,9 @@
 		align-items: center;
 
 		.knowledgeList {
-			height: 50vh;
+			height: 55vh;
 			align-items: flex-start;
-			margin-top: 1rem;
+			margin-top: 0;
 
 			.knowledgeItem {
 				width: 25%;
@@ -179,6 +179,15 @@
 					font-size: 1rem;
 					display: none;
 				}
+			}
+		}
+
+		.phrase {
+			font-size: 1.4rem;
+			width: 80%;
+
+			div {
+				font-size: 1.6rem;
 			}
 		}
 	}

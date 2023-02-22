@@ -71,18 +71,18 @@
 
 @media screen and (max-width: 900px) {
 	.about {
-		font-size: 1.5rem;
+		font-size: 1.6rem;
 
 		.aboutContent {
 			.aboutText {
 				width: 95%;
-				height: 90%;
+				height: 75%;
 				padding: 1.2rem;
 			}
 
 			.location {
-				font-size: 2rem;
-				margin: 0.6rem 0;
+				font-size: 2.2rem;
+				margin: 2rem 0;
 			}
 		}
 	}
@@ -90,7 +90,7 @@
 
 @media screen and (max-width: 630px) {
 	.about {
-		font-size: 1.4rem;
+		font-size: 1.3rem;
 
 		.aboutContent {
 			.aboutText {
@@ -100,7 +100,7 @@
 
 			.location {
 				font-size: 1.8rem;
-				margin: 0.6rem 0;
+				margin: 2rem 0;
 			}
 		}
 	}
@@ -122,14 +122,23 @@
 
 @media screen and (max-width: 500px) {
 	.about {
-		font-size: 1.35rem;
+		font-size: 1.3rem;
 		.aboutContent {
-			height: 75vh;
+			height: 78vh;
 		}
 	}
 }
 
 @media screen and (max-width: 450px) {
+	.about {
+		font-size: 1.4rem;
+		.aboutContent {
+			height: 82vh;
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
 	.about {
 		font-size: 1.3rem;
 		.aboutContent {
@@ -138,11 +147,11 @@
 	}
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 380px) {
 	.about {
-		font-size: 1.2rem;
+		font-size: 1.15rem;
 		.aboutContent {
-			height: 85vh;
+			height: 80vh;
 		}
 	}
 }
