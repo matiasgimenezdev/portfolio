@@ -1,0 +1,20 @@
+[
+	{
+		"title": "Twitter Clone",
+		"url": "https://twitter-clone-mg.netlify.app",
+		"gitHub": "https://github.com/matiasgimenezdev/twitter-clone",
+		"class": "twitterClone"
+	},
+	{
+		"title": "GIF Browser",
+		"url": "https://gif-browser-mg.netlify.app/",
+		"gitHub": "https://github.com/matiasgimenezdev/gif-browser",
+		"class": "gifBrowser"
+	},
+	{
+		"title": "Typing Test",
+		"url": "https://typing-test-mg.netlify.app/",
+		"gitHub": "https://github.com/matiasgimenezdev/typing-test",
+		"class": "typingTest"
+	}
+]

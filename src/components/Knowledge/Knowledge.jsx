@@ -1,4 +1,5 @@
 import './Knowledge.scss';
+import { FcIdea } from 'react-icons/fc';
 
 export function Knowledge() {
 	return (
@@ -54,6 +55,14 @@ export function Knowledge() {
 					<span className='text'>GIT</span>
 				</li>
 				<li className='knowledgeItem'>
+					<img
+						className='icon'
+						src='/icons/terminal.svg'
+						alt='Terminal icon'
+					/>
+					<span className='text'>Terminal</span>
+				</li>
+				<li className='knowledgeItem'>
 					<img className='icon' src='/icons/sql.svg' alt='SQL icon' />
 					<span className='text'>SQL</span>
 				</li>
@@ -66,6 +75,18 @@ export function Knowledge() {
 					<span className='text'>Design Patterns</span>
 				</li>
 			</ul>
+			<h6>
+				<div>
+					<FcIdea />
+				</div>
+				Living,
+				<br />
+				learning
+				<br />
+				&
+				<br />
+				leveling up one day at a time.
+			</h6>
 		</section>
 	);
 }

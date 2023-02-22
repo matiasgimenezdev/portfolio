@@ -1,0 +1,86 @@
+@import '../../utils/shared.scss';
+@import '../../utils/variables.scss';
+
+.projects {
+	height: 100vh;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	h2 {
+		@include sectionTitle('Projects');
+	}
+
+	.projectsContent {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		margin-top: 1rem;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+
+		a {
+			width: 100%;
+			height: 100%;
+		}
+
+		@mixin project($project) {
+			font-family: $titleFont;
+			width: 48%;
+			position: relative;
+			height: 250px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+
+			h6 {
+				color: white;
+				padding: 0.7rem 0.2rem;
+				font-size: 2.2rem;
+				position: absolute;
+				top: 2%;
+				left: 5%;
+				filter: drop-shadow(5px 5px 8px #000);
+				transition: transform 0.2s ease-in-out;
+
+				&:hover {
+					transform: scale(1.05);
+				}
+			}
+
+			.links {
+				position: absolute;
+				bottom: 2%;
+				left: 2%;
+
+				.icon {
+					color: white;
+					margin: 0.3rem;
+					font-size: 2.5rem;
+					filter: drop-shadow(5px 5px 8px #000);
+					transition: transform 0.2s ease-in-out;
+
+					&:hover {
+						transform: scale(1.15);
+					}
+				}
+			}
+		}
+
+		.twitterClone {
+			@include project('twitterClone');
+			background-image: url('/images/twitterClone.png');
+		}
+
+		.gifBrowser {
+			@include project('gifBrowser');
+			background-image: url('/images/gifBrowser.png');
+		}
+
+		.typingTest {
+			@include project('typingTest');
+			background-image: url('/images/typingTest.png');
+		}
+	}
+}
