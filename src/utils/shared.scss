@@ -13,11 +13,11 @@
 		position: absolute;
 		display: inline-block;
 		height: 3px;
-		bottom: 25px;
-		left: 30px;
+		bottom: 10%;
+		left: 8%;
 		background-color: $purple;
 		transform: scaleX(0);
-		transition: transform 0.4s ease;
+		transition: transform 0.6s ease;
 	}
 
 	&:hover::before {
