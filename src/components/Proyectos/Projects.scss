@@ -40,7 +40,7 @@
 				font-size: 2.2rem;
 				position: absolute;
 				top: 2%;
-				left: 5%;
+				left: 2%;
 				filter: drop-shadow(5px 5px 8px #000);
 				transition: transform 0.2s ease-in-out;
 
@@ -97,6 +97,11 @@
 		.typingTest {
 			@include project('typingTest');
 			background-image: url('/images/typingTest.png');
+		}
+
+		.portfolio {
+			@include project('portfolio');
+			background-image: url('/images/portfolio.png');
 		}
 	}
 }

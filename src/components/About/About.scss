@@ -71,7 +71,7 @@
 
 @media screen and (max-width: 900px) {
 	.about {
-		font-size: 1.6rem;
+		font-size: 1.4rem;
 
 		.aboutContent {
 			.aboutText {
@@ -81,14 +81,14 @@
 			}
 
 			.location {
-				font-size: 2.2rem;
+				font-size: 2rem;
 				margin: 2rem 0;
 			}
 		}
 	}
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 750px) {
 	.about {
 		font-size: 1.3rem;
 
@@ -131,16 +131,15 @@
 
 @media screen and (max-width: 450px) {
 	.about {
-		font-size: 1.4rem;
 		.aboutContent {
-			height: 82vh;
+			height: 85vh;
 		}
 	}
 }
 
 @media screen and (max-width: 400px) {
 	.about {
-		font-size: 1.3rem;
+		font-size: 1.1rem;
 		.aboutContent {
 			height: 80vh;
 		}
@@ -149,7 +148,16 @@
 
 @media screen and (max-width: 380px) {
 	.about {
-		font-size: 1.15rem;
+		font-size: 1.1rem;
+		.aboutContent {
+			height: 80vh;
+		}
+	}
+}
+
+@media screen and (max-width: 330px) {
+	.about {
+		font-size: 1rem;
 		.aboutContent {
 			height: 80vh;
 		}
