@@ -20,7 +20,11 @@ export function Introduction() {
 					</button>
 				</a>
 			</div>
-			<img className='gif' src='/developer.gif' alt='developer gif' />
+			<img
+				className='gif'
+				src='/images/developer.gif'
+				alt='developer gif'
+			/>
 		</section>
 	);
 }

@@ -5,4 +5,46 @@
 	h2 {
 		@include sectionTitle('Knowledge');
 	}
+
+	.knowledgeList {
+		min-height: 50vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		align-content: flex-start;
+		gap: 2rem 3rem;
+		list-style: none;
+		flex-wrap: wrap;
+
+		.knowledgeItem {
+			width: 45%;
+			height: 4rem;
+			gap: 0.8rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid $lightPurple;
+			padding: 0.8rem;
+			box-shadow: -5px 5px 10px 2px grey;
+			transition: transform 0.25s ease-in-out;
+
+			&:hover {
+				transform: scale(1.05);
+			}
+
+			.text {
+				font-size: 2rem;
+				line-height: rem;
+				font-family: $textFont;
+				font-weight: bold;
+				color: $darkPurple;
+			}
+
+			.icon {
+				padding: 0;
+				width: 60px;
+				height: 60px;
+			}
+		}
+	}
 }
