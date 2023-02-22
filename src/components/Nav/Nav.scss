@@ -22,3 +22,50 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1350px) {
+	.nav {
+		.navContainer {
+			.navItem {
+				font-size: 1.7rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.nav {
+		.navContainer {
+			.navItem {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1150px) {
+	.nav {
+		flex-grow: 1;
+		.navContainer {
+			.navItem {
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.nav {
+		.navContainer {
+			.navItem {
+				font-size: 1.6rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.nav {
+		display: none;
+	}
+}

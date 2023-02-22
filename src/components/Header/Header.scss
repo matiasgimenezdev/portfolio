@@ -9,7 +9,7 @@
 	align-items: center;
 	background-color: $purple;
 
-	.title-container {
+	.titleContainer {
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
@@ -44,6 +44,63 @@
 			width: 100px;
 			height: 100px;
 			margin-left: 1rem;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.titleContainer {
+		width: 40%;
+
+		.title {
+			font-size: 2.5rem;
+			color: white;
+			font-family: $headerFont;
+			transition: transform 0.2s ease-in-out;
+			position: relative;
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.header {
+		.titleContainer {
+			.title {
+				font-size: 2.1rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.titleContainer {
+		width: 20%;
+		.title {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.header {
+		.titleContainer {
+			gap: 5rem;
+			width: 100%;
+			.title {
+				display: initial;
+				font-size: 2.6rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.header {
+		.titleContainer {
+			gap: 3rem;
+			.title {
+				font-size: 2.3rem;
+			}
 		}
 	}
 }

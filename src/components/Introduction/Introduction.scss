@@ -1,4 +1,5 @@
 @import '../../utils/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 .introduction {
 	display: flex;
@@ -6,6 +7,7 @@
 	align-items: center;
 	padding: 1rem;
 	height: 85vh;
+	width: 90vw;
 
 	.introductionContent {
 		display: flex;
@@ -18,18 +20,26 @@
 		.introductionText {
 			font-size: 3rem;
 			font-family: $textFont;
+			display: inline-block;
+			text-align: center;
+			width: 100%;
+
 			.name {
 				color: $purple;
 				font-family: $titleFont;
 				font-weight: bold;
 				font-size: 3.5rem;
+				display: inline-block;
+				text-align: center;
+				width: 100%;
 			}
 
 			.occupation {
-				font-size: 1.5rem;
+				font-size: 1.7rem;
 				color: $purple;
 				font-style: italic;
 				text-align: center;
+				font-family: 'VT323', monospace;
 				margin-bottom: 2rem;
 			}
 		}
@@ -48,20 +58,40 @@
 				font-size: 1.3rem;
 				padding: 0.5rem;
 				text-align: center;
-				background-color: transparent;
+				background-color: white;
 				color: $purple;
 				outline: none;
-				border: thin solid $purple;
-
+				border: 1px solid $darkPurple;
 				cursor: pointer;
+				position: relative;
 
-				transition: background 0.3s ease-in-out;
-				box-shadow: -8px 8px 15px black;
+				&:hover svg {
+					translate: 8px 0;
+					background: white;
+				}
 
-				&:hover {
-					color: white;
-					border: thin solid white;
-					background-color: $purple;
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: -1;
+					background: linear-gradient(
+						45deg,
+						#f988ff,
+						#fc098b,
+						#3f007e,
+						#fc098b,
+						#f988ff,
+						#0fe9f8,
+						#3f007e,
+						#0fe9f8
+					);
+					background-size: 800%;
+					filter: blur(15px);
+					animation: glowing 25s linear infinite;
 				}
 			}
 		}
@@ -71,5 +101,57 @@
 		width: 500px;
 		height: 350px;
 		margin-bottom: 5%;
+	}
+}
+
+@keyframes glowing {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.introduction {
+		.gif {
+			width: 400px;
+			height: 250px;
+			margin-bottom: 5%;
+		}
+	}
+}
+
+@media screen and (max-width: 880px) {
+	.introduction {
+		gap: 2rem;
+		.introductionContent {
+			.moreLink {
+				width: 60%;
+			}
+		}
+		.gif {
+			width: 300px;
+			height: 200px;
+			margin-bottom: 5%;
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.introduction {
+		.introductionContent {
+			.moreLink {
+				width: 70%;
+			}
+		}
+
+		.gif {
+			display: none;
+		}
 	}
 }

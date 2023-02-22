@@ -75,7 +75,7 @@ export function Knowledge() {
 					<span className='text'>Design Patterns</span>
 				</li>
 			</ul>
-			<h6>
+			<h6 className='phrase'>
 				<div>
 					<FcIdea />
 				</div>

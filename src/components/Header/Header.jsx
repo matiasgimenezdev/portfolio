@@ -6,9 +6,9 @@ import { Nav } from '../Nav/Nav';
 export function Header() {
 	return (
 		<header className='header'>
-			<section className='title-container'>
+			<section className='titleContainer'>
 				<img src='/logo.png' alt='logo' className='logo' />
-				<h1 className='title animate__shakeX'>
+				<h1 className='title'>
 					<span className='underline'>Matías Giménez</span>
 				</h1>
 			</section>
