@@ -91,7 +91,7 @@
 		align-items: center;
 
 		.knowledgeList {
-			height: 60vh;
+			height: 55vh;
 			align-items: flex-start;
 
 			.knowledgeItem {
@@ -111,9 +111,8 @@
 
 @media screen and (max-width: 700px) {
 	.knowledge {
-		align-items: center;
-
 		.knowledgeList {
+			margin-top: 2rem;
 			height: 60vh;
 			align-items: flex-start;
 
@@ -152,7 +151,8 @@
 		}
 
 		.phrase {
-			font-size: 1.5rem;
+			font-size: 1.6rem;
+			width: 80%;
 
 			div {
 				font-size: 2rem;
@@ -166,22 +166,20 @@
 		align-items: center;
 
 		.knowledgeList {
-			height: 70vh;
+			height: 50vh;
 			align-items: flex-start;
 			margin-top: 1rem;
 
 			.knowledgeItem {
-				width: 95%;
-				padding: 0.5rem;
+				width: 25%;
+				padding: 0.6rem;
 				height: 2.5rem;
 
 				.text {
-					font-size: 1.2rem;
+					font-size: 1rem;
+					display: none;
 				}
 			}
-		}
-		.phrase {
-			display: none;
 		}
 	}
 }

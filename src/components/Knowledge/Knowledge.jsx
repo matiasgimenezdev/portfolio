@@ -40,7 +40,7 @@ export function Knowledge() {
 						src='/icons/react.svg'
 						alt='React icon'
 					/>
-					<span className='text'>React (learning)</span>
+					<span className='text'>Learning React</span>
 				</li>
 				<li className='knowledgeItem'>
 					<img
@@ -58,14 +58,6 @@ export function Knowledge() {
 				<li className='knowledgeItem'>
 					<img className='icon' src='/icons/sql.svg' alt='SQL icon' />
 					<span className='text'>SQL</span>
-				</li>
-				<li className='knowledgeItem'>
-					<img
-						className='icon'
-						src='/icons/patterns.svg'
-						alt='Design Patterns icon'
-					/>
-					<span className='text'>Design Patterns</span>
 				</li>
 			</ul>
 			<h6 className='phrase'>
