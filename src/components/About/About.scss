@@ -14,8 +14,8 @@
 	}
 
 	.aboutContent {
-		height: 70%;
-		width: 80%;
+		height: 60%;
+		width: 70%;
 		background-color: $darkprimary;
 		display: flex;
 		flex-direction: column;
@@ -27,7 +27,7 @@
 		.aboutText {
 			width: 100%;
 			color: $font;
-			font-size: 1.5rem;
+			font-size: 1.7rem;
 		}
 
 		.cvLink {
@@ -52,10 +52,16 @@
 	}
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1300px) {
 	.about {
 		.aboutContent {
-			height: 75%;
+			height: 70%;
+
+			.aboutText {
+				width: 100%;
+				color: $font;
+				font-size: 1.5rem;
+			}
 		}
 	}
 }
@@ -76,7 +82,7 @@
 @media screen and (max-width: 700px) {
 	.about {
 		.aboutContent {
-			height: 80%;
+			height: 75%;
 			width: 90%;
 
 			.aboutText {
@@ -107,9 +113,9 @@
 @media screen and (max-width: 460px) {
 	.about {
 		.aboutContent {
-			height: 70%;
+			height: 65%;
 			.aboutText {
-				font-size: 1rem;
+				font-size: 1.1rem;
 			}
 			.cvLink {
 				width: 60%;
@@ -124,17 +130,16 @@
 @media screen and (max-width: 380px) {
 	.about {
 		.aboutContent {
-			height: 88%;
-
-			// .cvLink {
-			// 	display: none;
-			// }
+			height: 85%;
 		}
 	}
 }
+
 @media screen and (max-width: 300px) {
 	.about {
 		.aboutContent {
+			height: 85%;
+
 			.cvLink {
 				display: none;
 			}
