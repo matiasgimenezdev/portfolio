@@ -33,7 +33,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			border: 1px solid $lightPurple;
+			border: 1px solid $lightprimary;
 			padding: 1rem;
 			box-shadow: -5px 5px 10px 2px grey;
 			transition: transform 0.25s ease-in-out;
@@ -47,7 +47,7 @@
 				line-height: 1.7rem;
 				font-family: $textFont;
 				font-weight: bold;
-				color: $darkPurple;
+				color: $darkprimary;
 			}
 
 			.icon {
@@ -63,7 +63,7 @@
 		font-family: 'Croissant One', cursive;
 		font-weight: bold;
 		font-size: 1.7rem;
-		color: $purple;
+		color: $primary;
 
 		div {
 			font-size: 3rem;

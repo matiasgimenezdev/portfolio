@@ -1,12 +1,12 @@
 @import '../../utils/variables.scss';
 
 @mixin socials($color) {
-	$bgcolor: white;
-	$textcolor: $purple;
+	$bgcolor: $font;
+	$textcolor: $primary;
 
-	@if ($color == 'purple') {
-		$bgcolor: $purple;
-		$textcolor: white;
+	@if ($color == 'primary') {
+		$bgcolor: $primary;
+		$textcolor: $font;
 	}
 
 	.socials-#{$color} {
@@ -57,5 +57,5 @@
 	}
 }
 
-@include socials('purple');
-@include socials('white');
+@include socials('primary');
+@include socials('secondary');

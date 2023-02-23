@@ -13,7 +13,7 @@ export function Introduction() {
 						& <br />
 						Estudiante Lic. en Sistemas de Información
 					</p>
-					<Socials color='purple' />
+					<Socials color='primary' />
 				</div>
 				<a href='#About' className='moreLink'>
 					<button className='moreButton'>

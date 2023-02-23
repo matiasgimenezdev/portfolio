@@ -8,44 +8,56 @@
 	}
 	.contactContent {
 		margin: auto;
-		height: 80vh;
-		width: 100%;
+		height: 80%;
+		width: 90%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		border: 1px solid $primary;
+		border-radius: 25px;
+		overflow: hidden;
+
+		.decoration {
+			flex-grow: 1;
+			height: 100%;
+			background-image: url('/images/decoration.png');
+			background-position: center;
+			background-size: cover;
+		}
 
 		.contactForm {
 			width: 60%;
+			height: 100%;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			gap: 0.5rem;
 			font-family: $textFont;
+			background-color: $darkprimary;
 
 			.textInput {
 				width: 80%;
 				height: 1.9rem;
 				border: none;
 				outline: none;
+				margin-top: 0.4rem;
 				padding: 0.3rem;
 				font-size: 1.1rem;
 				font-family: $textFont;
-				background-color: $purple;
-				color: white;
+				background-color: transparent;
+				border-bottom: 2px solid white;
+				color: $font;
 
 				&::placeholder {
 					padding: 0.1rem;
-					color: white;
-				}
-
-				&:focus {
-					outline: 2px solid $purple;
+					color: $font;
 				}
 			}
 
 			.textArea {
 				width: 80%;
+				margin-top: 1rem;
 				height: 300px;
 				padding: 0.3rem;
 				resize: none;
@@ -54,37 +66,34 @@
 				font-size: 1.1rem;
 				font-family: $textFont;
 				overflow: hidden;
-				color: $purple;
-				border: 2px solid $purple;
+				color: black;
+				border: 2px solid $darkprimary;
 				background-color: white;
 
 				&::placeholder {
 					padding: 0.1rem;
-					color: $purple;
+					color: $primary;
 				}
 
 				&:focus {
-					outline: 2px solid $purple;
+					outline: 2px solid $primary;
 				}
 			}
+			a {
+				display: none;
+			}
 
-			.submitInput {
+			.sendButton {
 				width: 25%;
-				height: 3rem;
+				height: 2.8rem;
 				margin: 1rem;
-				border: 2px solid white;
-				background-color: $purple;
+				border: 2px solid $primary;
+				background-color: white;
 				outline: none;
-				color: white;
-				font-size: 1.2rem;
-				transition: background-color 0.4s ease-in-out;
+				color: $primary;
+				font-weight: bold;
+				font-size: 1.1rem;
 				cursor: pointer;
-
-				&:hover {
-					background-color: white;
-					border: 2px solid $purple;
-					color: $purple;
-				}
 			}
 		}
 	}
@@ -93,8 +102,11 @@
 @media screen and (max-width: 800px) {
 	.contact {
 		.contactContent {
+			.decoration {
+				display: none;
+			}
 			.contactForm {
-				width: 80%;
+				width: 100%;
 
 				.textInput {
 					width: 95%;
@@ -116,11 +128,17 @@
 @media screen and (max-width: 500px) {
 	.contact {
 		.contactContent {
+			width: 95%;
+
 			.contactForm {
-				width: 95%;
+				width: 100%;
+				padding: 0.5rem;
 
 				.submitInput {
 					width: 50%;
+				}
+				.textArea {
+					height: 200px;
 				}
 			}
 		}

@@ -2,10 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varta:wght@400;500&display=swap');
 
-$purple: #3f007e;
-$darkPurple: #2f0558;
-$lightPurple: #be8fec;
-$link: #cba6ef;
+$primary: #0a0074;
+$font: white;
+$lightprimary: lighten(
+	$color: $primary,
+	$amount: 15,
+);
+$darkprimary: darken(
+	$color: $primary,
+	$amount: 5,
+);
+$link: #68f0ff;
 $headerFont: 'Montserrat Subrayada', sans-serif;
 $titleFont: 'Montserrat', sans-serif;
 $textFont: 'Varta', sans-serif;
