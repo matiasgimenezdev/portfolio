@@ -63,7 +63,12 @@ export function Contact() {
 						onChange={handleChange}
 						value={form.body}
 					></textarea>
-					<a href='' ref={linkRef}></a>
+					<a
+						target='_blank'
+						rel='noreferer'
+						href=''
+						ref={linkRef}
+					></a>
 					<button className='sendButton' type='submit' id='submit'>
 						Enviar
 					</button>
