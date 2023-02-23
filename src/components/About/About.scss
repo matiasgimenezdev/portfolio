@@ -5,7 +5,6 @@
 	min-height: 100vh;
 	height: 100vh;
 	font-family: $textFont;
-	font-size: 1.6rem;
 	background-image: url('/images/background.jpg');
 	background-position: center;
 	background-size: cover;
@@ -15,29 +14,34 @@
 	}
 
 	.aboutContent {
+		height: 70%;
+		width: 80%;
+		background-color: $darkprimary;
 		display: flex;
-		height: 75vh;
-		margin: 1rem;
+		flex-direction: column;
 		align-items: center;
-		justify-content: flex-start;
+		justify-content: center;
+		margin: auto;
+		padding: 0 1rem;
 
 		.aboutText {
-			width: 70%;
+			width: 100%;
 			color: $font;
-			background-color: $darkprimary;
-			padding: 2rem;
-			z-index: 0;
+			font-size: 1.5rem;
 		}
 
 		.cvLink {
 			text-decoration: none;
 			font-family: $titleFont;
+			width: 30%;
+			z-index: 0;
 
 			.cvButton {
 				@include animatedButton;
+				font-size: 1.2rem;
 				font-weight: bold;
-				width: 30%;
-				height: 4rem;
+				width: 100%;
+				height: 3rem;
 				margin: 2rem auto;
 
 				&:hover svg {
@@ -48,90 +52,68 @@
 	}
 }
 
-@media screen and (max-width: 1650px) {
-	.about {
-		.aboutContent {
-			.aboutText {
-				margin: auto;
-				width: 90%;
-				height: 80%;
-			}
-		}
-	}
-}
-
 @media screen and (max-width: 1100px) {
 	.about {
 		.aboutContent {
-			.aboutText {
-				width: 95%;
-				height: 85%;
-			}
+			height: 75%;
 		}
 	}
 }
 
 @media screen and (max-width: 900px) {
 	.about {
-		font-size: 1.4rem;
-
 		.aboutContent {
+			height: 80%;
+			width: 90%;
+
 			.aboutText {
-				width: 95%;
-				height: 80%;
+				font-size: 1.4rem;
 			}
 		}
 	}
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
 	.about {
-		font-size: 1.3rem;
-
 		.aboutContent {
+			height: 80%;
+			width: 90%;
+
 			.aboutText {
-				width: 95%;
-				height: 90%;
+				font-size: 1.3rem;
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.about {
+		.aboutContent {
 			.cvLink {
+				width: 40%;
+
 				.cvButton {
-					width: 70%;
-					height: 3rem;
 					font-size: 1.2rem;
 				}
 			}
-		}
-	}
-}
-
-@media screen and (max-width: 550px) {
-	.about {
-		font-size: 1.2rem;
-		width: 100%;
-
-		.aboutContent {
-			margin-top: 0;
-			height: 85%;
 
 			.aboutText {
-				height: 90%;
-				padding: 1rem;
+				font-size: 1.2rem;
 			}
 		}
 	}
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 460px) {
 	.about {
-		font-size: 1rem;
-
 		.aboutContent {
-			height: 90%;
-
+			height: 70%;
+			.aboutText {
+				font-size: 1rem;
+			}
 			.cvLink {
+				width: 60%;
 				.cvButton {
-					width: 70%;
-					height: 3rem;
 					font-size: 1rem;
 				}
 			}
@@ -139,11 +121,20 @@
 	}
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 380px) {
 	.about {
 		.aboutContent {
-			height: 85%;
+			height: 88%;
 
+			// .cvLink {
+			// 	display: none;
+			// }
+		}
+	}
+}
+@media screen and (max-width: 300px) {
+	.about {
+		.aboutContent {
 			.cvLink {
 				display: none;
 			}

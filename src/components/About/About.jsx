@@ -28,12 +28,12 @@ export function About() {
 					conocimientos y potenciar los adquiridos durante mis
 					estudios.
 					<br />
-					<a href='/CV.pdf' download='CV.pdf' className='cvLink'>
-						<button className='cvButton'>
-							Descargar CV <BsDownload />
-						</button>
-					</a>
 				</p>
+				<a href='/CV.pdf' download='CV.pdf' className='cvLink'>
+					<button className='cvButton'>
+						Descargar CV <BsDownload />
+					</button>
+				</a>
 			</div>
 		</section>
 	);
