@@ -45,7 +45,6 @@ export function Portfolio() {
 				theme='colored'
 				transition={Zoom}
 			/>
-			<Contact />
 		</div>
 	);
 }

@@ -1,5 +1,11 @@
 [
 	{
+		"title": "Portfolio",
+		"url": "https://matiasgimenez.vercel.app/",
+		"gitHub": "https://github.com/matiasgimenezdev/portfolio",
+		"class": "portfolio"
+	},
+	{
 		"title": "Twitter Clone",
 		"url": "https://twitter-clone-mg.netlify.app",
 		"gitHub": "https://github.com/matiasgimenezdev/twitter-clone",
@@ -10,12 +16,6 @@
 		"url": "https://gif-browser-mg.netlify.app/",
 		"gitHub": "https://github.com/matiasgimenezdev/gif-browser",
 		"class": "gifBrowser"
-	},
-	{
-		"title": "Portfolio",
-		"url": "https://matiasgimenez.vercel.app/",
-		"gitHub": "https://github.com/matiasgimenezdev/portfolio",
-		"class": "portfolio"
 	},
 	{
 		"title": "Typing Test",

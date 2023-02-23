@@ -13,9 +13,6 @@ export function Nav() {
 				<a href='#Projects'>
 					<li className='navItem'>Proyectos</li>
 				</a>
-				<a href='#Contact'>
-					<li className='navItem'>Contacto</li>
-				</a>
 			</ul>
 		</nav>
 	);
