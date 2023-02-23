@@ -101,6 +101,10 @@
 					font-size: 1rem;
 				}
 
+				.submitInput {
+					width: 35%;
+				}
+
 				.textArea {
 					width: 95%;
 					font-size: 1rem;
@@ -114,6 +118,10 @@
 		.contactContent {
 			.contactForm {
 				width: 95%;
+
+				.submitInput {
+					width: 50%;
+				}
 			}
 		}
 	}
