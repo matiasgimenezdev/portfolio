@@ -5,7 +5,7 @@
 	min-height: 100vh;
 	height: 100vh;
 	font-family: $textFont;
-	font-size: 1.7rem;
+	font-size: 1.6rem;
 	background-image: url('/images/background.jpg');
 	background-position: center;
 	background-size: cover;
@@ -36,7 +36,7 @@
 			.cvButton {
 				@include animatedButton;
 				font-weight: bold;
-				width: 40%;
+				width: 30%;
 				height: 4rem;
 				margin: 2rem auto;
 
@@ -78,14 +78,13 @@
 		.aboutContent {
 			.aboutText {
 				width: 95%;
-				height: 75%;
-				padding: 1.2rem;
+				height: 80%;
 			}
 		}
 	}
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
 	.about {
 		font-size: 1.3rem;
 
@@ -94,72 +93,60 @@
 				width: 95%;
 				height: 90%;
 			}
-		}
-	}
-}
-
-@media screen and (max-width: 550px) {
-	.about {
-		.aboutContent {
-			.aboutText {
-				height: 90%;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 500px) {
-	.about {
-		font-size: 1.3rem;
-		.aboutContent {
-			height: 78vh;
-		}
-	}
-}
-
-@media screen and (max-width: 450px) {
-	.about {
-		.aboutContent {
-			height: 90vh;
-
 			.cvLink {
-				text-decoration: none;
-				font-family: $titleFont;
-
 				.cvButton {
-					width: 60%;
-					height: 4rem;
-					margin: 2rem auto;
-
-					&:hover svg {
-						transform: translate(0px, 5px);
-					}
+					width: 70%;
+					height: 3rem;
+					font-size: 1.2rem;
 				}
 			}
 		}
 	}
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 550px) {
 	.about {
-		font-size: 1.1rem;
+		font-size: 1.2rem;
+		width: 100%;
+
 		.aboutContent {
-			height: 80vh;
+			margin-top: 0;
+			height: 85%;
+
+			.aboutText {
+				height: 90%;
+				padding: 1rem;
+			}
 		}
 	}
 }
 
-@media screen and (max-width: 380px) {
-	.about {
-		font-size: 1.1rem;
-		.aboutContent {
-			height: 85vh;
-		}
-	}
-}
-
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 450px) {
 	.about {
 		font-size: 1rem;
+
+		.aboutContent {
+			height: 90%;
+
+			.cvLink {
+				.cvButton {
+					width: 70%;
+					height: 3rem;
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.about {
+		.aboutContent {
+			height: 85%;
+
+			.cvLink {
+				display: none;
+			}
+		}
 	}
 }

@@ -1,5 +1,4 @@
 @import '../../utils/shared.scss';
-@import '../../utils/shared.scss';
 @import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
 
 .knowledge {
@@ -78,10 +77,14 @@
 
 		.knowledgeList {
 			height: 45vh;
+			margin-top: 3rem;
 
 			.knowledgeItem {
 				width: 25%;
 			}
+		}
+		.phrase {
+			font-size: 1.5rem;
 		}
 	}
 }
@@ -91,7 +94,8 @@
 		align-items: center;
 
 		.knowledgeList {
-			height: 55vh;
+			height: 60vh;
+			margin-top: 0;
 			align-items: flex-start;
 
 			.knowledgeItem {
@@ -100,7 +104,7 @@
 		}
 
 		.phrase {
-			font-size: 1.5rem;
+			font-size: 1.4rem;
 
 			div {
 				font-size: 2rem;
@@ -138,7 +142,7 @@
 		.knowledgeList {
 			height: 60vh;
 			align-items: flex-start;
-
+			margin-top: 0;
 			.knowledgeItem {
 				width: 40%;
 				padding: 0.5rem;
@@ -161,15 +165,26 @@
 	}
 }
 
+@media screen and (max-width: 550px) {
+	.knowledge {
+		.phrase {
+			font-size: 1.4rem;
+			width: 80%;
+
+			div {
+				font-size: 1.6rem;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 460px) {
 	.knowledge {
 		align-items: center;
 
 		.knowledgeList {
 			height: 55vh;
-			align-items: flex-start;
-			margin-top: 0;
-
+			margin-top: 1rem;
 			.knowledgeItem {
 				width: 25%;
 				padding: 0.6rem;
@@ -183,7 +198,7 @@
 		}
 
 		.phrase {
-			font-size: 1.4rem;
+			font-size: 1.2rem;
 			width: 80%;
 
 			div {

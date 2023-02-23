@@ -1,13 +1,12 @@
 @import '../../utils/variables.scss';
 @import '../../utils/shared.scss';
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 .introduction {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	padding: 1rem;
-	height: 85vh;
+	height: 70vh;
 	width: 90vw;
 
 	.introductionContent {
@@ -16,7 +15,6 @@
 		align-items: center;
 		justify-content: center;
 		height: 100%;
-		margin-bottom: 5%;
 
 		.introductionText {
 			font-size: 3rem;
@@ -36,12 +34,10 @@
 			}
 
 			.occupation {
-				font-size: 1.7rem;
+				font-size: 1.4rem;
 				color: $purple;
-				font-style: italic;
 				text-align: center;
-				font-family: 'VT323', monospace;
-				margin-bottom: 2rem;
+				font-family: $titleFont;
 			}
 		}
 		.moreLink {
@@ -63,7 +59,6 @@
 	.gif {
 		width: 500px;
 		height: 350px;
-		margin-bottom: 5%;
 	}
 }
 

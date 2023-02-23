@@ -3,9 +3,10 @@
 @mixin sectionTitle($title) {
 	font-family: $titleFont;
 	padding: 1rem;
-	font-size: 3em;
+	font-size: 2.8rem;
 	color: $purple;
 	position: relative;
+	margin-top: 3rem;
 
 	&::before {
 		content: $title;

@@ -1,0 +1,119 @@
+@import '../../utils/shared.scss';
+
+.contact {
+	height: 100vh;
+
+	h2 {
+		@include sectionTitle('Contact');
+	}
+	.contactContent {
+		margin: auto;
+		height: 80vh;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.contactForm {
+			width: 60%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
+			font-family: $textFont;
+
+			.textInput {
+				width: 80%;
+				height: 1.9rem;
+				border: none;
+				outline: none;
+				padding: 0.3rem;
+				font-size: 1.1rem;
+				font-family: $textFont;
+				background-color: $darkPurple;
+				color: white;
+
+				&::placeholder {
+					padding: 0.1rem;
+					color: white;
+				}
+
+				&:focus {
+					outline: 2px solid $purple;
+				}
+			}
+
+			.textArea {
+				width: 80%;
+				height: 300px;
+				padding: 0.3rem;
+				resize: none;
+				border: none;
+				outline: none;
+				font-size: 1.1rem;
+				font-family: $textFont;
+				overflow: hidden;
+				color: white;
+				background-color: $darkPurple;
+
+				&::placeholder {
+					padding: 0.1rem;
+					color: white;
+				}
+
+				&:focus {
+					outline: 2px solid $purple;
+				}
+			}
+
+			.submitInput {
+				width: 25%;
+				height: 3rem;
+				margin: 1rem;
+				border: 2px solid white;
+				background-color: $darkPurple;
+				outline: none;
+				color: white;
+				font-size: 1.2rem;
+				transition: background-color 0.4s ease-in-out;
+				cursor: pointer;
+
+				&:hover {
+					background-color: white;
+					border: 2px solid $darkPurple;
+					color: $darkPurple;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.contact {
+		.contactContent {
+			.contactForm {
+				width: 80%;
+
+				.textInput {
+					width: 95%;
+					font-size: 1rem;
+				}
+
+				.textArea {
+					width: 95%;
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 500px) {
+	.contact {
+		.contactContent {
+			.contactForm {
+				width: 95%;
+			}
+		}
+	}
+}
