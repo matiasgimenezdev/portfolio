@@ -25,3 +25,11 @@
 		}
 	}
 }
+
+@media screen and (max-width: 300px) {
+	.footer {
+		.footerText {
+			font-size: 0.7rem;
+		}
+	}
+}
