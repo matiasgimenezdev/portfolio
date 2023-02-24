@@ -27,6 +27,7 @@ export function Socials({ section }) {
 					href='https://www.linkedin.com/in/matiasgimenezdev/'
 					target='_blank'
 					rel='noreferrer'
+					name='linkedinLink'
 				>
 					<AiFillLinkedin />
 				</a>
@@ -34,11 +35,13 @@ export function Socials({ section }) {
 					href='https://github.com/matiasgimenezdev'
 					target='_blank'
 					rel='noreferrer'
+					name='githubLink'
 				>
 					<AiOutlineGithub />
 				</a>
 				<button
 					className='mail'
+					name='emailAddress'
 					data-clipboard-text='matiasgimenez.dev@gmail.com'
 					target='_blank'
 					rel='noreferrer'

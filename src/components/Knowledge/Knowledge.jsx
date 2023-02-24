@@ -66,7 +66,7 @@ export function Knowledge() {
 					<span className='text'>SQL</span>
 				</li>
 			</ul>
-			<h6 className='phrase'>
+			<h3 className='phrase'>
 				<div>
 					<FcIdea />
 				</div>
@@ -77,7 +77,7 @@ export function Knowledge() {
 				&
 				<br />
 				leveling up one day at a time.
-			</h6>
+			</h3>
 		</section>
 	);
 }

@@ -18,7 +18,7 @@ export function Controls() {
 		<div className='controls'>
 			{scroll > 0 && (
 				<a href='#Home'>
-					<button className='home'>
+					<button className='home' name='home'>
 						<AiFillHome />
 					</button>
 				</a>
@@ -31,6 +31,7 @@ export function Controls() {
 				></button>
 			) : (
 				<button
+					name='changeLanguage'
 					className='language english'
 					onClick={() => setLanguage('spanish')}
 				></button>
