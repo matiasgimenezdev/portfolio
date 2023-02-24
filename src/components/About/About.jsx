@@ -7,19 +7,16 @@ import { LanguageContext } from '../../contexts';
 export function About() {
 	const { language } = useContext(LanguageContext);
 
-	return (
-		<section className='about'>
-			<h2 id='About'>
-				{language === 'spanish' ? 'Conóceme' : 'About me'}
-			</h2>
-			<div className='aboutContent'>
+	const renderText = () => {
+		if (language === 'spanish') {
+			return (
 				<p className='aboutText'>
 					Mi nombre es Matías Giménez 😊, tengo 22 años y vivo en
-					Argentina. Actualmente estoy realizando la
+					Argentina. Actualmente estoy realizando la{' '}
 					<Link
 						href='https://www.unlu.edu.ar/carg-sistemas.html'
-						value='Lic. en Sistemas de Información'
-					/>
+						value={`Lic. en Sistemas de Información`}
+					/>{' '}
 					en la
 					<Link href='https://www.unlu.edu.ar/' value='UNLu' /> y me
 					encuentro finalizando el tercer año de la carrera.
@@ -35,6 +32,41 @@ export function About() {
 					estudios.
 					<br />
 				</p>
+			);
+		} else {
+			return (
+				<p className='aboutText'>
+					My name is Matias Gimenez 😊, I am 22 years old and I am
+					living in Argentina. Currently, I am doing an{' '}
+					<Link
+						href='https://www.unlu.edu.ar/carg-sistemas.html'
+						value={`Information Systems degree`}
+					/>{' '}
+					at
+					<Link href='https://www.unlu.edu.ar/' value='UNLu' /> and I
+					am finishing the third year.
+					<br />
+					I consider myself to be a passionate about technology and
+					software development, so I try to keep learning day by day.
+					At the moment, I am in the process of learning React to add
+					it to my technology stack.
+					<br />
+					I am looking for the opportunity to combine my academic
+					training with work, with the aim of developing knowledge and
+					enhancing those acquired during my studies.
+					<br />
+				</p>
+			);
+		}
+	};
+
+	return (
+		<section className='about'>
+			<h2 id='About'>
+				{language === 'spanish' ? 'Conóceme' : 'About me'}
+			</h2>
+			<div className='aboutContent'>
+				<p className='aboutText'>{renderText()}</p>
 				<a href='/CV.pdf' download='CV.pdf' className='cvLink'>
 					<button className='cvButton'>
 						{language === 'spanish'
