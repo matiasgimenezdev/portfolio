@@ -13,15 +13,21 @@ export function Introduction() {
 				<div className='introductionText'>
 					Hi 👋! I am <span className='name'>Matias</span> <br />
 					<p className='occupation'>
-						Desarrollador de Software <br />
+						{language === 'spanish'
+							? 'Desarrollador de Software'
+							: 'Software Developer'}
+						<br />
 						& <br />
-						Estudiante Lic. en Sistemas de Información
+						{language === 'spanish'
+							? 'Estudiante Lic. en Sistemas de Información'
+							: 'Studying a degree in Information Systems'}
 					</p>
 					<Socials section='introduction' />
 				</div>
 				<a href='#About' className='moreLink'>
 					<button className='moreButton'>
-						Conocé más <FaLongArrowAltRight />
+						{language === 'spanish' ? 'Conocé más' : 'Know more'}
+						<FaLongArrowAltRight />
 					</button>
 				</a>
 			</div>

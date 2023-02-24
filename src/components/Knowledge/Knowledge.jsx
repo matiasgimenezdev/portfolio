@@ -1,10 +1,16 @@
 import './Knowledge.scss';
 import { FcIdea } from 'react-icons/fc';
+import { useContext } from 'react';
+import { LanguageContext } from '../../contexts';
 
 export function Knowledge() {
+	const { language } = useContext(LanguageContext);
+
 	return (
 		<section className='knowledge'>
-			<h2 id='Knowledge'>Tecnologías</h2>
+			<h2 id='Knowledge'>
+				{language === 'spanish' ? 'Tecnologías' : 'Knowledge'}
+			</h2>
 			<ul className='knowledgeList'>
 				<li className='knowledgeItem'>
 					<img

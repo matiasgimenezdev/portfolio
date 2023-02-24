@@ -1,12 +1,17 @@
 import './Projects.scss';
+import { useContext } from 'react';
 import { AiOutlineGithub } from 'react-icons/ai';
 import { TbWorld } from 'react-icons/tb';
 import projects from './projects.json';
+import { LanguageContext } from '../../contexts';
 
 export function Projects() {
+	const { language } = useContext(LanguageContext);
 	return (
 		<section className='projects'>
-			<h2 id='Projects'>Proyectos</h2>
+			<h2 id='Projects'>
+				{language === 'spanish' ? 'Proyectos' : 'Projects'}
+			</h2>
 			<div className='projectsContent'>
 				{projects.map((project) => {
 					return (

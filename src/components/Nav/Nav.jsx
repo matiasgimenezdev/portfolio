@@ -8,13 +8,19 @@ export function Nav() {
 		<nav className='nav'>
 			<ul className='navContainer'>
 				<a href='#About'>
-					<li className='navItem'>Conóceme</li>
+					<li className='navItem'>
+						{language === 'spanish' ? 'Conóceme' : 'About'}
+					</li>
 				</a>
 				<a href='#Knowledge'>
-					<li className='navItem'>Tecnologías</li>
+					<li className='navItem'>
+						{language === 'spanish' ? 'Tecnologías' : 'Knowledge'}
+					</li>
 				</a>
 				<a href='#Projects'>
-					<li className='navItem'>Proyectos</li>
+					<li className='navItem'>
+						{language === 'spanish' ? 'Proyectos' : 'Projects'}
+					</li>
 				</a>
 			</ul>
 		</nav>

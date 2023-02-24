@@ -9,7 +9,9 @@ export function About() {
 
 	return (
 		<section className='about'>
-			<h2 id='About'>Conóceme</h2>
+			<h2 id='About'>
+				{language === 'spanish' ? 'Conóceme' : 'About me'}
+			</h2>
 			<div className='aboutContent'>
 				<p className='aboutText'>
 					Mi nombre es Matías Giménez 😊, tengo 22 años y vivo en
@@ -35,7 +37,10 @@ export function About() {
 				</p>
 				<a href='/CV.pdf' download='CV.pdf' className='cvLink'>
 					<button className='cvButton'>
-						Descargar CV <BsDownload />
+						{language === 'spanish'
+							? 'Descargar CV'
+							: 'Download CV'}
+						<BsDownload />
 					</button>
 				</a>
 			</div>
