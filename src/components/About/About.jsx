@@ -1,8 +1,12 @@
+import { useContext } from 'react';
 import './About.scss';
 import { Link } from '../';
 import { BsDownload } from 'react-icons/bs';
+import { LanguageContext } from '../../contexts';
 
 export function About() {
+	const { language } = useContext(LanguageContext);
+
 	return (
 		<section className='about'>
 			<h2 id='About'>Conóceme</h2>

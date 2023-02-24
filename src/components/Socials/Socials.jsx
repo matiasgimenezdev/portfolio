@@ -1,14 +1,16 @@
-import React, { useRef } from 'react';
+import './Socials.scss';
+import { useRef, useContext } from 'react';
+import { LanguageContext } from '../../contexts';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
-import './Socials.scss';
 import ClipboardJS from 'clipboard';
 import { AiFillLinkedin, AiOutlineGithub } from 'react-icons/ai';
 import { SiGmail } from 'react-icons/si';
 
-export function Socials({ color }) {
+export function Socials({ section }) {
 	new ClipboardJS('.mail');
 	const toastRef = useRef(null);
+	const { language } = useContext(LanguageContext);
 
 	const handleClick = () => {
 		if (!toast.isActive(toastRef.current)) {
@@ -16,7 +18,7 @@ export function Socials({ color }) {
 		}
 	};
 
-	const socials = 'socials-' + color;
+	const socials = 'socials-' + section;
 
 	return (
 		<>

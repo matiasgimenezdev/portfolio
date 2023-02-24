@@ -22,7 +22,7 @@
 		align-items: center;
 		justify-content: center;
 		margin: auto;
-		padding: 0 1rem;
+		padding: 1rem 1rem;
 
 		.aboutText {
 			width: 100%;
@@ -95,6 +95,8 @@
 @media screen and (max-width: 600px) {
 	.about {
 		.aboutContent {
+			padding: 0rem 1rem;
+
 			.cvLink {
 				width: 40%;
 
@@ -113,6 +115,8 @@
 @media screen and (max-width: 460px) {
 	.about {
 		.aboutContent {
+			padding: 2rem 1rem;
+
 			height: 65%;
 			.aboutText {
 				font-size: 1.1rem;
@@ -127,7 +131,7 @@
 	}
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 392px) {
 	.about {
 		.aboutContent {
 			height: 85%;
@@ -138,6 +142,8 @@
 @media screen and (max-width: 300px) {
 	.about {
 		.aboutContent {
+			padding: 1rem 1rem;
+
 			height: 85%;
 
 			.cvLink {

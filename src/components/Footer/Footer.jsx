@@ -4,7 +4,7 @@ import './Footer.scss';
 export function Footer() {
 	return (
 		<div className='footer'>
-			<Socials color='primary' />
+			<Socials section='footer' />
 
 			<small className='footerText'></small>
 			<small className='footerText'>

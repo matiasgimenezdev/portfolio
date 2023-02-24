@@ -1,29 +1,31 @@
 @import '../../utils/variables.scss';
 
-@mixin socials($color) {
-	$bgcolor: $font;
-	$textcolor: $primary;
+@mixin socials($section) {
+	$padding: 0.6rem 0 0 0;
+	$margin: 0;
+	$fontSize: 1.8rem;
 
-	@if ($color == 'primary') {
-		$bgcolor: $darkprimary;
-		$textcolor: $font;
+	@if ($section == 'introduction') {
+		$padding: 0.8rem 1.5rem;
+		$margin: 2rem 1.2rem;
+		$fontSize: 2.2rem;
 	}
 
-	.socials-#{$color} {
+	.socials-#{$section} {
 		width: 80%;
-		color: $textcolor;
-		margin: 2rem 1.2rem;
-		font-size: 2.2rem;
-		padding: 0.8rem 1.5rem;
+		color: $font;
+		margin: $margin;
+		font-size: $fontSize;
+		padding: $padding;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		gap: 1.6rem;
-		background-color: $bgcolor;
+		background-color: $darkprimary;
 
 		a {
 			text-decoration: none;
-			color: $textcolor;
+			color: $font;
 			transition: transform 0.2s ease-in-out;
 			display: flex;
 			align-items: center;
@@ -40,7 +42,7 @@
 			align-items: center;
 			justify-content: center;
 			border: none;
-			color: $textcolor;
+			color: $font;
 			font-size: 2rem;
 			cursor: copy;
 			transition: transform 0.2s ease-in-out;
@@ -57,4 +59,5 @@
 	}
 }
 
-@include socials('primary');
+@include socials('introduction');
+@include socials('footer');

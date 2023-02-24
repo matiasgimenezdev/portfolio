@@ -1,8 +1,12 @@
+import { useContext } from 'react';
 import './Introduction.scss';
 import { Socials } from '../';
 import { FaLongArrowAltRight } from 'react-icons/fa';
+import { LanguageContext } from '../../contexts';
 
 export function Introduction() {
+	const { language } = useContext(LanguageContext);
+
 	return (
 		<section className='introduction'>
 			<div className='introductionContent'>
@@ -13,7 +17,7 @@ export function Introduction() {
 						& <br />
 						Estudiante Lic. en Sistemas de Información
 					</p>
-					<Socials color='primary' />
+					<Socials section='introduction' />
 				</div>
 				<a href='#About' className='moreLink'>
 					<button className='moreButton'>

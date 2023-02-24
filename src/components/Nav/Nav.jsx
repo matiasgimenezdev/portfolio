@@ -1,6 +1,9 @@
+import { useContext } from 'react';
+import { LanguageContext } from '../../contexts/';
 import './Nav.scss';
 
 export function Nav() {
+	const { language } = useContext(LanguageContext);
 	return (
 		<nav className='nav'>
 			<ul className='navContainer'>
