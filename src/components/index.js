@@ -6,3 +6,4 @@ export { Link } from './Link/Link';
 export { Nav } from './Nav/Nav';
 export { Knowledge } from './Knowledge/Knowledge';
 export { Projects } from './Proyectos/Projects';
+export { Footer } from './Footer/Footer';

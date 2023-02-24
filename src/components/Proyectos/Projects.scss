@@ -2,12 +2,13 @@
 @import '../../utils/variables.scss';
 
 .projects {
-	min-height: 100vh;
+	min-height: 85vh;
 	display: flex;
 	flex-direction: column;
 
 	h2 {
 		@include sectionTitle('Projects');
+		margin-top: 0rem;
 	}
 
 	.projectsContent {

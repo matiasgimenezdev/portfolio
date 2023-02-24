@@ -1,0 +1,27 @@
+@import '../../utils/variables.scss';
+
+.footer {
+	width: 100%;
+	background-color: $darkprimary;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	* {
+		margin: 0;
+	}
+
+	.footerText {
+		color: $font;
+		font-family: $titleFont;
+		padding: 0.3rem;
+
+		a {
+			text-decoration: none;
+			color: $link;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}

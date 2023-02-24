@@ -1,5 +1,12 @@
 import { ToastContainer, Zoom } from 'react-toastify';
-import { Header, Introduction, About, Knowledge, Projects } from './components';
+import {
+	Header,
+	Introduction,
+	About,
+	Knowledge,
+	Projects,
+	Footer,
+} from './components';
 import { AiFillHome } from 'react-icons/ai';
 import { useEffect, useState } from 'react';
 
@@ -38,6 +45,7 @@ export function Portfolio() {
 				theme='colored'
 				transition={Zoom}
 			/>
+			<Footer />
 		</div>
 	);
 }
