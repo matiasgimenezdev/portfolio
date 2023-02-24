@@ -6,7 +6,8 @@
 
 	.navContainer {
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: center;
+		gap: 5rem;
 		align-items: center;
 		width: 100%;
 		list-style: none;
@@ -26,6 +27,8 @@
 @media screen and (max-width: 1500px) {
 	.nav {
 		.navContainer {
+			justify-content: space-evenly;
+
 			gap: 1rem;
 			.navItem {
 				font-size: 1.7rem;
@@ -46,7 +49,7 @@
 	}
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1250px) {
 	.nav {
 		margin: 1rem;
 		.navContainer {
