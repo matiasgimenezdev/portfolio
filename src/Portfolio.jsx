@@ -1,12 +1,5 @@
 import { ToastContainer, Zoom } from 'react-toastify';
-import {
-	Header,
-	Introduction,
-	About,
-	Knowledge,
-	Projects,
-	Contact,
-} from './components';
+import { Header, Introduction, About, Knowledge, Projects } from './components';
 import { AiFillHome } from 'react-icons/ai';
 import { useEffect, useState } from 'react';
 
