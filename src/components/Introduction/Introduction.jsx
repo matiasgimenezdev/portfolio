@@ -8,7 +8,7 @@ export function Introduction() {
 	const { language } = useContext(LanguageContext);
 
 	return (
-		<section className='introduction'>
+		<section className='introduction animate__animated animate__fadeInLeft'>
 			<div className='introductionContent'>
 				<div className='introductionText'>
 					Hi 👋! I am <span className='name'>Matias</span> <br />
@@ -25,7 +25,7 @@ export function Introduction() {
 					<Socials section='introduction' />
 				</div>
 				<a href='#About' className='moreLink'>
-					<button className='moreButton'>
+					<button className='moreButton '>
 						{language === 'spanish' ? 'Conocé más' : 'Know more'}
 						<FaLongArrowAltRight />
 					</button>

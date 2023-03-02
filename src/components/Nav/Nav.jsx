@@ -5,8 +5,8 @@ import './Nav.scss';
 export function Nav() {
 	const { language } = useContext(LanguageContext);
 	return (
-		<nav className='nav'>
-			<ul className='navContainer'>
+		<nav className='nav animate__animated animate__fadeInRight'>
+			<ul className='navContainer '>
 				<a href='#About'>
 					<li className='navItem'>
 						{language === 'spanish' ? 'Conóceme' : 'About'}

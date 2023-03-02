@@ -15,7 +15,7 @@ export function Controls() {
 		};
 	}, [scroll]);
 	return (
-		<div className='controls'>
+		<div className='controls animate__animated animate__fadeInRight'>
 			{scroll > 0 && (
 				<a href='#Home'>
 					<button className='home' name='home'>

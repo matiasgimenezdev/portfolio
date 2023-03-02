@@ -22,23 +22,6 @@
 			font-family: $headerFont;
 			transition: transform 0.2s ease-in-out;
 			position: relative;
-
-			&::before {
-				content: 'Matias Gimenez';
-				color: transparent;
-				position: absolute;
-				display: inline-block;
-				height: 3px;
-				bottom: 0;
-				left: 0;
-				background-color: $font;
-				transform: scaleX(0);
-				transition: transform 0.5s ease;
-			}
-
-			&:hover::before {
-				transform: scaleX(1);
-			}
 		}
 
 		.logo {
