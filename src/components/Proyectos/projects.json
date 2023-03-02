@@ -22,5 +22,11 @@
 		"url": "https://typing-test-mg.netlify.app/",
 		"gitHub": "https://github.com/matiasgimenezdev/typing-test",
 		"class": "typingTest"
+	},
+	{
+		"title": "TIC-TAC-TOE",
+		"url": "https://tic-tac-toe-mg.netlify.app/",
+		"gitHub": "https://github.com/matiasgimenezdev/tic-tac-toe",
+		"class": "ticTacToe"
 	}
 ]

@@ -25,7 +25,7 @@
 			height: 100%;
 		}
 
-		@mixin project($project) {
+		@mixin project() {
 			font-family: $titleFont;
 			width: 48%;
 			position: relative;
@@ -85,23 +85,28 @@
 		}
 
 		.twitterClone {
-			@include project('twitterClone');
+			@include project();
 			background-image: url('/images/twitterClone.png');
 		}
 
 		.gifBrowser {
-			@include project('gifBrowser');
+			@include project();
 			background-image: url('/images/gifBrowser.png');
 		}
 
 		.typingTest {
-			@include project('typingTest');
+			@include project();
 			background-image: url('/images/typingTest.png');
 		}
 
 		.portfolio {
-			@include project('portfolio');
+			@include project();
 			background-image: url('/images/portfolio.png');
+		}
+
+		.ticTacToe {
+			@include project();
+			background-image: url('/images/ticTacToe.png');
 		}
 	}
 }
