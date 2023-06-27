@@ -1,4 +1,4 @@
-# Matias Gimenez - My personal site
+# Matias Gimenez | My personal site
 
 ## Todo
 
