@@ -1,4 +1,5 @@
-# matiasgimenezdev blog
+# Matias Gimenez - My personal site
+
 ## Todo
 
 - [ ] Dark theme
