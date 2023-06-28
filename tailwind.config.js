@@ -2,7 +2,22 @@
 export default {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				'grey-darkest': '#343A40',
+				'grey-dark': '#495057',
+				'grey-medium': '#6C757D',
+				'grey-base': '#ADB5BD',
+				'grey-light': '#CED4DA',
+				'grey-lightest': '#DEE2E6',
+				'white-high': '#E9ECEF',
+				'white-medium': '#F8F9FA',
+				'white-base': '#FFFFFF',
+			},
+			dropShadow: {
+				'custom-grey': '0 3px 8px #495057',
+			},
+		},
 	},
 	plugins: [],
 };
