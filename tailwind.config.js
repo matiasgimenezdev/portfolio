@@ -15,7 +15,7 @@ export default {
 				'white-base': '#FFFFFF',
 			},
 			dropShadow: {
-				'custom-grey': '0 3px 8px #495057',
+				'custom-grey': '0 2px 2px #495057',
 			},
 		},
 	},
