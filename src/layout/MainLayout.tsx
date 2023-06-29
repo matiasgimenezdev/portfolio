@@ -1,10 +1,10 @@
 import { Navbar } from '../components';
 import { ReactNode, FunctionComponent } from 'react';
 
-interface MainLayoutProps {
+type MainLayoutProps = {
 	children: ReactNode;
 	location?: string;
-}
+};
 
 export const MainLayout: FunctionComponent<MainLayoutProps> = ({
 	children,

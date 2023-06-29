@@ -2,10 +2,10 @@ import { FunctionComponent } from 'react';
 import { PiMoonLight } from 'react-icons/pi';
 import { GrMenu } from 'react-icons/gr';
 
-interface NavbarProps {
+type NavbarProps = {
 	sections: string[];
 	location: string;
-}
+};
 
 export const Navbar: FunctionComponent<NavbarProps> = ({
 	sections,
