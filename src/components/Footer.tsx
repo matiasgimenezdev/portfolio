@@ -5,7 +5,7 @@ import { BsLightbulb, BsLinkedin, BsGithub } from 'react-icons/bs';
 export const Footer: FunctionComponent = () => {
 	return (
 		<footer className='flex flex-col items-center'>
-			<Balancer className='text-center font-light text-xl w-9/12 px-4 block leading-8 mt-10 md:w-1/3 xl:text-2xl'>
+			<Balancer className='text-center font-light text-xl w-9/12 px-4 block mt-10 md:w-1/3 xl:text-2xl'>
 				I am currently doing the fourth year of an Information Systems
 				degree in Argentina. <br /> <br /> I consider myself passionate
 				about technology and software development, so I try to keep
