@@ -42,7 +42,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
 									} text-xl flex justify-center items-center h-16 border-b border-grey-dark md:ml-8 md:border-none md:inline`}
 									key={element}
 								>
-									<Link to={`${element.toLowerCase()}`}>
+									<Link to={`/${element.toLowerCase()}`}>
 										{element}
 									</Link>
 								</li>
