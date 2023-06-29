@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react';
 import { PiMoonLight } from 'react-icons/pi';
+import { GrMenu } from 'react-icons/gr';
 
 interface NavbarProps {
 	sections: string[];
@@ -23,7 +24,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
 							className={
 								location.toLowerCase() === element
 									? 'text-white text-l drop-shadow-custom-grey'
-									: 'text-grey-dark text-xl '
+									: 'hidden text-grey-dark text-xl md:inline'
 							}
 							key={element}
 						>
@@ -33,9 +34,10 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
 				})}
 				<li>
 					{
-						<PiMoonLight className='text-3xl ml-10 mr-4 text-grey-dark' />
+						<PiMoonLight className='text-3xl ml-10 text-grey-dark md:mr-4' />
 					}
 				</li>
+				<li>{<GrMenu className='block text-3xl mr-4 md:hidden' />}</li>
 			</ul>
 		</nav>
 	);
