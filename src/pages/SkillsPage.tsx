@@ -6,8 +6,8 @@ export const SkillsPage: FunctionComponent = () => {
 	return (
 		<MainLayout location='skills'>
 			<main className='flex flex-col items-center mt-16 min-h-60'>
-				<Balancer className='text-center font-light text-xl w-9/12 px-4 block  md:w-1/3 xl:text-2xl'>
-					<h2 className='mb-4 font-medium text-2xl text-grey-dark drop-shadow-grey xl:text-3xl '>
+				<Balancer className='text-center font-light text-xl w-9/12 px-4 block md:w-1/3 xl:text-2xl'>
+					<h2 className='mb-4 font-medium text-3xl text-grey-darkest drop-shadow-grey xl:text-4xl '>
 						Skills & Technologies
 					</h2>
 					I'm excited to share with you the different skills I've
