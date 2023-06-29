@@ -41,3 +41,6 @@ Made with:
       - [ ] Live demo
       - [ ] Repo 
   - [ ] Skills
+
+- [ ] Page transitions
+- [ ] Error page
