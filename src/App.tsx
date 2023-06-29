@@ -6,6 +6,8 @@ function App() {
 		<>
 			<Routes>
 				<Route path='/' element={<HomePage />} />
+				{/* <Route path='/blog' element={<BlogPage />} /> */}
+				{/* <Route path='/blog/note' element={<NotePage />} /> */}
 			</Routes>
 		</>
 	);

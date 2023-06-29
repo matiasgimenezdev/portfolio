@@ -17,6 +17,7 @@ export const MainLayout: FunctionComponent<MainLayoutProps> = ({
 				location={location}
 			/>
 			{children}
+			{/* <Footer/> */}
 		</>
 	);
 };
