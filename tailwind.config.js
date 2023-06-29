@@ -17,6 +17,9 @@ export default {
 			dropShadow: {
 				'custom-grey': '0 2px 2px #495057',
 			},
+			minHeight: {
+				60: '40vh',
+			},
 		},
 	},
 	plugins: [],

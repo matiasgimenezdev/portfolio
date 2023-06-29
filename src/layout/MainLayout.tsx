@@ -1,4 +1,4 @@
-import { Navbar } from '../components';
+import { Navbar, Footer } from '../components';
 import { ReactNode, FunctionComponent } from 'react';
 
 type MainLayoutProps = {
@@ -17,7 +17,7 @@ export const MainLayout: FunctionComponent<MainLayoutProps> = ({
 				location={location}
 			/>
 			{children}
-			{/* <Footer/> */}
+			<Footer />
 		</>
 	);
 };
