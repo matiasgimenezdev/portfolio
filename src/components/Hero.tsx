@@ -5,7 +5,7 @@ import { DiGithubBadge } from 'react-icons/di';
 export const Hero: FunctionComponent = () => {
 	return (
 		<Balancer className='text-center font-light text-xl w-9/12 px-4 block leading-8 md:w-1/3 xl:text-2xl'>
-			<h2 className='mb-4 font-medium text-2xl xl:text-3xl text-grey-dark'>
+			<h2 className='mb-4 font-medium text-2xl text-grey-dark drop-shadow-grey xl:text-3xl  '>
 				Hello, there 👋! My name is Matias.
 			</h2>
 			This is my personal site made using React, Typescript, and
