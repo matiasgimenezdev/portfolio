@@ -1,4 +1,9 @@
 # My personal site | Matias Gimenez 
+Made with:
+- React
+- React Router
+- TailwindCSS
+- TypeScript
 
 ## Todo
 
