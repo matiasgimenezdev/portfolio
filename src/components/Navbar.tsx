@@ -35,7 +35,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
 								<li
 									className={`${
 										location === element.toLowerCase()
-											? 'font-bold drop-shadow-black md:text-white md:text-2xl'
+											? 'font-bold drop-shadow-black text-white md:text-2xl'
 											: 'text-grey-dark'
 									} ${
 										hidden ? 'hidden' : 'block'
