@@ -10,8 +10,6 @@ Made with:
 - [ ] Dark theme
 
   - [ ] ThemeToggle
-  - [ ] next-theme
-  - [ ] Color schemes
 
 - [ ] Multi-lingual support
 
@@ -23,25 +21,25 @@ Made with:
 - [ ] Layout
 
   - [ ] Header con secciones (nav)
-  - [ ] Footer personalizado
-    - [ ] Call to action y links
+  - [x] Footer personalizado
+    - [x] Call to action y links
 
 - [ ] Secciones
 
-  - [ ] HomePage
-    - [ ] Bio/intro
-    - [ ] Curriculum
-    - [ ] Redes sociales
-    - [ ] Contacto
-
-- [ ] Portfolio
-
-  - [ ] Lista de proyectos
-  - [ ] Proyecto
+  - [ ] Home
+    - [x] Bio/intro
+    - [ ] Latest notes
+  - [ ] Blog
+  - [ ] Projects
+  - [ ] Project
     - [ ] Descripción
     - [ ] Links
-      - [ ] Live demo
-      - [ ] Repo
+    - [ ] Live demo
+    - [ ] Repo 
+  - [ ] Skills
+
+- [ ] Portfolio
+  - [ ] Lista de proyectos
 
 - [ ] Blog
   - [ ] Artículos
