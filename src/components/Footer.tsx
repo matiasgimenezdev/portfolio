@@ -33,12 +33,12 @@ export const Footer: FunctionComponent = () => {
 							<BsGithub />
 						</a>
 					</li>
-					<li className='inline text-xl text-[#0a66c2] xl:text-2xl mb-1'>
+					<li className='inline text-xl text-[#0a66c2] xl:text-2x0'>
 						<a
 							href='https://github.com/matiasgimenezdev'
 							target='_blank'
 						>
-							<BsLinkedin />
+							<BsLinkedin className='h-6 w-6' />
 						</a>
 					</li>
 					<li className='text-grey-darkest font-normal text-md'>
