@@ -9,7 +9,7 @@ type NotesListProps = {
 export const NotesList: FunctionComponent<NotesListProps> = ({ title }) => {
 	return (
 		<section className='px-6 py-4 w-full md:p-10 xl:w-1/2 xl:px-20 xl:py-10'>
-			<h4 className='text-xl py-4 px-2 border-b border-grey-light font-bold text-grey-dark drop-shadow-grey md:text-2xl xl:text-3xl '>
+			<h4 className='text-xl py-4 px-2 border-b border-grey-light font-bold text-grey-dark md:text-2xl xl:text-3xl '>
 				{title}
 			</h4>
 			<div className='mb-2'>

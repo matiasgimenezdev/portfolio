@@ -15,7 +15,7 @@ export default {
 				'white-base': '#FFFFFF',
 			},
 			dropShadow: {
-				grey: '0 4px 4px rgba(0,0,0,.4) ',
+				grey: '0 5px 4px rgba(0,0,0,.4) ',
 				black: '0 4px 4px rgba(0,0,0,.8) ',
 			},
 			minHeight: {

@@ -22,7 +22,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
 	return (
 		<header className='h-20'>
 			<nav className='font-sans h-full shadow-md flex w-full items-center justify-between p-3'>
-				<h1 className='text-grey-dark text-2xl ml-4 font-medium '>
+				<h1 className='text-grey-dark text-2xl ml-4 font-medium drop-shadow-grey'>
 					<a href='/'>Matias Gimenez</a>
 				</h1>
 
