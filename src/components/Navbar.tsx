@@ -2,6 +2,7 @@
 import { FunctionComponent, useState } from 'react';
 import { PiMoonLight } from 'react-icons/pi';
 import { GrMenu } from 'react-icons/gr';
+import { Link } from 'react-router-dom';
 
 type NavbarProps = {
 	sections: string[];
@@ -16,31 +17,34 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
 
 	const handleMenu = (): void => {
 		setHidden(!hidden);
-		console.log(hidden);
 	};
 
 	return (
 		<header className='h-20'>
 			<nav className='font-sans h-full shadow-md flex w-full items-center justify-between p-3'>
-				<h1 className='text-grey-dark text-2xl ml-4 font-medium'>
+				<h1 className='text-grey-dark text-2xl ml-4 font-medium '>
 					<a href='/'>Matias Gimenez</a>
 				</h1>
 
 				<ul className='flex align-center relative gap-8 md:flex-row'>
-					<div className='absolute top-14 -right-3 bg-white-medium border-l border-grey-dark w-60 text-center md:static md:bg-white md:border-none'>
+					<div
+						className={`absolute z-50 top-14 -right-3 bg-white-medium border-l border-grey-dark w-60 text-center md:bg-white md:static md:border-none`}
+					>
 						{sections.map((element: string) => {
 							return (
 								<li
-									className={
-										location.toLowerCase() === element
-											? 'text-bold text-xl ml-3 drop-shadow-custom-grey md:text-white'
-											: `${
-													hidden ? 'hidden' : 'block'
-											  } text-grey-dark  flex justify-center items-center h-16 border-b border-grey-dark text-xl md:inline md:text-grey-dark md:ml-8 md:border-none`
-									}
+									className={`${
+										location === element.toLowerCase()
+											? 'font-bold drop-shadow-grey md:text-white md:text-2xl'
+											: 'text-grey-dark'
+									} ${
+										hidden ? 'hidden' : 'block'
+									} text-xl flex justify-center items-center h-16 border-b border-grey-dark md:ml-8 md:border-none md:inline`}
 									key={element}
 								>
-									{element}
+									<Link to={`${element.toLowerCase()}`}>
+										{element}
+									</Link>
 								</li>
 							);
 						})}
