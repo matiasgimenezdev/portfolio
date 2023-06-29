@@ -1,10 +1,10 @@
 # My personal site | Matias Gimenez 
 Made with:
-- React
-- React Router
-- TailwindCSS
-- TypeScript
-
+- [React](https://es.react.dev/)
+- [React Router](https://reactrouter.com/en/main)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+  
 ## Todo
 
 - [ ] Dark theme
@@ -17,7 +17,7 @@ Made with:
   - [ ] Language switcher
 
 - [ ] Layout
-  - [ ] Header con secciones (nav)
+  - [x] Header con secciones (nav)
   - [x] Footer personalizado
     - [x] Call to action y links
 
@@ -40,7 +40,7 @@ Made with:
       - [ ] Links
       - [ ] Live demo
       - [ ] Repo 
-  - [ ] Skills
+  - [x] Skills
 
 - [ ] Page transitions
 - [ ] Error page
