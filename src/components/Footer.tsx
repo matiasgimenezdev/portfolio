@@ -5,7 +5,7 @@ import { BsLightbulb, BsLinkedin, BsGithub } from 'react-icons/bs';
 export const Footer: FunctionComponent = () => {
 	return (
 		<footer className='flex flex-col items-center'>
-			<Balancer className='text-center font-light text-xl w-9/12 px-4 block leading-8 mt-12 md:w-1/3 xl:text-2xl'>
+			<Balancer className='text-center font-light text-xl w-9/12 px-4 block leading-8 mt-10 md:w-1/3 xl:text-2xl'>
 				I am currently doing the fourth year of an Information Systems
 				degree in Argentina. <br /> <br /> I consider myself passionate
 				about technology and software development, so I try to keep
@@ -28,7 +28,7 @@ export const Footer: FunctionComponent = () => {
 			</Balancer>
 			<nav className='w-full max-h-18 py-6 mt-10 shadow-inner footer-shadow'>
 				<ul className='flex gap-5 items-center justify-center'>
-					<li className='inline text-xl text-black xl:text-2xl mb-1'>
+					<li className='inline text-xl text-black xl:text-2xl xl:mb-1'>
 						<a href=''>
 							<BsGithub />
 						</a>
