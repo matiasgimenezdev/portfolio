@@ -10,8 +10,8 @@ export const Footer: FunctionComponent = () => {
 				degree in Argentina. <br /> <br /> I consider myself passionate
 				about technology and software development, so I try to keep
 				learning day by day. <br />
-				<span className='font-normal mt-8 block text-grey-dark'>
-					<BsLightbulb className='inline text-orange-500' /> <br />
+				<span className='font-normal text-xl italic mt-8 block text-grey-darkest'>
+					<BsLightbulb className='inline text-orange-400' /> <br />
 					"Living, learning & leveling up <br />
 					one day at a time"
 				</span>
