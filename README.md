@@ -43,4 +43,4 @@ Made with:
   - [x] Skills
 
 - [ ] Page transitions
-- [ ] Error page
+- [x] Error page
