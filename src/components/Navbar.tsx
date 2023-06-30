@@ -1,6 +1,7 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 import { FunctionComponent, useState } from 'react';
 import { PiMoonLight } from 'react-icons/pi';
+import { BsSun } from 'react-icons/bs';
 import { GrMenu } from 'react-icons/gr';
 import { Link } from 'react-router-dom';
 
@@ -13,10 +14,19 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
 	sections,
 	location,
 }) => {
-	const [hidden, setHidden] = useState(true);
+	const [hidden, setHidden] = useState<boolean>(true);
+	const [theme, setTheme] = useState<string>('light');
 
 	const handleMenu = (): void => {
 		setHidden(!hidden);
+	};
+
+	const handleThemeSwitch = (): void => {
+		if (theme === 'light') {
+			setTheme('dark');
+		} else {
+			setTheme('light');
+		}
 	};
 
 	return (
@@ -35,7 +45,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
 								<li
 									className={`${
 										location === element.toLowerCase()
-											? 'font-bold drop-shadow-black text-white md:text-2xl'
+											? 'font-bold drop-shadow-black text-white'
 											: 'text-grey-dark'
 									} ${
 										hidden ? 'hidden' : 'block'
@@ -50,9 +60,13 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
 						})}
 					</div>
 					<li>
-						{
-							<PiMoonLight className='text-3xl ml-10 text-grey-dark md:mr-4' />
-						}
+						<button onClick={handleThemeSwitch}>
+							{theme === 'light' ? (
+								<PiMoonLight className='text-3xl ml-10 text-grey-dark md:mr-4' />
+							) : (
+								<BsSun className='text-3xl ml-10 text-grey-dark md:mr-4' />
+							)}
+						</button>
 					</li>
 					<li>
 						{
