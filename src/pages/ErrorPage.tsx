@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react';
 import { MainLayout } from '../layout';
+import { Title } from '../components';
 import { Balancer } from 'react-wrap-balancer';
 import { Link } from 'react-router-dom';
 import { IoIosArrowRoundBack } from 'react-icons/io';
@@ -9,9 +10,7 @@ export const ErrorPage: FunctionComponent = () => {
 		<MainLayout location='error'>
 			<main className='flex flex-col items-center mt-16 min-h-60'>
 				<Balancer className='text-center font-light text-md w-9/12 px-4 block  md:w-1/3 md:text-xl'>
-					<h2 className='text-4xl text-grey-darkest drop-shadow-grey font-bold'>
-						404
-					</h2>
+					<Title title='404' />
 					<h3 className='mb-4 font-medium text-2xl text-grey-darkest drop-shadow-grey xl:text-3xl  '>
 						We've lost this page
 					</h3>

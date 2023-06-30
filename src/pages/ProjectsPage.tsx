@@ -4,6 +4,7 @@ import { Balancer } from 'react-wrap-balancer';
 import { PiGithubLogo } from 'react-icons/pi';
 import { TbWorldShare } from 'react-icons/tb';
 import { helpFetch } from '../helpers';
+import { Title } from '../components';
 
 type Project = {
 	title: string;
@@ -33,9 +34,7 @@ export const ProjectsPage: FunctionComponent = () => {
 		<MainLayout location='projects'>
 			<main className='flex flex-col items-center mt-16 min-h-60'>
 				<Balancer className='text-center font-light text-md w-9/12 px-4 block md:w-1/3 md:text-xl'>
-					<h2 className='mb-4 font-medium text-3xl text-grey-darkest drop-shadow-grey xl:text-4xl  '>
-						Projects
-					</h2>
+					<Title title='Projects' />
 					In this section, you will find a collection of some projects
 					I have worked on. Each project represents a unique challenge
 					I undertook to enhance my skills my abilities. <br />

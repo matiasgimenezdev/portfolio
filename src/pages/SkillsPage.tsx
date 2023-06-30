@@ -2,6 +2,7 @@ import { FunctionComponent, useState, useEffect } from 'react';
 import { MainLayout } from '../layout';
 import { Balancer } from 'react-wrap-balancer';
 import { helpFetch } from '../helpers';
+import { Title } from '../components';
 
 type Skill = {
 	name: string;
@@ -30,9 +31,7 @@ export const SkillsPage: FunctionComponent = () => {
 		<MainLayout location='skills'>
 			<main className='flex flex-col items-center mt-16 min-h-60'>
 				<Balancer className='text-center font-light text-md w-9/12 px-4 block md:w-1/3 md:text-xl'>
-					<h2 className='mb-4 font-medium text-3xl text-grey-darkest drop-shadow-grey xl:text-4xl '>
-						Skills & Technologies
-					</h2>
+					<Title title='Skills & Technologies' />
 					I'm excited to share with you the different skills I've
 					acquired throughout my
 					<span className='font-light'> -still brief-</span> journey

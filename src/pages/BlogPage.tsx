@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 import { MainLayout } from '../layout';
 import { Balancer } from 'react-wrap-balancer';
 import { NotesList } from '../components';
-import { Title } from '../components/Title';
+import { Title } from '../components';
 
 export const BlogPage: FunctionComponent = () => {
 	return (
