@@ -5,12 +5,12 @@ import { BsLightbulb, BsLinkedin, BsGithub } from 'react-icons/bs';
 export const Footer: FunctionComponent = () => {
 	return (
 		<footer className='flex flex-col items-center'>
-			<Balancer className='text-center font-light text-xl w-9/12 px-4 block mt-10 md:w-1/3 xl:text-2xl'>
+			<Balancer className='text-center font-light text-md w-9/12 px-4 block mt-10 md:w-1/3 md:text-xl'>
 				I am currently doing the fourth year of an Information Systems
 				degree in Argentina. <br /> <br /> I consider myself passionate
 				about technology and software development, so I try to keep
 				learning day by day. <br />
-				<span className='font-normal text-xl italic mt-8 block text-grey-darkest'>
+				<span className='font-normal text-xl  mt-8 block text-grey-darkest'>
 					<BsLightbulb className='inline text-orange-400' /> <br />
 					"Living, learning & leveling up <br />
 					one day at a time"
@@ -30,7 +30,7 @@ export const Footer: FunctionComponent = () => {
 				<ul className='flex gap-5 items-center justify-center'>
 					<li className='inline text-xl text-black xl:text-2xl xl:mb-1'>
 						<a href=''>
-							<BsGithub />
+							<BsGithub className='h-5 w-5' />
 						</a>
 					</li>
 					<li className='inline text-xl text-[#0a66c2] xl:text-2x0'>
@@ -38,10 +38,10 @@ export const Footer: FunctionComponent = () => {
 							href='https://github.com/matiasgimenezdev'
 							target='_blank'
 						>
-							<BsLinkedin className='h-6 w-6' />
+							<BsLinkedin className='h-5 w-5' />
 						</a>
 					</li>
-					<li className='text-grey-darkest font-normal text-md'>
+					<li className='text-grey-darkest font-normal text-sm'>
 						&copy; 2023 Matias Gimenez
 					</li>
 				</ul>

@@ -6,7 +6,7 @@ export const BlogPage: FunctionComponent = () => {
 	return (
 		<MainLayout location='blog'>
 			<main className='flex flex-col items-center mt-16 min-h-60'>
-				<Balancer className='text-center font-light text-xl w-9/12 px-4 block md:w-1/3 xl:text-2xl'>
+				<Balancer className='text-center font-light text-md w-9/12 px-4 block md:w-1/3 md:text-xl'>
 					<h2 className='mb-4 font-medium text-3xl text-grey-darkest drop-shadow-grey xl:text-4xl  '>
 						Welcome to my blog!
 					</h2>
