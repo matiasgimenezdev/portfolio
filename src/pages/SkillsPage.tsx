@@ -21,7 +21,6 @@ export const SkillsPage: FunctionComponent = () => {
 			})
 			.then((data) => {
 				setSkills(data);
-				console.log(data);
 			});
 	};
 
