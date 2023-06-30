@@ -2,24 +2,30 @@ import { FunctionComponent, useState, useEffect } from 'react';
 import { MainLayout } from '../layout';
 import { Balancer } from 'react-wrap-balancer';
 
+type Skill = {
+	name: string;
+	alt: string;
+	src: string;
+};
+
 export const SkillsPage: FunctionComponent = () => {
-	const [skills, setSkills] = useState([]);
+	const [skills, setSkills] = useState<Skill[]>([]);
 
 	useEffect(() => {
 		getData();
 	}, []);
 
 	const getData = (): void => {
-		fetch('../../data/skills.json', {
+		fetch('/data/skills.json', {
 			headers: {
 				'Content-Type': 'application/json',
 				Accept: 'application/json',
 			},
 		})
-			.then((response) => {
+			.then((response: Response) => {
 				return response.json();
 			})
-			.then((data) => {
+			.then((data: Skill[]) => {
 				setSkills(data);
 			});
 	};
