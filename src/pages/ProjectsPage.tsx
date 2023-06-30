@@ -19,7 +19,7 @@ export const ProjectsPage: FunctionComponent = () => {
 		const fetchData = async () => {
 			try {
 				const data: Project[] = await helpFetch(
-					'../../public/data/skills.json'
+					'../../public/data/projects.json'
 				);
 				setProjects(data);
 			} catch (error) {
