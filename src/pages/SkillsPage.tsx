@@ -1,6 +1,7 @@
 import { FunctionComponent, useState, useEffect } from 'react';
 import { MainLayout } from '../layout';
 import { Balancer } from 'react-wrap-balancer';
+import { helpFetch } from '../helpers';
 
 type Skill = {
 	name: string;
@@ -12,23 +13,18 @@ export const SkillsPage: FunctionComponent = () => {
 	const [skills, setSkills] = useState<Skill[]>([]);
 
 	useEffect(() => {
-		getData();
-	}, []);
-
-	const getData = (): void => {
-		fetch('/data/skills.json', {
-			headers: {
-				'Content-Type': 'application/json',
-				Accept: 'application/json',
-			},
-		})
-			.then((response: Response) => {
-				return response.json();
-			})
-			.then((data: Skill[]) => {
+		const fetchData = async () => {
+			try {
+				const data: Skill[] = await helpFetch(
+					'../../public/data/skills.json'
+				);
 				setSkills(data);
-			});
-	};
+			} catch (error) {
+				console.error(error);
+			}
+		};
+		fetchData();
+	}, []);
 
 	return (
 		<MainLayout location='skills'>
@@ -49,7 +45,10 @@ export const SkillsPage: FunctionComponent = () => {
 					<section className='grid py-4 grid-cols-2 w-90 bg-white-high rounded-md md:grid-cols-3 xl:grid-cols-4 '>
 						{skills.map(({ name, alt, src }) => {
 							return (
-								<article className='flex py-4 px-4 gap-2 justify-center items-center text-center'>
+								<article
+									key={name}
+									className='flex py-4 px-4 gap-2 justify-center items-center text-center'
+								>
 									<img
 										className='h-10 w-10 max-w-10'
 										src={src}

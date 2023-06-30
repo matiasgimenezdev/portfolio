@@ -3,6 +3,7 @@ import { MainLayout } from '../layout';
 import { Balancer } from 'react-wrap-balancer';
 import { PiGithubLogo } from 'react-icons/pi';
 import { TbWorldShare } from 'react-icons/tb';
+import { helpFetch } from '../helpers';
 
 type Project = {
 	title: string;
@@ -15,23 +16,18 @@ export const ProjectsPage: FunctionComponent = () => {
 	const [projects, setProjects] = useState<Project[]>([]);
 
 	useEffect(() => {
-		getData();
-	}, []);
-
-	const getData = (): void => {
-		fetch('/data/projects.json', {
-			headers: {
-				'Content-Type': 'application/json',
-				Accept: 'application/json',
-			},
-		})
-			.then((response: Response) => {
-				return response.json();
-			})
-			.then((data: Project[]) => {
+		const fetchData = async () => {
+			try {
+				const data: Project[] = await helpFetch(
+					'../../public/data/skills.json'
+				);
 				setProjects(data);
-			});
-	};
+			} catch (error) {
+				console.error(error);
+			}
+		};
+		fetchData();
+	}, []);
 
 	return (
 		<MainLayout location='projects'>
