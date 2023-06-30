@@ -6,7 +6,7 @@ import { IoIosArrowRoundBack } from 'react-icons/io';
 
 export const ErrorPage: FunctionComponent = () => {
 	return (
-		<MainLayout>
+		<MainLayout location='error'>
 			<main className='flex flex-col items-center mt-16 min-h-60'>
 				<Balancer className='text-center font-light text-md w-9/12 px-4 block  md:w-1/3 md:text-xl'>
 					<h2 className='text-4xl text-grey-darkest drop-shadow-grey font-bold'>

@@ -6,7 +6,7 @@ import { DiGithubBadge } from 'react-icons/di';
 
 export const HomePage: FunctionComponent = () => {
 	return (
-		<MainLayout>
+		<MainLayout location='home'>
 			<main className='flex flex-col items-center mt-16 min-h-60'>
 				<Balancer className='text-center font-light text-md w-9/12 px-4 block  md:w-1/3 md:text-xl'>
 					<h2 className='mb-4 font-medium text-2xl text-grey-darkest drop-shadow-grey xl:text-3xl  '>

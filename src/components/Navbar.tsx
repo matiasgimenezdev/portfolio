@@ -4,6 +4,7 @@ import { PiMoonLight } from 'react-icons/pi';
 import { BsSun } from 'react-icons/bs';
 import { GrMenu } from 'react-icons/gr';
 import { Link } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 
 type NavbarProps = {
 	sections: string[];
@@ -60,13 +61,18 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
 						})}
 					</div>
 					<li>
-						<button className='swap' onClick={handleThemeSwitch}>
-							{theme === 'light' ? (
-								<PiMoonLight className='text-3xl ml-10 text-grey-dark md:mr-4' />
-							) : (
-								<BsSun className='text-3xl ml-10 text-grey-dark md:mr-4' />
-							)}
-						</button>
+						<AnimatePresence>
+							<motion.button
+								className='swap'
+								onClick={handleThemeSwitch}
+							>
+								{theme === 'light' ? (
+									<PiMoonLight className='text-3xl ml-10 text-grey-dark md:mr-4' />
+								) : (
+									<BsSun className='text-3xl ml-10 text-grey-dark md:mr-4' />
+								)}
+							</motion.button>
+						</AnimatePresence>
 					</li>
 					<li>
 						{
