@@ -25,7 +25,7 @@ Made with:
   - [x] Footer
 
 - [ ] Sections
-  - [ ] Home
+  - [x] Home
     - [x] Bio/intro
     - [ ] Latest notes
   - [ ] Blog
