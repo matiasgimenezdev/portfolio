@@ -31,7 +31,7 @@ Made with:
       - [ ] Lista paginada
     - [ ] Articulo
       - [ ] Title
-      - [ ] Image?
+      - [ ] Content
       - [ ] Date
       - [ ] Tags 
   - [ ] Projects
