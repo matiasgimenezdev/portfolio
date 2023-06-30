@@ -1,19 +1,7 @@
 [
 	{
 		"title": "Portfolio",
-		"image": "/images/portfolio.png",
-		"demoURL": "http://google.com.ar",
-		"repositoryURL": "https://github.com/matiasgimenezdev/blog-portfolio"
-	},
-	{
-		"title": "Portfolio",
-		"image": "/images/portfolio.png",
-		"demoURL": "http://google.com.ar",
-		"repositoryURL": "https://github.com/matiasgimenezdev/blog-portfolio"
-	},
-	{
-		"title": "Portfolio",
-		"image": "/images/portfolio.png",
+		"image": "/images/projects/portfolio.png",
 		"demoURL": "http://google.com.ar",
 		"repositoryURL": "https://github.com/matiasgimenezdev/blog-portfolio"
 	}
