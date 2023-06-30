@@ -2,7 +2,7 @@
 	{
 		"title": "Portfolio",
 		"image": "/images/projects/portfolio.png",
-		"demoURL": "http://google.com.ar",
+		"demoURL": "/",
 		"repositoryURL": "https://github.com/matiasgimenezdev/blog-portfolio"
 	}
 ]
