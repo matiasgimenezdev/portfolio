@@ -46,7 +46,7 @@ export const SkillsPage: FunctionComponent = () => {
 					keep up with the ever-evolving world of technology.
 				</Balancer>
 				<section className='container flex mt-8 justify-center mb-4'>
-					<section className='grid py-4 grid-cols-2 w-90 bg-white-medium rounded-md md:grid-cols-3 xl:grid-cols-4 '>
+					<section className='grid py-4 grid-cols-2 w-90 bg-white-high rounded-md md:grid-cols-3 xl:grid-cols-4 '>
 						{skills.map(({ name, alt, src }) => {
 							return (
 								<article className='flex py-4 px-4 gap-2 justify-center items-center text-center'>
