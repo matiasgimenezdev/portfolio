@@ -17,7 +17,7 @@ Made with:
   - [ ] Global state (Zustand or Context)
   - [ ] Language switcher
 
-- [ ] Layout
+- [x] Layout
   - [x] Header con secciones (nav)
   - [x] Footer
 
