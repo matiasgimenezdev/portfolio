@@ -11,7 +11,7 @@ Made with:
   - [x] ThemeToggle
   - [ ] Global state (Zustand or Context)
 
-- [ ] Multi-lingual support for articles
+- [ ] Multi-lingual support
   - [ ] Extract content to variables/json files
   - [ ] Render articles conditionally depending on language
   - [ ] Global state (Zustand or Context)
