@@ -10,6 +10,9 @@ Made with:
 - [ ] Dark theme
   - [x] ThemeToggle
   - [ ] Global state (Zustand or Context)
+      
+- [x] Page transitions
+- [x] Error page (404)
 
 - [ ] Multi-lingual support
   - [ ] Extract content to variables/json files
@@ -41,6 +44,3 @@ Made with:
       - [x] Live demo
       - [x] Repo 
   - [x] Skills
-
-- [ ] Page transitions
-- [x] Error page
