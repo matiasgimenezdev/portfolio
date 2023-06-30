@@ -9,7 +9,7 @@ Made with:
 
 - [ ] Dark theme
   - [x] ThemeToggle
-  - [] Global state (Zustand or Context)
+  - [ ] Global state (Zustand or Context)
 
 - [ ] Multi-lingual support for articles
   - [ ] Extract content to variables/json files
