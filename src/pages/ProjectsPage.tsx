@@ -51,12 +51,12 @@ export const ProjectsPage: FunctionComponent = () => {
 						{projects.map(
 							({ title, image, demoURL, repositoryURL }) => {
 								return (
-									<article className='w-full px-5 mt-4 rounded-md'>
+									<article className='w-full px-5 mt-4 rounded-md h-52'>
 										<figure className='relative h-full w-full'>
 											<img
 												src={image}
 												alt={title}
-												className='rounded-md figure-shadow'
+												className='rounded-md figure-shadow h-full w-full '
 											/>
 											<figcaption className='absolute bottom-2 left-3 text-2xl font-medium text-white drop-shadow-figcaption '>
 												{title}
