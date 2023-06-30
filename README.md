@@ -8,18 +8,18 @@ Made with:
 ## Todo
 
 - [ ] Dark theme
-  - [ ] ThemeToggle
+  - [x] ThemeToggle
+  - [ ] Global state (Zustand or Context)
 
 - [ ] Multi-lingual support
   - [ ] Extract content to variables/json files
   - [ ] Render articles conditionally depending on language
-  - [ ] Global state (Zustand or Context?)
+  - [ ] Global state (Zustand or Context)
   - [ ] Language switcher
 
 - [ ] Layout
   - [x] Header con secciones (nav)
-  - [x] Footer personalizado
-    - [x] Call to action y links
+  - [x] Footer
 
 - [ ] Sections
   - [ ] Home
@@ -34,12 +34,12 @@ Made with:
       - [ ] Content
       - [ ] Date
       - [ ] Tags 
-  - [ ] Projects
-    - [ ] Project
-      - [ ] Descripción
-      - [ ] Links
-      - [ ] Live demo
-      - [ ] Repo 
+  - [x] Projects
+    - [x] Project
+      - [x] Descripción
+      - [x] Links
+      - [x] Live demo
+      - [x] Repo 
   - [x] Skills
 
 - [ ] Page transitions
