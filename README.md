@@ -9,15 +9,15 @@ Made with:
 
 - [ ] Dark theme
   - [x] ThemeToggle
-  - [ ] Global state (Zustand or Context)
+  - [] Global state (Zustand or Context)
 
-- [ ] Multi-lingual support
+- [ ] Multi-lingual support for articles
   - [ ] Extract content to variables/json files
   - [ ] Render articles conditionally depending on language
   - [ ] Global state (Zustand or Context)
   - [ ] Language switcher
 
-- [ ] Layout
+- [x] Layout
   - [x] Header con secciones (nav)
   - [x] Footer
 
