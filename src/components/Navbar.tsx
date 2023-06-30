@@ -60,7 +60,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
 						})}
 					</div>
 					<li>
-						<button onClick={handleThemeSwitch}>
+						<button className='swap' onClick={handleThemeSwitch}>
 							{theme === 'light' ? (
 								<PiMoonLight className='text-3xl ml-10 text-grey-dark md:mr-4' />
 							) : (

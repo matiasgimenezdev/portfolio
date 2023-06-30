@@ -9,3 +9,11 @@
 .figure-shadow {
 	box-shadow: 3px 3px 6px 0 rgba(73, 80, 87, 0.5);
 }
+
+.swap {
+	transition: transform 0.5s ease;
+}
+
+.swap:active {
+	transform: rotateZ(25deg);
+}
