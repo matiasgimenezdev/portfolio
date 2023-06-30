@@ -5,6 +5,7 @@ import {
 	SkillsPage,
 	ProjectsPage,
 	ErrorPage,
+	ArticlePage,
 } from './pages';
 
 function App() {
@@ -12,9 +13,9 @@ function App() {
 		<>
 			<Routes>
 				<Route path='/' element={<HomePage />} />
-				{/* <Route path='/blog/note' element={<NotePage />} /> */}
 				<Route path='/skills' element={<SkillsPage />} />
 				<Route path='/blog' element={<BlogPage />} />
+				<Route path='/blog/:article' element={<ArticlePage />} />
 				<Route path='/projects' element={<ProjectsPage />} />
 				<Route path='/*' element={<ErrorPage />} />
 			</Routes>
