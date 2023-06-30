@@ -16,7 +16,9 @@ export const Footer: FunctionComponent = () => {
 					one day at a time"
 				</span>
 				<br />
-				I'm looking for my first software development job. Here is my{' '}
+				I'm looking for my first software development job.
+				<br />
+				Here is my{' '}
 				<a
 					href='https://github.com/matiasgimenezdev'
 					target='_blank'
