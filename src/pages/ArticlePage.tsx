@@ -1,5 +1,5 @@
 import { FunctionComponent, useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, Navigate, useParams } from 'react-router-dom';
 import { MainLayout } from '../layout';
 import { Title } from '../components/Title';
 import { helpFetch } from '../helpers';
@@ -11,6 +11,7 @@ export const ArticlePage: FunctionComponent = () => {
 	const { article } = useParams();
 	const [currentArticle, setCurrentArticle] = useState<Article>();
 	const [language, setLanguage] = useState<string>('english');
+	const [articleContent, setArticleContent] = useState('');
 
 	const handleLanguageSwitch = (): void => {
 		if (language == 'english') {
@@ -35,6 +36,21 @@ export const ArticlePage: FunctionComponent = () => {
 		};
 		fetchData();
 	}, [article]);
+
+	useEffect(() => {
+		const getArticleContent = async () => {
+			const filePath = `/content/${currentArticle?.id}/${currentArticle?.id}.html`;
+			try {
+				const response = await fetch(filePath);
+				const htmlContent = await response.text();
+				setArticleContent(htmlContent);
+			} catch (error) {
+				<Navigate to='/error' />;
+			}
+		};
+
+		getArticleContent();
+	}, [currentArticle]);
 
 	return (
 		<MainLayout>
@@ -73,11 +89,10 @@ export const ArticlePage: FunctionComponent = () => {
 					})}
 				</ul>
 
-				<Balancer className='text font-light mt-4 text-md min-w-full px-6 block py-2 md:text-lg md:px-40'>
-					<ReactMarkdown>
-						*React-Markdown* is **Awesome**
-					</ReactMarkdown>
-				</Balancer>
+				<Balancer
+					dangerouslySetInnerHTML={{ __html: articleContent }}
+					className='text font-light mt-4 text-md min-w-full px-6 block py-2 md:text-lg md:px-32'
+				/>
 				<Link to='/blog' className='text-md font-normal mt-4'>
 					Return to all the notes
 				</Link>
