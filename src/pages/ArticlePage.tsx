@@ -99,7 +99,10 @@ export const ArticlePage: FunctionComponent = () => {
 					</ReactMarkdown>
 				</Balancer>
 
-				<Link to='/blog' className='text-md font-normal mt-4'>
+				<Link
+					to='/blog'
+					className='text-md font-semibold text-grey-darkest mt-4 bg-white-high p-2 px-3 rounded-lg'
+				>
 					Return to all the notes
 				</Link>
 			</main>
