@@ -13,7 +13,9 @@ export const ProjectsPage: FunctionComponent = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const data: Project[] = await helpFetch('/data/projects.json');
+				const data: Project[] = await helpFetch(
+					'../../src/data/projects.json'
+				);
 				setProjects(data);
 			} catch (error) {
 				console.error(error);

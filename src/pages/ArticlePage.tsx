@@ -25,7 +25,9 @@ export const ArticlePage: FunctionComponent = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const data: Article[] = await helpFetch('/data/articles.json');
+				const data: Article[] = await helpFetch(
+					'../../src/data/articles.json'
+				);
 
 				const current: Article = data.filter((item) =>
 					item.path.includes(article ?? '')
