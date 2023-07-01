@@ -12,6 +12,7 @@ type ArticleListProps = {
 type Article = {
 	title: string;
 	date: string;
+	tags: string[];
 	path: string;
 	id: string;
 };
@@ -41,7 +42,8 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 			return (
 				<>
 					{articles
-						.slice(0, 4)
+						.slice(-4)
+						.reverse()
 						.map(({ title, date, path, id }: Article) => (
 							<ArticleLink
 								key={id}
