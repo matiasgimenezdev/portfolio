@@ -5,6 +5,7 @@ import { Title } from '../components/Title';
 import { helpFetch } from '../helpers';
 import { Article } from '../types';
 import { Balancer } from 'react-wrap-balancer';
+import { IoIosArrowRoundBack } from 'react-icons/io';
 
 export const ArticlePage: FunctionComponent = () => {
 	const { article } = useParams();
@@ -95,9 +96,10 @@ export const ArticlePage: FunctionComponent = () => {
 
 				<Link
 					to='/blog'
-					className='text-md font-semibold text-grey-darkest mt-4 bg-white-high p-2 px-3 rounded-lg'
+					className='text-md font-semibold text-grey-darkest mt-4 p-2 px-3 rounded-lg hover:-translate-x-5 transition duration-300'
 				>
-					Return to all the notes
+					<IoIosArrowRoundBack className='inline-block' /> Return to
+					the blog
 				</Link>
 			</main>
 		</MainLayout>
