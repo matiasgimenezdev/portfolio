@@ -45,13 +45,13 @@ export const ArticlePage: FunctionComponent = () => {
 				>
 					{language === 'english' ? (
 						<img
-							src='../../public/icons/english.svg'
+							src='/icons/english.svg'
 							alt='USA flag'
 							className='m-auto'
 						/>
 					) : (
 						<img
-							src='../../public/icons/spanish.svg'
+							src='/icons/spanish.svg'
 							alt='Spain flag'
 							className='m-auto'
 						/>
