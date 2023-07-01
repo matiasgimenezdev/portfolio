@@ -13,7 +13,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
 	sections,
 	location,
 }) => {
-	const [isOpen, setIsOpen] = useState<boolean>(true);
+	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const [theme, setTheme] = useState<string>('light');
 
 	const handleMenu = (): void => {
