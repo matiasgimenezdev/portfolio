@@ -19,7 +19,6 @@ export const MainLayout: FunctionComponent<MainLayoutProps> = ({
 			/>
 			<AnimatePresence>
 				<motion.div
-					className='absolute'
 					key={location}
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
