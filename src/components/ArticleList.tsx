@@ -149,50 +149,6 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 		);
 	};
 
-	// const renderPaginationIndex = () => {
-	// 	return (
-	// 		<ul className='w-full text-center py-4 pb-0'>
-	// 			<li
-	// 				className={`${
-	// 					currentPage === 1 ? 'hidden' : 'inline-block'
-	// 				} mr-2 text-lg`}
-	// 				onClick={() => {
-	// 					setCurrentPage(currentPage - 1);
-	// 				}}
-	// 			>
-	// 				<BsArrowLeftShort className='inline-block' />
-	// 			</li>
-
-	// 			{pages.map((_, index) => {
-	// 				return (
-	// 					<li
-	// 						key={index + 1}
-	// 						className={`inline-block mr-1 px-1 text-lg ${
-	// 							index + 1 == currentPage && 'font-bold'
-	// 						}`}
-	// 						onClick={() => {
-	// 							setCurrentPage(index + 1);
-	// 						}}
-	// 					>
-	// 						{index + 1}
-	// 					</li>
-	// 				);
-	// 			})}
-
-	// 			<li
-	// 				className={`${
-	// 					currentPage === pagesCount ? 'hidden' : 'inline-block'
-	// 				} text-lg`}
-	// 				onClick={() => {
-	// 					setCurrentPage(currentPage + 1);
-	// 				}}
-	// 			>
-	// 				<BsArrowRightShort className='inline-block' />
-	// 			</li>
-	// 		</ul>
-	// 	);
-	// };
-
 	const renderNotes = () => {
 		if (!paginated) {
 			return (
