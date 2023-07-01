@@ -31,7 +31,7 @@ Made with:
     -   [x] Home
         -   [x] Bio/intro
         -   [x] Latest notes
-    -   [ ] Blog
+    -   [x] Blog
         -   [x] Lista de artículos paginada
         -   [x] Articulo
             -   [x] Title
