@@ -23,7 +23,7 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 }) => {
 	const [articles, setArticles] = useState<Article[]>([]);
 	const [currentPage, setCurrentPage] = useState<number>(1);
-	const [pagesCount, setPagesCount] = useState<number>();
+	const [pagesCount, setPagesCount] = useState<number>(1);
 	const [pages, setPages] = useState<Article[][]>([]);
 	const max = 4;
 
@@ -63,7 +63,6 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 			return 'null';
 		}
 
-		console.log(pages[currentPage - 1]);
 		return pages[currentPage - 1].map(({ title, date, path }: Article) => (
 			<ArticleLink key={title} title={title} date={date} path={path} />
 		));
@@ -84,19 +83,56 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 				</li>
 
 				{pages.map((_, index) => {
-					return (
-						<li
-							key={index + 1}
-							className={`inline-block mr-1 px-1 text-lg ${
-								index + 1 == currentPage && 'font-bold'
-							}`}
-							onClick={() => {
-								setCurrentPage(index + 1);
-							}}
-						>
-							{index + 1}
-						</li>
-					);
+					if (pagesCount > 6) {
+						if (
+							index === 0 ||
+							index === pagesCount - 1 ||
+							(index >= currentPage - 2 &&
+								index <= currentPage + 1)
+						) {
+							return (
+								<li
+									key={index + 1}
+									className={`inline-block mr-1 px-1 text-lg ${
+										index + 1 === currentPage
+											? 'font-bold'
+											: ''
+									}`}
+									onClick={() => {
+										setCurrentPage(index + 1);
+									}}
+								>
+									{index + 1}
+								</li>
+							);
+						} else if (
+							index === currentPage - 3 ||
+							index === currentPage + 2
+						) {
+							return (
+								<li
+									key={index + 1}
+									className='inline-block mx-1 text-lg'
+								>
+									...
+								</li>
+							);
+						}
+					} else {
+						return (
+							<li
+								key={index + 1}
+								className={`inline-block mr-1 px-1 text-lg ${
+									index + 1 === currentPage ? 'font-bold' : ''
+								}`}
+								onClick={() => {
+									setCurrentPage(index + 1);
+								}}
+							>
+								{index + 1}
+							</li>
+						);
+					}
 				})}
 
 				<li
@@ -112,6 +148,51 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 			</ul>
 		);
 	};
+
+	// const renderPaginationIndex = () => {
+	// 	return (
+	// 		<ul className='w-full text-center py-4 pb-0'>
+	// 			<li
+	// 				className={`${
+	// 					currentPage === 1 ? 'hidden' : 'inline-block'
+	// 				} mr-2 text-lg`}
+	// 				onClick={() => {
+	// 					setCurrentPage(currentPage - 1);
+	// 				}}
+	// 			>
+	// 				<BsArrowLeftShort className='inline-block' />
+	// 			</li>
+
+	// 			{pages.map((_, index) => {
+	// 				return (
+	// 					<li
+	// 						key={index + 1}
+	// 						className={`inline-block mr-1 px-1 text-lg ${
+	// 							index + 1 == currentPage && 'font-bold'
+	// 						}`}
+	// 						onClick={() => {
+	// 							setCurrentPage(index + 1);
+	// 						}}
+	// 					>
+	// 						{index + 1}
+	// 					</li>
+	// 				);
+	// 			})}
+
+	// 			<li
+	// 				className={`${
+	// 					currentPage === pagesCount ? 'hidden' : 'inline-block'
+	// 				} text-lg`}
+	// 				onClick={() => {
+	// 					setCurrentPage(currentPage + 1);
+	// 				}}
+	// 			>
+	// 				<BsArrowRightShort className='inline-block' />
+	// 			</li>
+	// 		</ul>
+	// 	);
+	// };
+
 	const renderNotes = () => {
 		if (!paginated) {
 			return (
