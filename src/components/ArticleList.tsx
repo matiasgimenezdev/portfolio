@@ -22,6 +22,10 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 	paginated = false,
 }) => {
 	const [articles, setArticles] = useState<Article[]>([]);
+	const [currentPage, setCurrentPage] = useState<number>(1);
+	const [pagesCount, setPagesCount] = useState<number>();
+	const [pages, setPages] = useState<Article[][]>([]);
+	const max = 4;
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -37,6 +41,77 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 		fetchData();
 	}, []);
 
+	useEffect(() => {
+		const pages: Article[][] = [];
+		const pagesCount: number = Math.ceil(articles.length / max);
+		setPagesCount(pagesCount);
+
+		for (let i = 0; i < pagesCount; i += 1) {
+			let page: Article[];
+			if (i + 1 === pagesCount) {
+				page = articles.slice(i * max, articles.length + 1);
+			} else {
+				page = articles.slice(i * max, i * max + max);
+			}
+			pages.push(page);
+		}
+		setPages(pages);
+	}, [articles]);
+
+	const renderCurrentPage = () => {
+		if (pages.length === 0) {
+			return 'null';
+		}
+
+		console.log(pages[currentPage - 1]);
+		return pages[currentPage - 1].map(({ title, date, path }: Article) => (
+			<ArticleLink key={title} title={title} date={date} path={path} />
+		));
+	};
+
+	const renderPaginationIndex = () => {
+		return (
+			<ul className='w-full text-center py-4 pb-0'>
+				<li
+					className={`${
+						currentPage === 1 ? 'hidden' : 'inline-block'
+					} mr-2 text-lg`}
+					onClick={() => {
+						setCurrentPage(currentPage - 1);
+					}}
+				>
+					<BsArrowLeftShort className='inline-block' />
+				</li>
+
+				{pages.map((_, index) => {
+					return (
+						<li
+							key={index + 1}
+							className={`inline-block mr-1 px-1 text-lg ${
+								index + 1 == currentPage && 'font-bold'
+							}`}
+							onClick={() => {
+								setCurrentPage(index + 1);
+							}}
+						>
+							{index + 1}
+						</li>
+					);
+				})}
+
+				<li
+					className={`${
+						currentPage === pagesCount ? 'hidden' : 'inline-block'
+					} text-lg`}
+					onClick={() => {
+						setCurrentPage(currentPage + 1);
+					}}
+				>
+					<BsArrowRightShort className='inline-block' />
+				</li>
+			</ul>
+		);
+	};
 	const renderNotes = () => {
 		if (!paginated) {
 			return (
@@ -64,25 +139,8 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 		} else {
 			return (
 				<>
-					{articles.map(({ title, date, path }: Article) => (
-						<ArticleLink
-							key={title}
-							title={title}
-							date={date}
-							path={path}
-						/>
-					))}
-					<ul className='w-full text-center py-2'>
-						<li className='inline-block hidden'>
-							<BsArrowLeftShort className='inline-block' />
-						</li>
-						<li className='inline-block mr-1 font-bold'>1</li>
-						<li className='inline-block mr-1'>2</li>
-						<li className='inline-block mr-1'>3</li>
-						<li className='inline-block'>
-							<BsArrowRightShort className='inline-block' />
-						</li>
-					</ul>
+					{renderCurrentPage()}
+					{renderPaginationIndex()}
 				</>
 			);
 		}
