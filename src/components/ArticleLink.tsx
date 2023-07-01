@@ -7,7 +7,7 @@ type NoteLinkProps = {
 	path: string;
 };
 
-export const NoteLink: FunctionComponent<NoteLinkProps> = ({
+export const ArticleLink: FunctionComponent<NoteLinkProps> = ({
 	title,
 	date,
 	path,

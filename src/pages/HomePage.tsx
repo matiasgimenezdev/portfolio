@@ -1,6 +1,6 @@
 import { MainLayout } from '../layout';
 import { FunctionComponent } from 'react';
-import { NotesList } from '../components';
+import { ArticleList } from '../components';
 import { Balancer } from 'react-wrap-balancer';
 import { DiGithubBadge } from 'react-icons/di';
 import { Title } from '../components';
@@ -25,7 +25,7 @@ export const HomePage: FunctionComponent = () => {
 					</a>
 					.
 				</Balancer>
-				<NotesList title='Latest notes' />
+				<ArticleList title='Latest notes' />
 			</main>
 		</MainLayout>
 	);

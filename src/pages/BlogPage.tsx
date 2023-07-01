@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import { MainLayout } from '../layout';
 import { Balancer } from 'react-wrap-balancer';
-import { NotesList } from '../components';
+import { ArticleList } from '../components';
 import { Title } from '../components';
 
 export const BlogPage: FunctionComponent = () => {
@@ -16,7 +16,7 @@ export const BlogPage: FunctionComponent = () => {
 					code. <br /> Thanks for getting here{' '}
 					<span className='text-lg'>🤍</span>.
 				</Balancer>
-				<NotesList title='All my notes' paginated={true} />
+				<ArticleList title='All my notes' paginated={true} />
 			</main>
 		</MainLayout>
 	);

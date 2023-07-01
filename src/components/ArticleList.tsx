@@ -1,10 +1,10 @@
 import { FunctionComponent, useState, useEffect } from 'react';
-import { NoteLink } from './NoteLink';
+import { ArticleLink } from './ArticleLink';
 import { Link } from 'react-router-dom';
 import { helpFetch } from '../helpers';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 
-type NotesListProps = {
+type ArticleListProps = {
 	title: string;
 	paginated?: boolean;
 };
@@ -16,7 +16,7 @@ type Article = {
 	id: string;
 };
 
-export const NotesList: FunctionComponent<NotesListProps> = ({
+export const ArticleList: FunctionComponent<ArticleListProps> = ({
 	title,
 	paginated = false,
 }) => {
@@ -43,7 +43,7 @@ export const NotesList: FunctionComponent<NotesListProps> = ({
 					{articles
 						.slice(0, 4)
 						.map(({ title, date, path, id }: Article) => (
-							<NoteLink
+							<ArticleLink
 								key={id}
 								title={title}
 								date={date}
@@ -63,7 +63,7 @@ export const NotesList: FunctionComponent<NotesListProps> = ({
 			return (
 				<>
 					{articles.map(({ title, date, path }: Article) => (
-						<NoteLink
+						<ArticleLink
 							key={title}
 							title={title}
 							date={date}
