@@ -98,9 +98,9 @@ export const ArticlePage: FunctionComponent = () => {
 					})}
 				</ul>
 
-				<Balancer
+				<p
 					dangerouslySetInnerHTML={{ __html: articleContent }}
-					className='text font-light mt-4 text-md  px-6 block py-2 min-w-[75%] md:text-lg md:px-16'
+					className='text font-light mt-4 text-md w-[100%] xs:w-9/12 px-6 block py-2 md:w-[70%] md:text-lg '
 				/>
 
 				<Link
