@@ -5,8 +5,6 @@ import { Title } from '../components/Title';
 import { helpFetch } from '../helpers';
 import { Article } from '../types';
 import { Balancer } from 'react-wrap-balancer';
-import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
-import remarkGfm from 'remark-gfm';
 
 export const ArticlePage: FunctionComponent = () => {
 	const { article } = useParams();
