@@ -5,6 +5,7 @@ import { Title } from '../components/Title';
 import { helpFetch } from '../helpers';
 import { Article } from '../types';
 import { Balancer } from 'react-wrap-balancer';
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 
 export const ArticlePage: FunctionComponent = () => {
 	const { article } = useParams();
@@ -13,9 +14,7 @@ export const ArticlePage: FunctionComponent = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const data: Article[] = await helpFetch(
-					'../../public/data/articles.json'
-				);
+				const data: Article[] = await helpFetch('/data/articles.json');
 
 				const current: Article = data.filter((item) =>
 					item.path.includes(article ?? '')
@@ -45,14 +44,9 @@ export const ArticlePage: FunctionComponent = () => {
 					})}
 				</ul>
 				<Balancer className='text font-light mt-4 text-md min-w-full px-6 block md:text-lg md:p-8'>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Voluptates, illo placeat officiis, sed quia cupiditate quas
-					labore nulla ea vero libero! Natus expedita a consequuntur
-					nam quaerat dignissimos aliquam at? Lorem ipsum dolor sit
-					amet consectetur adipisicing elit. Voluptates, illo placeat
-					officiis, sed quia cupiditate quas labore nulla ea vero
-					libero! Natus expedita a consequuntur nam quaerat
-					dignissimos aliquam at?
+					<ReactMarkdown>
+						*React-Markdown* is **Awesome**
+					</ReactMarkdown>
 				</Balancer>
 				<Link to='/blog' className='text-md font-normal mt-4'>
 					Return to all the notes
