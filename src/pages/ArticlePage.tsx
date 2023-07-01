@@ -10,6 +10,15 @@ import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 export const ArticlePage: FunctionComponent = () => {
 	const { article } = useParams();
 	const [currentArticle, setCurrentArticle] = useState<Article>();
+	const [language, setLanguage] = useState<string>('english');
+
+	const handleLanguageSwitch = (): void => {
+		if (language == 'english') {
+			setLanguage('spanish');
+		} else {
+			setLanguage('english');
+		}
+	};
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -30,12 +39,32 @@ export const ArticlePage: FunctionComponent = () => {
 	return (
 		<MainLayout>
 			<main className='flex flex-col items-center mt-16 min-h-60'>
+				<button
+					className='w-7 h-7 text-center mb-3'
+					onClick={handleLanguageSwitch}
+				>
+					{language === 'english' ? (
+						<img
+							src='../../public/icons/english.svg'
+							alt='USA flag'
+							className='m-auto'
+						/>
+					) : (
+						<img
+							src='../../public/icons/spanish.svg'
+							alt='Spain flag'
+							className='m-auto'
+						/>
+					)}
+				</button>
+				<p>{currentArticle?.fullDate}</p>
 				<Title title={currentArticle ? currentArticle?.title : ''} />
+
 				<ul>
 					{currentArticle?.tags.map((tag) => {
 						return (
 							<span
-								className='bg-grey-lightest py-1 px-3 rounded-2xl text-xs'
+								className='bg-grey-lightest py-1 px-3 ml-1 rounded-2xl text-xs'
 								key={tag}
 							>
 								{tag}
@@ -43,7 +72,8 @@ export const ArticlePage: FunctionComponent = () => {
 						);
 					})}
 				</ul>
-				<Balancer className='text font-light mt-4 text-md min-w-full px-6 block md:text-lg md:p-8'>
+
+				<Balancer className='text font-light mt-4 text-md min-w-full px-6 block py-2 md:text-lg md:px-40'>
 					<ReactMarkdown>
 						*React-Markdown* is **Awesome**
 					</ReactMarkdown>
