@@ -3,17 +3,11 @@ import { ArticleLink } from './ArticleLink';
 import { Link } from 'react-router-dom';
 import { helpFetch } from '../helpers';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
+import { Article } from '../types';
 
 type ArticleListProps = {
 	title: string;
 	paginated?: boolean;
-};
-
-type Article = {
-	title: string;
-	date: string;
-	tags: string[];
-	path: string;
 };
 
 export const ArticleList: FunctionComponent<ArticleListProps> = ({

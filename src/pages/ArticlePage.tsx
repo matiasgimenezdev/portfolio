@@ -3,16 +3,11 @@ import { Link, useParams } from 'react-router-dom';
 import { MainLayout } from '../layout';
 import { Title } from '../components/Title';
 import { helpFetch } from '../helpers';
+import { Article } from '../types';
 
 export const ArticlePage: FunctionComponent = () => {
 	const { article } = useParams();
 	const [currentArticle, setCurrentArticle] = useState<Article>();
-	type Article = {
-		title: string;
-		date: string;
-		tags: string[];
-		path: string;
-	};
 
 	useEffect(() => {
 		const fetchData = async () => {

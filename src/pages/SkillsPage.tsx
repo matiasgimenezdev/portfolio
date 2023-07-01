@@ -3,12 +3,7 @@ import { MainLayout } from '../layout';
 import { Balancer } from 'react-wrap-balancer';
 import { helpFetch } from '../helpers';
 import { Title } from '../components';
-
-type Skill = {
-	name: string;
-	alt: string;
-	src: string;
-};
+import { Skill } from '../types';
 
 export const SkillsPage: FunctionComponent = () => {
 	const [skills, setSkills] = useState<Skill[]>([]);

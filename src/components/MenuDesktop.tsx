@@ -1,12 +1,7 @@
 import { Link } from 'react-router-dom';
+import { Menu } from '../types';
 
-export const MenuDesktop = ({
-	sections,
-	location,
-}: {
-	sections: string[];
-	location: string;
-}) => {
+export const MenuDesktop = ({ sections, location }: Menu) => {
 	return (
 		<ul
 			className={`bg-white-medium border-l border-grey-dark w-60 text-center hidden md:bg-white md:block md:border-none`}

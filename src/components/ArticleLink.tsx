@@ -2,13 +2,13 @@ import { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
-type NoteLinkProps = {
+type ArticleLinkProps = {
 	title: string;
 	date: string;
 	path: string;
 };
 
-export const ArticleLink: FunctionComponent<NoteLinkProps> = ({
+export const ArticleLink: FunctionComponent<ArticleLinkProps> = ({
 	title,
 	date,
 	path,

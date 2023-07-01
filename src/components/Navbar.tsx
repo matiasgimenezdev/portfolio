@@ -3,16 +3,12 @@ import { PiMoonLight } from 'react-icons/pi';
 import { BsSun } from 'react-icons/bs';
 import { GrMenu } from 'react-icons/gr';
 import { MenuDesktop, MenuMobile } from './';
+import { Menu } from '../types/Menu';
 
-type NavbarProps = {
-	sections: string[];
-	location: string;
-};
-
-export const Navbar: FunctionComponent<NavbarProps> = ({
+export const Navbar: FunctionComponent<Menu> = ({
 	sections,
 	location,
-}) => {
+}: Menu) => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const [theme, setTheme] = useState<string>('light');
 

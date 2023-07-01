@@ -5,13 +5,7 @@ import { PiGithubLogo } from 'react-icons/pi';
 import { TbWorldShare } from 'react-icons/tb';
 import { helpFetch } from '../helpers';
 import { Title } from '../components';
-
-type Project = {
-	title: string;
-	image: string;
-	demoURL: string;
-	repositoryURL: string;
-};
+import { Project } from '../types';
 
 export const ProjectsPage: FunctionComponent = () => {
 	const [projects, setProjects] = useState<Project[]>([]);

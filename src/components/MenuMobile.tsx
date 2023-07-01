@@ -1,15 +1,8 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Menu } from '../types';
 
-export const MenuMobile = ({
-	sections,
-	location,
-	isOpen,
-}: {
-	sections: string[];
-	location: string;
-	isOpen: boolean;
-}) => {
+export const MenuMobile = ({ sections, location, isOpen }: Menu) => {
 	return (
 		<AnimatePresence>
 			{isOpen && (
