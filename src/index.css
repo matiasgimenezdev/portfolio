@@ -17,3 +17,20 @@
 .swap:active {
 	transform: rotateZ(25deg);
 }
+
+pre {
+	width: 100%;
+	display: block;
+	margin-top: 0.6rem;
+	margin-bottom: 0.1rem;
+	background-color: #f8f9fa;
+	border-radius: 10px;
+	padding: 0.2rem 0.5rem;
+	text-align: left;
+}
+
+code {
+	font-size: 0.9rem;
+	text-align: left;
+	margin: auto;
+}

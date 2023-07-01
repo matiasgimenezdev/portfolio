@@ -6,6 +6,7 @@ import { helpFetch } from '../helpers';
 import { Article } from '../types';
 import { Balancer } from 'react-wrap-balancer';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export const ArticlePage: FunctionComponent = () => {
 	const { article } = useParams();
@@ -39,7 +40,7 @@ export const ArticlePage: FunctionComponent = () => {
 
 	useEffect(() => {
 		const getArticleContent = async () => {
-			const filePath = `/content/${currentArticle?.id}/${currentArticle?.id}.html`;
+			const filePath = `/content/${currentArticle?.id}/${currentArticle?.id}-${language}.mdx`;
 			try {
 				const response = await fetch(filePath);
 				const htmlContent = await response.text();
@@ -50,7 +51,7 @@ export const ArticlePage: FunctionComponent = () => {
 		};
 
 		getArticleContent();
-	}, [currentArticle]);
+	}, [currentArticle, language]);
 
 	return (
 		<MainLayout>
@@ -89,10 +90,15 @@ export const ArticlePage: FunctionComponent = () => {
 					})}
 				</ul>
 
-				<Balancer
-					dangerouslySetInnerHTML={{ __html: articleContent }}
-					className='text font-light mt-4 text-md min-w-full px-6 block py-2 md:text-lg md:px-32'
-				/>
+				<Balancer className='text font-light mt-4 text-md  px-6 block py-2 min-w-[75%] md:text-lg md:px-16'>
+					<ReactMarkdown
+						remarkPlugins={[remarkGfm]}
+						linkTarget='_blank'
+					>
+						{articleContent}
+					</ReactMarkdown>
+				</Balancer>
+
 				<Link to='/blog' className='text-md font-normal mt-4'>
 					Return to all the notes
 				</Link>
