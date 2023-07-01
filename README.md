@@ -15,27 +15,27 @@ Made with:
 -   [x] Page transitions
 -   [x] Error page (404)
 
--   [ ] Multi-lingual support
+-   [x] Multi-lingual support
 
-    -   [ ] Extract content to json files
-    -   [ ] Render articles conditionally depending on language
+    -   [x] Extract content to json files
+    -   [x] Render articles conditionally depending on language
     -   [ ] Global state (Zustand or Context)
-    -   [ ] Language switcher
+    -   [x] Language switcher
 
 -   [x] Layout
 
     -   [x] Header con secciones (nav)
     -   [x] Footer
 
--   [ ] Sections
+-   [x] Sections
     -   [x] Home
         -   [x] Bio/intro
         -   [x] Latest notes
     -   [ ] Blog
         -   [x] Lista de artículos paginada
-        -   [ ] Articulo
+        -   [x] Articulo
             -   [x] Title
-            -   [ ] Content
+            -   [x] Content
             -   [x] Date
             -   [x] Tags
     -   [x] Projects
