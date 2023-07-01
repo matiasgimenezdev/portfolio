@@ -4,7 +4,6 @@ import { MainLayout } from '../layout';
 import { Title } from '../components/Title';
 import { helpFetch } from '../helpers';
 import { Article } from '../types';
-import { Balancer } from 'react-wrap-balancer';
 import { IoIosArrowRoundBack } from 'react-icons/io';
 
 export const ArticlePage: FunctionComponent = () => {
