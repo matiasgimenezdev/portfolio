@@ -1,5 +1,5 @@
 import { FunctionComponent, useEffect, useState } from 'react';
-import { Link, Navigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { MainLayout } from '../layout';
 import { Title } from '../components/Title';
 import { helpFetch } from '../helpers';
@@ -11,7 +11,8 @@ export const ArticlePage: FunctionComponent = () => {
 	const { article } = useParams();
 	const [currentArticle, setCurrentArticle] = useState<Article>();
 	const [language, setLanguage] = useState<string>('english');
-	const [articleContent, setArticleContent] = useState('');
+	const [articleContent, setArticleContent] = useState<string>('');
+	const navigate = useNavigate();
 
 	const handleLanguageSwitch = (): void => {
 		if (language == 'english') {
@@ -29,9 +30,14 @@ export const ArticlePage: FunctionComponent = () => {
 				const current: Article = data.filter((item) =>
 					item.path.includes(article ?? '')
 				)[0];
+
+				if (!current) {
+					throw new Error('Resource not found');
+				}
+
 				setCurrentArticle(current);
 			} catch (error) {
-				console.error(error);
+				navigate('/error');
 			}
 		};
 		fetchData();
@@ -42,10 +48,13 @@ export const ArticlePage: FunctionComponent = () => {
 			const filePath = `/content/${currentArticle?.id}/${currentArticle?.id}-${language}.html`;
 			try {
 				const response = await fetch(filePath);
+				if (!response) {
+					throw new Error('Error fetching the file');
+				}
 				const htmlContent = await response.text();
 				setArticleContent(htmlContent);
 			} catch (error) {
-				<Navigate to='/error' />;
+				navigate('/error');
 			}
 		};
 
