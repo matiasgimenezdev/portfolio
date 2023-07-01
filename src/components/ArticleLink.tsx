@@ -21,10 +21,10 @@ export const ArticleLink: FunctionComponent<ArticleLinkProps> = ({
 					animate={{ opacity: 1 }}
 					exit={{ opacity: 0 }}
 					transition={{ duration: 0.8 }}
-					className='h-16 md:text-lg text-grey-darkest font-normal px-2 border-b border-grey-light flex items-center justify-between transition ease-in-out hover:bg-white-medium'
+					className='h-16 md:text-lg text-sm text-grey-darkest font-normal px-2 border-b border-grey-light flex items-center justify-between transition ease-in-out hover:bg-white-medium'
 				>
-					<span>{title}</span>{' '}
-					<time className='inline-block mr-4 text-sm xl:mr-10'>
+					<span className='min-w-[70%] px-0'>{title}</span>{' '}
+					<time className='text-right min-w-[20%] inline-block mr-2 text-sm xl:mr-10'>
 						{date}
 					</time>
 				</motion.p>
