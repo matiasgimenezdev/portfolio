@@ -31,13 +31,16 @@ export const Footer: FunctionComponent = () => {
 			<nav className='w-full max-h-18 py-6 mt-10 shadow-inner footer-shadow'>
 				<ul className='flex gap-5 items-center justify-center'>
 					<li className='inline text-xl text-black xl:text-2xl xl:mb-1'>
-						<a href=''>
+						<a
+							href='https://github.com/matiasgimenezdev'
+							target='_blank'
+						>
 							<BsGithub className='h-5 w-5' />
 						</a>
 					</li>
 					<li className='inline text-xl text-[#0a66c2] xl:text-2x0'>
 						<a
-							href='https://github.com/matiasgimenezdev'
+							href='https://linkedin.com/in/matiasgimenezdev/'
 							target='_blank'
 						>
 							<BsLinkedin className='h-5 w-5' />
