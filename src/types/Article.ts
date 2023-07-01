@@ -4,4 +4,5 @@ export type Article = {
 	fullDate?: string;
 	tags: string[];
 	path: string;
+	id: string;
 };

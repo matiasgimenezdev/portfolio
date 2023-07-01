@@ -2,7 +2,9 @@
 	{
 		"title": "Hello world",
 		"date": "Jun 27",
+		"fullDate": "June 27, 2023",
 		"tags": ["blog"],
-		"path": "/blog/hello-world"
+		"path": "/blog/hello-world",
+		"id": "hello-world"
 	}
 ]
