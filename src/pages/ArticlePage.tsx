@@ -41,7 +41,7 @@ export const ArticlePage: FunctionComponent = () => {
 			}
 		};
 		fetchData();
-	}, [article]);
+	}, [article, navigate]);
 
 	useEffect(() => {
 		const getArticleContent = async () => {
@@ -59,7 +59,7 @@ export const ArticlePage: FunctionComponent = () => {
 		};
 
 		getArticleContent();
-	}, [currentArticle, language]);
+	}, [currentArticle, language, navigate]);
 
 	return (
 		<MainLayout>
