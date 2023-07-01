@@ -20,7 +20,7 @@ export const Footer: FunctionComponent = () => {
 				<br />
 				Here is my{' '}
 				<a
-					href='https://github.com/matiasgimenezdev'
+					href='https://linkedin.com/in/matiasgimenezdev/'
 					target='_blank'
 					className='font-medium text-grey-dark'
 				>
