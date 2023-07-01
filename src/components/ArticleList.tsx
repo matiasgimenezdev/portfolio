@@ -23,9 +23,7 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const data: Article[] = await helpFetch(
-					'../../src/data/articles.json'
-				);
+				const data: Article[] = await helpFetch('/data/articles.json');
 				setArticles(data);
 			} catch (error) {
 				console.error(error);

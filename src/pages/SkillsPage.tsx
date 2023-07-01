@@ -11,9 +11,7 @@ export const SkillsPage: FunctionComponent = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const data: Skill[] = await helpFetch(
-					'../../src/data/skills.json'
-				);
+				const data: Skill[] = await helpFetch('/data/skills.json');
 				setSkills(data);
 			} catch (error) {
 				console.error(error);
