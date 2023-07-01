@@ -81,7 +81,7 @@ export const ArticlePage: FunctionComponent = () => {
 					{currentArticle?.tags.map((tag) => {
 						return (
 							<span
-								className='bg-grey-lightest py-1 px-3 ml-1 rounded-2xl text-xs'
+								className='bg-grey-lightest py-1 px-3 ml-1 text-grey-darkest rounded-2xl text-xs border border-grey-base'
 								key={tag}
 							>
 								{tag}
