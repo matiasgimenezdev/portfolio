@@ -92,13 +92,6 @@ export const ArticlePage: FunctionComponent = () => {
 					dangerouslySetInnerHTML={{ __html: articleContent }}
 					className='text font-light mt-4 text-md  px-6 block py-2 min-w-[75%] md:text-lg md:px-16'
 				/>
-				{/* <ReactMarkdown
-						remarkPlugins={[remarkGfm]}
-						linkTarget='_blank'
-					>
-						{articleContent}
-					</ReactMarkdown> */}
-				{/* </Balancer> */}
 
 				<Link
 					to='/blog'
