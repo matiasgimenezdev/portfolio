@@ -2,6 +2,7 @@
 	{
 		"title": "Hello world",
 		"date": "Jun 27",
+		"tags": ["blog"],
 		"path": "/blog/hello-world",
 		"id": "hello-world"
 	}
