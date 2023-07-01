@@ -17,7 +17,7 @@ Made with:
 
 -   [ ] Multi-lingual support
 
-    -   [ ] Extract content to variables/json files
+    -   [ ] Extract content to json files
     -   [ ] Render articles conditionally depending on language
     -   [ ] Global state (Zustand or Context)
     -   [ ] Language switcher
@@ -32,14 +32,12 @@ Made with:
         -   [x] Bio/intro
         -   [x] Latest notes
     -   [ ] Blog
-        -   [ ] Lista de artículos
-            -   [ ] Lista completa
-            -   [ ] Lista paginada
+        -   [x] Lista de artículos paginada
         -   [ ] Articulo
-            -   [ ] Title
+            -   [x] Title
             -   [ ] Content
-            -   [ ] Date
-            -   [ ] Tags
+            -   [x] Date
+            -   [x] Tags
     -   [x] Projects
         -   [x] Project
             -   [x] Descripción
