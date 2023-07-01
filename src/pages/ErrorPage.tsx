@@ -24,7 +24,7 @@ export const ErrorPage: FunctionComponent = () => {
 					</Link>
 					<img
 						className='rounded-xl w-3/4 m-auto mt-10'
-						src='/public/images/other/not-found-404.png'
+						src='images/other/not-found-404.png'
 						alt='Not found page'
 					/>
 				</Balancer>
