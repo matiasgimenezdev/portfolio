@@ -3,63 +3,6 @@
 		"title": "Hello world",
 		"date": "Jun 27",
 		"tags": ["blog"],
-		"path": "/blog/hello-world",
-		"id": "hello-world"
-	},
-	{
-		"title": "Hello world 2",
-		"date": "Jun 27",
-		"tags": ["blog"],
-		"path": "/blog/hello-world",
-		"id": "hello-world 2"
-	},
-	{
-		"title": "Hello world 3",
-		"date": "Jun 27",
-		"tags": ["blog"],
-		"path": "/blog/hello-world",
-		"id": "hello-world 3"
-	},
-	{
-		"title": "Hello world 4",
-		"date": "Jun 27",
-		"tags": ["blog"],
-		"path": "/blog/hello-world",
-		"id": "hello-world 4"
-	},
-	{
-		"title": "Hello world 5",
-		"date": "Jun 27",
-		"tags": ["blog"],
-		"path": "/blog/hello-world",
-		"id": "hello-world 5"
-	},
-	{
-		"title": "Hello world 6",
-		"date": "Jun 27",
-		"tags": ["blog"],
-		"path": "/blog/hello-world",
-		"id": "hello-world 6"
-	},
-	{
-		"title": "Hello world 7",
-		"date": "Jun 27",
-		"tags": ["blog"],
-		"path": "/blog/hello-world",
-		"id": "hello-world 7"
-	},
-	{
-		"title": "Hello world 8",
-		"date": "Jun 27",
-		"tags": ["blog"],
-		"path": "/blog/hello-world",
-		"id": "hello-world 8"
-	},
-	{
-		"title": "Hello world 9",
-		"date": "Jun 27",
-		"tags": ["blog"],
-		"path": "/blog/hello-world",
-		"id": "hello-world 9"
+		"path": "/blog/hello-world"
 	}
 ]
