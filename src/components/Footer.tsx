@@ -1,6 +1,6 @@
 import Balancer from 'react-wrap-balancer';
 import { FunctionComponent } from 'react';
-import { BsLightbulb, BsLinkedin, BsGithub } from 'react-icons/bs';
+import { BsLinkedin, BsGithub } from 'react-icons/bs';
 import { useThemeStore } from '../store';
 
 export const Footer: FunctionComponent = () => {
@@ -26,7 +26,7 @@ export const Footer: FunctionComponent = () => {
 						theme == 'light' ? 'text-grey-darkest' : 'text-white'
 					}`}
 				>
-					<BsLightbulb className='inline text-orange-400' /> <br />
+					<span>💡</span> <br />
 					"Living, learning & leveling up <br />
 					one day at a time"
 				</span>
