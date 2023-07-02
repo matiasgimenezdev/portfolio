@@ -1,6 +1,7 @@
 import { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { m, LazyMotion, domAnimation } from 'framer-motion';
+import { useThemeStore } from '../store/themeStore';
 
 type ArticleLinkProps = {
 	title: string;
@@ -13,6 +14,8 @@ export const ArticleLink: FunctionComponent<ArticleLinkProps> = ({
 	date,
 	path,
 }) => {
+	const theme = useThemeStore((state) => state.theme);
+
 	return (
 		<LazyMotion features={domAnimation}>
 			<Link to={path}>
@@ -21,7 +24,11 @@ export const ArticleLink: FunctionComponent<ArticleLinkProps> = ({
 					animate={{ opacity: 1 }}
 					exit={{ opacity: 0 }}
 					transition={{ duration: 0.6 }}
-					className='h-16 md:text-lg text-sm text-grey-darkest font-normal px-2 border-b border-grey-light flex items-center justify-between transition ease-in-out hover:bg-white-medium'
+					className={`h-16 md:text-lg text-sm ${
+						theme == 'light'
+							? 'text-grey-darkest border-grey-light hover:bg-white-medium'
+							: 'text-white border-grey-medium hover:bg-grey-dark'
+					} font-normal px-2 border-b flex items-center justify-between transition ease-in-out`}
 				>
 					<span className='min-w-[70%] px-0'>{title}</span>{' '}
 					<time className='text-right min-w-[20%] inline-block mr-2 text-sm xl:mr-10'>

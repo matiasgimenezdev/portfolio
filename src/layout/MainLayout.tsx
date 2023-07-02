@@ -1,6 +1,7 @@
 import { Navbar, Footer } from '../components';
-import { ReactNode, FunctionComponent } from 'react';
+import { ReactNode, FunctionComponent, useEffect } from 'react';
 import { LazyMotion, m, domAnimation } from 'framer-motion';
+import { useThemeStore } from '../store/themeStore';
 
 type MainLayoutProps = {
 	children: ReactNode;
@@ -11,6 +12,19 @@ export const MainLayout: FunctionComponent<MainLayoutProps> = ({
 	children,
 	location = '',
 }: MainLayoutProps) => {
+	const theme = useThemeStore((state) => state.theme);
+	useEffect(() => {
+		if (theme === 'dark') {
+			document.body.style.background = '#343A40';
+		} else {
+			document.body.style.background = '#ffffff';
+		}
+
+		return () => {
+			// Restaurar el color de fondo predeterminado al desmontar el componente
+			document.body.style.backgroundColor = '';
+		};
+	}, [theme]);
 	return (
 		<>
 			<Navbar

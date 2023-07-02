@@ -5,6 +5,7 @@ import { Title, Loader } from '../components';
 import { helpFetch } from '../helpers';
 import { Article } from '../types';
 import { IoIosArrowRoundBack } from 'react-icons/io';
+import { useThemeStore } from '../store/themeStore';
 
 export const ArticlePage: FunctionComponent = () => {
 	const { article } = useParams();
@@ -13,6 +14,7 @@ export const ArticlePage: FunctionComponent = () => {
 	const [articleContent, setArticleContent] = useState<string>('');
 	const [isLoading, setIsLoading] = useState<boolean>(true);
 	const navigate = useNavigate();
+	const theme = useThemeStore((state) => state.theme);
 
 	const handleLanguageSwitch = (): void => {
 		if (language == 'english') {
@@ -65,7 +67,13 @@ export const ArticlePage: FunctionComponent = () => {
 			{isLoading ? (
 				<Loader />
 			) : (
-				<main className='flex flex-col items-center mt-16 min-h-60'>
+				<main
+					className={`flex flex-col items-center pt-16 min-h-60 ${
+						theme == 'light'
+							? 'text-grey-dark bg-white'
+							: 'text-white bg-grey-darkest'
+					}`}
+				>
 					<button
 						className='w-7 h-7 text-center mb-3'
 						onClick={handleLanguageSwitch}
@@ -104,15 +112,23 @@ export const ArticlePage: FunctionComponent = () => {
 
 					<p
 						dangerouslySetInnerHTML={{ __html: articleContent }}
-						className='text font-light mt-4 text-md w-[100%] xs:w-9/12 px-6 block py-2 md:w-[70%] md:text-lg '
+						className={`${
+							theme == 'light'
+								? 'text-grey-darkest'
+								: 'text-white'
+						} text font-light mt-4 text-md w-[100%] xs:w-9/12 px-6 block py-2 md:w-[70%] md:text-lg`}
 					/>
 
 					<Link
 						to='/blog'
-						className='text-md font-semibold text-grey-darkest mt-4 p-2 px-3 rounded-lg hover:-translate-x-5 transition duration-300'
+						className={`text-md font-semibold ${
+							theme == 'light'
+								? 'text-grey-darkest'
+								: 'text-white'
+						} mt-4 p-2 px-3 hover:-translate-x-5 transition duration-300 text-lg`}
 					>
-						<IoIosArrowRoundBack className='inline-block' /> Return
-						to the blog
+						<IoIosArrowRoundBack className='inline-block text-xl' />{' '}
+						Return to the blog
 					</Link>
 				</main>
 			)}

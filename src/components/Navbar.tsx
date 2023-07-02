@@ -1,16 +1,19 @@
 import { FunctionComponent, useState } from 'react';
 import { PiMoonLight } from 'react-icons/pi';
 import { BsSun } from 'react-icons/bs';
-import { GrMenu } from 'react-icons/gr';
+import { AiOutlineMenu } from 'react-icons/ai';
 import { MenuDesktop, MenuMobile } from './';
 import { Menu } from '../types/Menu';
+import { useThemeStore } from '../store/themeStore';
+import { Link } from 'react-router-dom';
 
 export const Navbar: FunctionComponent<Menu> = ({
 	sections,
 	location,
 }: Menu) => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
-	const [theme, setTheme] = useState<string>('light');
+	const theme = useThemeStore((state) => state.theme);
+	const updateTheme = useThemeStore((state) => state.updateTheme);
 
 	const handleMenu = (): void => {
 		setIsOpen(!isOpen);
@@ -18,17 +21,29 @@ export const Navbar: FunctionComponent<Menu> = ({
 
 	const handleThemeSwitch = (): void => {
 		if (theme === 'light') {
-			setTheme('dark');
+			updateTheme('dark');
 		} else {
-			setTheme('light');
+			updateTheme('light');
 		}
 	};
 
 	return (
 		<header className='h-20'>
-			<nav className='font-sans h-full shadow-md flex w-full items-center justify-between p-3'>
-				<h1 className='text-grey-dark text-2xl ml-4 font-medium drop-shadow-grey'>
-					<a href='/'>Matias Gimenez</a>
+			<nav
+				className={`font-sans border-b ${
+					theme == 'light'
+						? 'bg-white border-grey-light'
+						: 'bg-grey-darkest border-grey-medium'
+				} h-full  flex w-full items-center justify-between p-3`}
+			>
+				<h1
+					className={`${
+						theme == 'light'
+							? 'text-grey-dark drop-shadow-grey'
+							: 'text-white drop-shadow-white'
+					} text-2xl ml-4 font-medium `}
+				>
+					<Link to='/'>Matias Gimenez</Link>
 				</h1>
 
 				<div className='flex list-none align-center relative gap-8 md:flex-row'>
@@ -41,16 +56,32 @@ export const Navbar: FunctionComponent<Menu> = ({
 					<span>
 						<button className='swap' onClick={handleThemeSwitch}>
 							{theme === 'light' ? (
-								<PiMoonLight className='text-3xl ml-10 text-grey-dark md:mr-4' />
+								<PiMoonLight
+									className={`text-3xl mt-1 inline-block ${
+										theme == 'light'
+											? 'text-grey-dark'
+											: 'text-white'
+									} md:mr-4`}
+								/>
 							) : (
-								<BsSun className='text-3xl ml-10 text-grey-dark md:mr-4' />
+								<BsSun
+									className={`text-3xl mt-1 inline-block ${
+										theme == 'light'
+											? 'text-grey-dark'
+											: 'text-white'
+									} md:mr-4`}
+								/>
 							)}
 						</button>
 					</span>
 					<span>
 						{
-							<GrMenu
-								className='block text-3xl mr-4 md:hidden'
+							<AiOutlineMenu
+								className={`block text-3xl mr-4 md:hidden mt-1 inline-block ${
+									theme == 'light'
+										? 'fill-grey-darkest'
+										: 'fill-white'
+								}`}
 								onClick={handleMenu}
 							/>
 						}

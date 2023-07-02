@@ -5,11 +5,13 @@ import { helpFetch } from '../helpers';
 import { Loader, Title } from '../components';
 import { Skill } from '../types';
 import { useNavigate } from 'react-router-dom';
+import { useThemeStore } from '../store/themeStore';
 
 export const SkillsPage: FunctionComponent = () => {
 	const [skills, setSkills] = useState<Skill[]>([]);
 	const [isLoading, setIsLoading] = useState<boolean>(true);
 	const navigate = useNavigate();
+	const theme = useThemeStore((state) => state.theme);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -26,8 +28,16 @@ export const SkillsPage: FunctionComponent = () => {
 
 	return (
 		<MainLayout location='skills'>
-			<main className='flex flex-col items-center mt-16 min-h-60'>
-				<Balancer className='text-center font-light text-md w-9/12 px-4 block md:w-1/3 md:text-xl'>
+			<main
+				className={`flex flex-col items-center pt-16 min-h-60 ${
+					theme == 'light' ? 'bg-white' : 'bg-grey-darkest'
+				}`}
+			>
+				<Balancer
+					className={`text-center font-light text-md w-9/12 px-4 block md:w-1/3 md:text-xl ${
+						theme == 'light' ? 'text-grey-darkest' : 'text-white'
+					}`}
+				>
 					<Title title='Skills & Technologies' />
 					I'm excited to share with you the different skills I've
 					acquired throughout my
@@ -41,7 +51,13 @@ export const SkillsPage: FunctionComponent = () => {
 					<Loader />
 				) : (
 					<section className='container flex mt-8 justify-center mb-4'>
-						<section className='grid py-4 grid-cols-2 w-90 bg-white-high rounded-md md:grid-cols-3 xl:grid-cols-4 '>
+						<section
+							className={`grid py-4 px-2 grid-cols-2 w-90 ${
+								theme == 'light'
+									? 'bg-white-high text-grey-darkest'
+									: 'border border-grey-base text-white'
+							} rounded-md md:grid-cols-3 xl:grid-cols-4 `}
+						>
 							{skills.map(({ name, alt, src }) => {
 								return (
 									<article
@@ -53,7 +69,7 @@ export const SkillsPage: FunctionComponent = () => {
 											src={src}
 											alt={alt}
 										/>
-										<span className='basis-9/12 text-left text-grey-darkest font-medium text-md'>
+										<span className='basis-9/12 text-left font-medium text-md'>
 											{name}
 										</span>
 									</article>

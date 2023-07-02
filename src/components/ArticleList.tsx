@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { helpFetch } from '../helpers';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 import { Article } from '../types';
+import { useThemeStore } from '../store/themeStore';
 
 type ArticleListProps = {
 	title: string;
@@ -18,6 +19,7 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 	const [currentPage, setCurrentPage] = useState<number>(1);
 	const [pagesCount, setPagesCount] = useState<number>(1);
 	const [pages, setPages] = useState<Article[][]>([]);
+	const theme = useThemeStore((state) => state.theme);
 	const max = 4;
 
 	useEffect(() => {
@@ -72,7 +74,11 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 						setCurrentPage(currentPage - 1);
 					}}
 				>
-					<BsArrowLeftShort className='inline-block' />
+					<BsArrowLeftShort
+						className={`inline-block ${
+							theme == 'light' ? 'text-grey-dark' : 'text-white'
+						}`}
+					/>
 				</li>
 
 				{pages.map((_, index) => {
@@ -90,6 +96,10 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 										index + 1 === currentPage
 											? 'font-bold'
 											: ''
+									} ${
+										theme == 'light'
+											? 'text-grey-darkest'
+											: 'text-white'
 									}`}
 									onClick={() => {
 										setCurrentPage(index + 1);
@@ -105,7 +115,11 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 							return (
 								<li
 									key={index + 1}
-									className='inline-block mx-1 text-lg'
+									className={`${
+										theme == 'light'
+											? 'text-grey-darkest'
+											: 'text-white'
+									} inline-block mx-1 text-lg`}
 								>
 									...
 								</li>
@@ -117,6 +131,10 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 								key={index + 1}
 								className={`inline-block mr-1 px-1 text-lg ${
 									index + 1 === currentPage ? 'font-bold' : ''
+								} ${
+									theme == 'light'
+										? 'text-grey-darkest'
+										: 'text-white'
 								}`}
 								onClick={() => {
 									setCurrentPage(index + 1);
@@ -136,7 +154,11 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 						setCurrentPage(currentPage + 1);
 					}}
 				>
-					<BsArrowRightShort className='inline-block' />
+					<BsArrowRightShort
+						className={`inline-block ${
+							theme == 'light' ? 'text-grey-dark' : 'text-white'
+						}`}
+					/>
 				</li>
 			</ul>
 		);
@@ -158,8 +180,14 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 							/>
 						))}
 					<Link to='/blog'>
-						<p className='h-16 px-2 border-b border-grey-light flex items-center justify-between transition ease-in-out hover:bg-white-medium'>
-							<span className='font-normal text-grey-dark text-lg '>
+						<p
+							className={`h-16 px-2 border-b ${
+								theme == 'light'
+									? 'border-grey-light text-grey-dark hover:bg-white-medium'
+									: 'border-grey-medium text-grey-base hover:bg-grey-dark'
+							} flex items-center justify-between transition ease-in-out`}
+						>
+							<span className='font-normal text-lg '>
 								+ Read more notes ...
 							</span>
 						</p>
@@ -178,7 +206,13 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 
 	return (
 		<section className='px-6 w-full md:p-10 xl:w-1/2 xl:px-20 xl:py-10'>
-			<h4 className='text-xl py-4 px-2 border-b border-grey-light font-bold text-grey-dark md:text-2xl xl:text-3xl '>
+			<h4
+				className={`text-xl py-4 px-2 border-b font-bold ${
+					theme == 'light'
+						? 'text-grey-dark border-grey-light'
+						: 'text-white border-grey-medium'
+				} md:text-2xl xl:text-3xl`}
+			>
 				{title}
 			</h4>
 			<div className='mb-2'>{renderNotes()}</div>

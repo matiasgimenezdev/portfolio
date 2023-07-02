@@ -7,11 +7,13 @@ import { helpFetch } from '../helpers';
 import { Title, Loader } from '../components';
 import { Project } from '../types';
 import { useNavigate } from 'react-router-dom';
+import { useThemeStore } from '../store/themeStore';
 
 export const ProjectsPage: FunctionComponent = () => {
 	const [projects, setProjects] = useState<Project[]>([]);
 	const [isLoading, setIsLoading] = useState<boolean>(true);
 	const navigate = useNavigate();
+	const theme = useThemeStore((state) => state.theme);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -24,12 +26,20 @@ export const ProjectsPage: FunctionComponent = () => {
 			}
 		};
 		fetchData();
-	}, []);
+	}, [navigate]);
 
 	return (
 		<MainLayout location='projects'>
-			<main className='flex flex-col items-center mt-16 min-h-60'>
-				<Balancer className='text-center font-light text-md w-9/12 px-4 block md:w-1/3 md:text-xl'>
+			<main
+				className={`flex flex-col items-center pt-16 min-h-60 ${
+					theme == 'light' ? 'bg-white' : 'bg-grey-darkest'
+				}`}
+			>
+				<Balancer
+					className={`text-center font-light text-md w-9/12 px-4 block md:w-1/3 md:text-xl ${
+						theme == 'light' ? 'text-grey-darkest' : 'text-white'
+					}`}
+				>
 					<Title title='Projects' />
 					In this section, you will find a collection of some projects
 					I have worked on. Each project represents a unique challenge

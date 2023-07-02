@@ -4,12 +4,23 @@ import { ArticleList } from '../components';
 import { Balancer } from 'react-wrap-balancer';
 import { DiGithubBadge } from 'react-icons/di';
 import { Title } from '../components';
+import { useThemeStore } from '../store/themeStore';
 
 export const HomePage: FunctionComponent = () => {
+	const theme = useThemeStore((state) => state.theme);
+
 	return (
 		<MainLayout location='home'>
-			<main className='flex flex-col items-center mt-16 min-h-60'>
-				<Balancer className='text-center font-light text-md w-9/12 px-4 block  md:w-1/3 md:text-xl'>
+			<main
+				className={`${
+					theme == 'light' ? 'bg-white' : 'bg-grey-darkest'
+				} flex flex-col items-center pt-12 min-h-60`}
+			>
+				<Balancer
+					className={`${
+						theme == 'light' ? 'text-grey-darkest' : 'text-white'
+					} text-center font-light text-md w-9/12 px-4 block  md:w-1/3 md:text-xl`}
+				>
 					<Title title='Hello, there 👋! My name is Matias.' />
 					This is my personal site made using React, Typescript, and
 					TailwindCSS. <br />
@@ -18,7 +29,11 @@ export const HomePage: FunctionComponent = () => {
 					<a
 						href='https://github.com/matiasgimenezdev'
 						target='_blank'
-						className='font-medium text-grey-dark'
+						className={`font-medium ${
+							theme == 'light'
+								? 'text-grey-darkest'
+								: 'text-white'
+						}`}
 					>
 						GitHub{' '}
 						<DiGithubBadge className='inline mb-1.5 text-xl ' />
