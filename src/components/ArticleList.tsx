@@ -51,7 +51,7 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 
 	const renderCurrentPage = () => {
 		if (pages.length === 0) {
-			return 'null';
+			return null;
 		}
 
 		return pages[currentPage - 1].map(({ title, date, path }: Article) => (
