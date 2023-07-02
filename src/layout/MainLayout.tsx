@@ -1,6 +1,6 @@
 import { Navbar, Footer } from '../components';
 import { ReactNode, FunctionComponent } from 'react';
-import { m, LazyMotion, domAnimation } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 type MainLayoutProps = {
 	children: ReactNode;
@@ -17,17 +17,17 @@ export const MainLayout: FunctionComponent<MainLayoutProps> = ({
 				sections={['Blog', 'Projects', 'Skills']}
 				location={location}
 			/>
-			<LazyMotion features={domAnimation}>
-				<m.div
-					initial={{ opacity: 0, x: -100 }}
-					animate={{ opacity: 1, x: 0 }}
-					exit={{ opacity: 0, x: 100 }}
+			<AnimatePresence>
+				<motion.div
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					exit={{ opacity: 0 }}
 					transition={{ duration: 0.6 }}
 				>
 					{children}
 					<Footer />
-				</m.div>
-			</LazyMotion>
+				</motion.div>
+			</AnimatePresence>
 		</>
 	);
 };
