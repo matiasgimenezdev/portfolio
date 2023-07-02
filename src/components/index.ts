@@ -5,3 +5,4 @@ export * from './ArticleLink';
 export * from './Title';
 export * from './MenuDesktop';
 export * from './MenuMobile';
+export * from './Loader';

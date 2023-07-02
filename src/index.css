@@ -17,3 +17,23 @@
 .swap:active {
 	transform: rotateZ(25deg);
 }
+
+.loading-spinner {
+	width: 50px;
+	margin: auto;
+	margin-top: 2rem;
+	height: 50px;
+	border: 8px solid #f3f3f3;
+	border-top: 10px solid #343a40;
+	border-radius: 50%;
+	animation: spinner 1.5s linear infinite;
+}
+
+@keyframes spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
