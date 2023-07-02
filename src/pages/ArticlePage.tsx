@@ -33,7 +33,6 @@ export const ArticlePage: FunctionComponent = () => {
 				if (!current) {
 					throw new Error('Resource not found');
 				}
-
 				setCurrentArticle(current);
 			} catch (error) {
 				navigate('/error');
