@@ -1,13 +1,13 @@
 import { FunctionComponent, useEffect, useState } from 'react';
-import { MainLayout } from '../layout';
 import { Balancer } from 'react-wrap-balancer';
 import { PiGithubLogo } from 'react-icons/pi';
 import { TbWorldShare } from 'react-icons/tb';
+import { useNavigate } from 'react-router-dom';
 import { helpFetch } from '../helpers';
+import { MainLayout } from '../layout';
 import { Title, Loader } from '../components';
 import { Project } from '../types';
-import { useNavigate } from 'react-router-dom';
-import { useThemeStore } from '../store/themeStore';
+import { useThemeStore } from '../store';
 
 export const ProjectsPage: FunctionComponent = () => {
 	const [projects, setProjects] = useState<Project[]>([]);

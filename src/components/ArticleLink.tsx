@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { m, LazyMotion, domAnimation } from 'framer-motion';
-import { useThemeStore } from '../store/themeStore';
+import { useThemeStore } from '../store';
 
 type ArticleLinkProps = {
 	title: string;

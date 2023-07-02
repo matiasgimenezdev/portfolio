@@ -1,9 +1,9 @@
 import { FunctionComponent } from 'react';
-import { MainLayout } from '../layout';
 import { Balancer } from 'react-wrap-balancer';
+import { MainLayout } from '../layout';
 import { ArticleList } from '../components';
 import { Title } from '../components';
-import { useThemeStore } from '../store/themeStore';
+import { useThemeStore } from '../store';
 
 export const BlogPage: FunctionComponent = () => {
 	const theme = useThemeStore((state) => state.theme);

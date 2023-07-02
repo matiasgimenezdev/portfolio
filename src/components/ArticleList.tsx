@@ -1,10 +1,10 @@
 import { FunctionComponent, useState, useEffect } from 'react';
-import { ArticleLink } from './ArticleLink';
 import { Link } from 'react-router-dom';
-import { helpFetch } from '../helpers';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
+import { ArticleLink } from './ArticleLink';
+import { helpFetch } from '../helpers';
 import { Article } from '../types';
-import { useThemeStore } from '../store/themeStore';
+import { useThemeStore } from '../store';
 
 type ArticleListProps = {
 	title: string;

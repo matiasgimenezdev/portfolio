@@ -1,10 +1,10 @@
 import { FunctionComponent } from 'react';
-import { MainLayout } from '../layout';
-import { Title } from '../components';
 import { Balancer } from 'react-wrap-balancer';
 import { Link } from 'react-router-dom';
 import { IoIosArrowRoundBack } from 'react-icons/io';
-import { useThemeStore } from '../store/themeStore';
+import { MainLayout } from '../layout';
+import { Title } from '../components';
+import { useThemeStore } from '../store';
 
 export const ErrorPage: FunctionComponent = () => {
 	const theme = useThemeStore((state) => state.theme);

@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import { useThemeStore } from '../store/themeStore';
+import { useThemeStore } from '../store';
 
 type TitleProps = {
 	title: string;

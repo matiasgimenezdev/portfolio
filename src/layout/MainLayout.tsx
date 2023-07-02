@@ -1,7 +1,7 @@
-import { Navbar, Footer } from '../components';
 import { ReactNode, FunctionComponent, useEffect } from 'react';
 import { LazyMotion, m, domAnimation } from 'framer-motion';
-import { useThemeStore } from '../store/themeStore';
+import { Navbar, Footer } from '../components';
+import { useThemeStore } from '../store';
 
 type MainLayoutProps = {
 	children: ReactNode;

@@ -2,10 +2,10 @@ import { FunctionComponent, useState } from 'react';
 import { PiMoonLight } from 'react-icons/pi';
 import { BsSun } from 'react-icons/bs';
 import { AiOutlineMenu } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 import { MenuDesktop, MenuMobile } from './';
 import { Menu } from '../types/Menu';
-import { useThemeStore } from '../store/themeStore';
-import { Link } from 'react-router-dom';
+import { useThemeStore } from '../store';
 
 export const Navbar: FunctionComponent<Menu> = ({
 	sections,

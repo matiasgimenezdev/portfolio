@@ -1,11 +1,11 @@
 import { FunctionComponent, useState, useEffect } from 'react';
-import { MainLayout } from '../layout';
 import { Balancer } from 'react-wrap-balancer';
+import { useNavigate } from 'react-router-dom';
+import { MainLayout } from '../layout';
 import { helpFetch } from '../helpers';
 import { Loader, Title } from '../components';
 import { Skill } from '../types';
-import { useNavigate } from 'react-router-dom';
-import { useThemeStore } from '../store/themeStore';
+import { useThemeStore } from '../store';
 
 export const SkillsPage: FunctionComponent = () => {
 	const [skills, setSkills] = useState<Skill[]>([]);

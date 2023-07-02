@@ -2,7 +2,7 @@
 import { LazyMotion, m, domAnimation } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Menu } from '../types';
-import { useThemeStore } from '../store/themeStore';
+import { useThemeStore } from '../store';
 
 export const MenuMobile = ({ sections, location, isOpen }: Menu) => {
 	const theme = useThemeStore((state) => state.theme);
