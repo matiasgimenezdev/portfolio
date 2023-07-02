@@ -1,12 +1,12 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { LazyMotion, m, domAnimation } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Menu } from '../types';
 
 export const MenuMobile = ({ sections, location, isOpen }: Menu) => {
 	return (
-		<AnimatePresence>
+		<LazyMotion features={domAnimation}>
 			{isOpen && (
-				<motion.ul
+				<m.ul
 					initial={{ opacity: 0, x: 100 }}
 					animate={{ opacity: 1, x: 0 }}
 					exit={{ opacity: 0, x: 100 }}
@@ -31,8 +31,8 @@ export const MenuMobile = ({ sections, location, isOpen }: Menu) => {
 							</li>
 						);
 					})}
-				</motion.ul>
+				</m.ul>
 			)}
-		</AnimatePresence>
+		</LazyMotion>
 	);
 };
