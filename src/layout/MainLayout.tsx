@@ -19,11 +19,6 @@ export const MainLayout: FunctionComponent<MainLayoutProps> = ({
 		} else {
 			document.body.style.background = '#ffffff';
 		}
-
-		return () => {
-			// Restaurar el color de fondo predeterminado al desmontar el componente
-			document.body.style.backgroundColor = '';
-		};
 	}, [theme]);
 	return (
 		<>
