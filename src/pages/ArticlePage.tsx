@@ -1,16 +1,18 @@
 import { FunctionComponent, useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import { IoIosArrowRoundBack } from 'react-icons/io';
 import { MainLayout } from '../layout';
 import { Title, Loader } from '../components';
 import { helpFetch } from '../helpers';
 import { Article } from '../types';
-import { IoIosArrowRoundBack } from 'react-icons/io';
-import { useThemeStore } from '../store/themeStore';
+import { useLanguageStore, useThemeStore } from '../store';
 
 export const ArticlePage: FunctionComponent = () => {
 	const { article } = useParams();
 	const [currentArticle, setCurrentArticle] = useState<Article>();
-	const [language, setLanguage] = useState<string>('english');
+	const language = useLanguageStore((state) => state.language);
+	const updateLanguage = useLanguageStore((state) => state.updateLanguage);
+	// const [language, setLanguage] = useState<string>('english');
 	const [articleContent, setArticleContent] = useState<string>('');
 	const [isLoading, setIsLoading] = useState<boolean>(true);
 	const navigate = useNavigate();
@@ -18,9 +20,9 @@ export const ArticlePage: FunctionComponent = () => {
 
 	const handleLanguageSwitch = (): void => {
 		if (language == 'english') {
-			setLanguage('spanish');
+			updateLanguage('spanish');
 		} else {
-			setLanguage('english');
+			updateLanguage('english');
 		}
 	};
 
