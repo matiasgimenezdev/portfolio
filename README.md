@@ -9,9 +9,9 @@ Made with:
 
 ## Todo
 
--   [ ] Dark theme
+-   [x] Dark theme
     -   [x] ThemeToggle
-    -   [ ] Global state (Zustand or Context)
+    -   [x] Global state (Zustand)
 -   [x] Page transitions
 -   [x] Error page (404)
 
@@ -19,7 +19,7 @@ Made with:
 
     -   [x] Extract content to json files
     -   [x] Render articles conditionally depending on language
-    -   [ ] Global state (Zustand or Context)
+    -   [x] Global state (Zustand)
     -   [x] Language switcher
 
 -   [x] Layout
