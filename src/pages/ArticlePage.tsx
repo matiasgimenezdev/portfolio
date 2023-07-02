@@ -12,7 +12,6 @@ export const ArticlePage: FunctionComponent = () => {
 	const [currentArticle, setCurrentArticle] = useState<Article>();
 	const language = useLanguageStore((state) => state.language);
 	const updateLanguage = useLanguageStore((state) => state.updateLanguage);
-	// const [language, setLanguage] = useState<string>('english');
 	const [articleContent, setArticleContent] = useState<string>('');
 	const [isLoading, setIsLoading] = useState<boolean>(true);
 	const navigate = useNavigate();
