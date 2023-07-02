@@ -14,7 +14,7 @@ export const HomePage: FunctionComponent = () => {
 			<main
 				className={`${
 					theme == 'light' ? 'bg-white' : 'bg-grey-darkest'
-				} flex flex-col items-center pt-12 min-h-60`}
+				} flex flex-col items-center pt-16 min-h-60`}
 			>
 				<Balancer
 					className={`${
