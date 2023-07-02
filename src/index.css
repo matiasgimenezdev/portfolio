@@ -14,13 +14,24 @@
 	transform: rotateZ(25deg);
 }
 
-.loading-spinner {
+.loading-spinner-light {
 	width: 50px;
 	margin: auto;
 	margin-top: 2rem;
 	height: 50px;
 	border: 8px solid #f3f3f3;
 	border-top: 10px solid #343a40;
+	border-radius: 50%;
+	animation: spinner 1.5s linear infinite;
+}
+
+.loading-spinner-dark {
+	width: 50px;
+	margin: auto;
+	margin-top: 2rem;
+	height: 50px;
+	border: 8px solid #343a40;
+	border-top: 10px solid #f3f3f3;
 	border-radius: 50%;
 	animation: spinner 1.5s linear infinite;
 }
