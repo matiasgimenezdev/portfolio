@@ -54,9 +54,11 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 			return null;
 		}
 
-		return pages[currentPage - 1].map(({ title, date, path }: Article) => (
-			<ArticleLink key={title} title={title} date={date} path={path} />
-		));
+		return pages[currentPage - 1].map(
+			({ title, date, path, id }: Article) => (
+				<ArticleLink key={id} title={title} date={date} path={path} />
+			)
+		);
 	};
 
 	const renderPaginationIndex = () => {
@@ -147,9 +149,9 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 					{articles
 						.slice(-4)
 						.reverse()
-						.map(({ title, date, path }: Article) => (
+						.map(({ title, date, path, id }: Article) => (
 							<ArticleLink
-								key={path}
+								key={id}
 								title={title}
 								date={date}
 								path={path}

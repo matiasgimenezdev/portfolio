@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
+import { m, LazyMotion, domAnimation } from 'framer-motion';
 
 type ArticleLinkProps = {
 	title: string;
@@ -14,9 +14,9 @@ export const ArticleLink: FunctionComponent<ArticleLinkProps> = ({
 	path,
 }) => {
 	return (
-		<Link to={path}>
-			<AnimatePresence>
-				<motion.p
+		<LazyMotion features={domAnimation}>
+			<Link to={path}>
+				<m.p
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					exit={{ opacity: 0 }}
@@ -27,8 +27,8 @@ export const ArticleLink: FunctionComponent<ArticleLinkProps> = ({
 					<time className='text-right min-w-[20%] inline-block mr-2 text-sm xl:mr-10'>
 						{date}
 					</time>
-				</motion.p>
-			</AnimatePresence>
-		</Link>
+				</m.p>
+			</Link>
+		</LazyMotion>
 	);
 };
