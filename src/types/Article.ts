@@ -5,4 +5,6 @@ export type Article = {
 	tags: string[];
 	path: string;
 	id: string;
+	englishContent: string;
+	spanishContent: string;
 };
