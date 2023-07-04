@@ -22,8 +22,10 @@ export const Navbar: FunctionComponent<Menu> = ({
 	const handleThemeSwitch = (): void => {
 		if (theme === 'light') {
 			updateTheme('dark');
+			localStorage.setItem('preferedTheme', 'dark');
 		} else {
 			updateTheme('light');
+			localStorage.setItem('preferedTheme', 'light');
 		}
 	};
 
@@ -77,7 +79,7 @@ export const Navbar: FunctionComponent<Menu> = ({
 					<span>
 						{
 							<AiOutlineMenu
-								className={`block text-3xl mr-4 md:hidden mt-1 inline-block ${
+								className={`text-3xl mr-4 md:hidden mt-1 inline-block ${
 									theme == 'light'
 										? 'fill-grey-darkest'
 										: 'fill-white'
