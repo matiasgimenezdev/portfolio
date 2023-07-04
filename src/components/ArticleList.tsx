@@ -2,9 +2,9 @@ import { FunctionComponent, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 import { ArticleLink } from './ArticleLink';
-import { helpFetch } from '../helpers';
 import { Article } from '../types';
 import { useThemeStore } from '../store';
+import { articles } from '../data';
 
 type ArticleListProps = {
 	title: string;
@@ -15,24 +15,11 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 	title,
 	paginated = false,
 }) => {
-	const [articles, setArticles] = useState<Article[]>([]);
 	const [currentPage, setCurrentPage] = useState<number>(1);
 	const [pagesCount, setPagesCount] = useState<number>(1);
 	const [pages, setPages] = useState<Article[][]>([]);
 	const theme = useThemeStore((state) => state.theme);
 	const max = 4;
-
-	useEffect(() => {
-		const fetchData = async () => {
-			try {
-				const data: Article[] = await helpFetch('/data/articles.json');
-				setArticles(data);
-			} catch (error) {
-				console.error(error);
-			}
-		};
-		fetchData();
-	}, []);
 
 	useEffect(() => {
 		const pages: Article[][] = [];
@@ -49,7 +36,7 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 			pages.push(page);
 		}
 		setPages(pages);
-	}, [articles]);
+	}, []);
 
 	const renderCurrentPage = () => {
 		if (pages.length === 0) {
