@@ -45,9 +45,7 @@ export const ArticlePage: FunctionComponent = () => {
 				}
 				const htmlContent = await response.text();
 				setArticleContent(htmlContent);
-				setTimeout(() => {
-					setIsLoading(false);
-				}, 300);
+				setIsLoading(false);
 			} catch (error) {
 				navigate('/error');
 			}
