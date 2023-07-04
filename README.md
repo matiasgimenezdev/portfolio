@@ -18,7 +18,7 @@ Made with:
 
 -   [x] Multi-lingual support
 
-    -   [x] Extract content to json files
+    -   [x] Extract content to external files
     -   [x] Render articles conditionally depending on language
     -   [x] Global state (Zustand)
     -   [x] Language switcher
