@@ -12,7 +12,7 @@ Made with:
 -   [x] Dark theme
     -   [x] ThemeToggle
     -   [x] Global state (Zustand)
-    -   [ ] Initialize the state with the last value (local storage?)
+    -   [x] Initialize the state with the last value (local storage)
 -   [x] Page transitions
 -   [x] Error page (404)
 
