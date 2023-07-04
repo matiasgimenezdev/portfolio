@@ -45,7 +45,9 @@ export const ArticlePage: FunctionComponent = () => {
 				}
 				const htmlContent = await response.text();
 				setArticleContent(htmlContent);
-				setIsLoading(false);
+				setTimeout(() => {
+					setIsLoading(false);
+				}, 300);
 			} catch (error) {
 				navigate('/error');
 			}
@@ -54,75 +56,77 @@ export const ArticlePage: FunctionComponent = () => {
 	}, [currentArticle, language, navigate, article]);
 
 	return (
-		<MainLayout>
+		<>
 			{isLoading ? (
 				<Loader />
 			) : (
-				<main
-					className={`flex flex-col items-center pt-16 min-h-60 ${
-						theme == 'light'
-							? 'text-grey-dark bg-white'
-							: 'text-white bg-grey-darkest'
-					}`}
-				>
-					<button
-						className='w-7 h-7 text-center mb-3'
-						onClick={handleLanguageSwitch}
-					>
-						{language === 'english' ? (
-							<img
-								src='/icons/english.svg'
-								alt='USA flag'
-								className='m-auto'
-							/>
-						) : (
-							<img
-								src='/icons/spanish.svg'
-								alt='Spain flag'
-								className='m-auto'
-							/>
-						)}
-					</button>
-					<p>{currentArticle?.fullDate}</p>
-					<Title
-						title={currentArticle ? currentArticle?.title : ''}
-					/>
-
-					<ul>
-						{currentArticle?.tags.map((tag) => {
-							return (
-								<span
-									className='bg-grey-lightest py-1 px-3 ml-1 text-grey-darkest rounded-2xl text-xs border border-grey-base'
-									key={tag}
-								>
-									{tag}
-								</span>
-							);
-						})}
-					</ul>
-
-					<p
-						dangerouslySetInnerHTML={{ __html: articleContent }}
-						className={`${
+				<MainLayout>
+					<main
+						className={`flex flex-col items-center pt-16 min-h-60 ${
 							theme == 'light'
-								? 'text-grey-darkest'
-								: 'text-white'
-						} text font-light mt-4 text-md w-[100%] xs:w-9/12 px-6 block py-2 md:w-[70%] md:text-lg`}
-					/>
-
-					<Link
-						to='/blog'
-						className={`text-md font-semibold ${
-							theme == 'light'
-								? 'text-grey-darkest'
-								: 'text-white'
-						} mt-4 p-2 px-3 hover:-translate-x-5 transition duration-300 text-lg`}
+								? 'text-grey-dark bg-white'
+								: 'text-white bg-grey-darkest'
+						}`}
 					>
-						<IoIosArrowRoundBack className='inline-block text-xl' />{' '}
-						Return to the blog
-					</Link>
-				</main>
+						<button
+							className='w-7 h-7 text-center mb-3'
+							onClick={handleLanguageSwitch}
+						>
+							{language === 'english' ? (
+								<img
+									src='/icons/english.svg'
+									alt='USA flag'
+									className='m-auto'
+								/>
+							) : (
+								<img
+									src='/icons/spanish.svg'
+									alt='Spain flag'
+									className='m-auto'
+								/>
+							)}
+						</button>
+						<p>{currentArticle?.fullDate}</p>
+						<Title
+							title={currentArticle ? currentArticle?.title : ''}
+						/>
+
+						<ul>
+							{currentArticle?.tags.map((tag) => {
+								return (
+									<span
+										className='bg-grey-lightest py-1 px-3 ml-1 text-grey-darkest rounded-2xl text-xs border border-grey-base'
+										key={tag}
+									>
+										{tag}
+									</span>
+								);
+							})}
+						</ul>
+
+						<p
+							dangerouslySetInnerHTML={{ __html: articleContent }}
+							className={`${
+								theme == 'light'
+									? 'text-grey-darkest'
+									: 'text-white'
+							} text font-light mt-4 text-md w-[100%] xs:w-9/12 px-6 block py-2 md:w-[70%] md:text-lg`}
+						/>
+
+						<Link
+							to='/blog'
+							className={`text-md font-semibold ${
+								theme == 'light'
+									? 'text-grey-darkest'
+									: 'text-white'
+							} mt-4 p-2 px-3 hover:-translate-x-5 transition duration-300 text-lg`}
+						>
+							<IoIosArrowRoundBack className='inline-block text-xl' />{' '}
+							Return to the blog
+						</Link>
+					</main>
+				</MainLayout>
 			)}
-		</MainLayout>
+		</>
 	);
 };
