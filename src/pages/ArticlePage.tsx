@@ -106,7 +106,3 @@ export const ArticlePage: FunctionComponent = () => {
 		</MainLayout>
 	);
 };
-
-export const Greeting = () => {
-	return <h1>Hello World 👋</h1>;
-};
