@@ -34,8 +34,8 @@ export const SkillsPage: FunctionComponent = () => {
 					<section
 						className={`grid py-4 px-2 grid-cols-2 w-90 ${
 							theme == 'light'
-								? 'bg-white-high text-grey-darkest'
-								: 'border border-grey-base text-white'
+								? 'border border-grey-light text-grey-darkest'
+								: 'border border-grey-medium text-white'
 						} rounded-md md:grid-cols-3 xl:grid-cols-4 `}
 					>
 						{skills.map(({ name, alt, src }) => {
