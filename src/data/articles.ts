@@ -15,7 +15,7 @@ export const articles: Article[] = [
 			developer, I've learned that collaboration is key.
 		</p>
 		<img
-			src="https://datademia.es/wp-content/uploads/2019/06/hello_world.png"
+		src="/images/articles/hello-world/hello.png"
 			alt=""
 			class="h-52 rounded-xl"
 		/>
@@ -32,7 +32,7 @@ export const articles: Article[] = [
 			programando, aprendí que la colaboración es clave.
 		</p>
 		<img
-			src="https://datademia.es/wp-content/uploads/2019/06/hello_world.png"
+			src="/images/articles/hello-world/hello.png"
 			alt=""
 			class="h-52 rounded-xl"
 		/>
