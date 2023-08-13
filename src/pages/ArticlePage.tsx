@@ -10,6 +10,7 @@ import { articles } from '../data';
 export const ArticlePage: FunctionComponent = () => {
 	const { article } = useParams();
 	const [currentArticle, setCurrentArticle] = useState<Article>();
+	const [currentContent, setCurrentContent] = useState<string>('');
 	const navigate = useNavigate();
 	const language = useLanguageStore((state) => state.language);
 	const updateLanguage = useLanguageStore((state) => state.updateLanguage);
@@ -30,12 +31,23 @@ export const ArticlePage: FunctionComponent = () => {
 			)[0];
 			if (current) {
 				setCurrentArticle(current);
+				const path: string =
+					language === 'english'
+						? `${current.contentPath}-en.html`
+						: `${current.contentPath}-es.html`;
+				fetch(path)
+					.then((response) => response.text())
+					.then((data) => {
+						setCurrentContent(data);
+						console.log(data);
+					});
+				console.log(currentContent);
 			} else {
 				navigate('/error');
 			}
 		};
 		getArticleContent();
-	}, [currentArticle, language, navigate, article]);
+	}, [currentArticle, currentContent, language, navigate, article]);
 
 	return (
 		<MainLayout>
@@ -82,11 +94,7 @@ export const ArticlePage: FunctionComponent = () => {
 
 				<p
 					dangerouslySetInnerHTML={{
-						__html: currentArticle
-							? language == 'spanish'
-								? currentArticle?.spanishContent
-								: currentArticle.englishContent
-							: '',
+						__html: currentArticle ? currentContent : '',
 					}}
 					className={`${
 						theme == 'light' ? 'text-grey-darkest' : 'text-white'
