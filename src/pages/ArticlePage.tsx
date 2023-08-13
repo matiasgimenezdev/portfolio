@@ -97,8 +97,8 @@ export const ArticlePage: FunctionComponent = () => {
 						__html: currentArticle ? currentContent : '',
 					}}
 					className={`${
-						theme == 'light' ? 'text-grey-darkest' : 'text-white'
-					} text font-light mt-4 text-md w-[100%] xs:w-9/12 px-6 block py-2 md:w-[70%] md:text-lg`}
+						theme == 'light' ? 'text-black' : 'text-white'
+					} text font-light mt-4 w-[100%] xs:w-9/12 px-6 block py-2 md:w-[70%] md:text-lg`}
 				/>
 
 				<Link
