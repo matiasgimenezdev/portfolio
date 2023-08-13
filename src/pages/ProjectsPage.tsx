@@ -1,4 +1,4 @@
-import { FunctionComponent, lazy } from 'react';
+import { FunctionComponent } from 'react';
 import { Balancer } from 'react-wrap-balancer';
 import { PiGithubLogo } from 'react-icons/pi';
 import { TbWorldShare } from 'react-icons/tb';
