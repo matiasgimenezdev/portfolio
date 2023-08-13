@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, lazy } from 'react';
 import { Balancer } from 'react-wrap-balancer';
 import { PiGithubLogo } from 'react-icons/pi';
 import { TbWorldShare } from 'react-icons/tb';
@@ -43,6 +43,10 @@ export const ProjectsPage: FunctionComponent = () => {
 											<img
 												src={image}
 												alt={title}
+												loading={'lazy'}
+												style={{
+													height: '210px',
+												}}
 												className='rounded-md figure-shadow h-full w-full '
 											/>
 											<figcaption className='absolute bottom-2 left-3 text-2xl font-medium text-white drop-shadow-figcaption '>
