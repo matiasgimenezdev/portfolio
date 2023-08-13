@@ -29,9 +29,9 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 		for (let i = 0; i < pagesCount; i += 1) {
 			let page: Article[];
 			if (i + 1 === pagesCount) {
-				page = articles.slice(i * max, articles.length + 1);
+				page = articles.slice(i * max, articles.length + 1).reverse();
 			} else {
-				page = articles.slice(i * max, i * max + max);
+				page = articles.slice(i * max, i * max + max).reverse();
 			}
 			pages.push(page);
 		}
