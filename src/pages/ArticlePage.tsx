@@ -39,9 +39,7 @@ export const ArticlePage: FunctionComponent = () => {
 					.then((response) => response.text())
 					.then((data) => {
 						setCurrentContent(data);
-						console.log(data);
 					});
-				console.log(currentContent);
 			} else {
 				navigate('/error');
 			}
