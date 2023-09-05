@@ -56,24 +56,24 @@ export const Navbar: FunctionComponent<Menu> = ({
 					/>
 					<MenuDesktop sections={sections} location={location} />
 					<span>
-						<button className='swap' onClick={handleThemeSwitch}>
-							{theme === 'light' ? (
-								<PiMoonLight
-									className={`text-3xl mt-1 inline-block ${
-										theme == 'light'
-											? 'text-grey-dark'
-											: 'text-white'
-									} md:mr-4`}
-								/>
-							) : (
-								<BsSun
-									className={`text-3xl mt-1 inline-block ${
-										theme == 'light'
-											? 'text-grey-dark'
-											: 'text-white'
-									} md:mr-4`}
-								/>
-							)}
+						<button
+							className='swap swap-rotate swap-active'
+							onClick={handleThemeSwitch}
+						>
+							<PiMoonLight
+								className={`text-3xl mt-1 inline-block ${
+									theme == 'light'
+										? 'text-grey-dark swap-on'
+										: 'swap-off'
+								} md:mr-4`}
+							/>
+							<BsSun
+								className={`text-3xl mt-1 inline-block ${
+									theme == 'light'
+										? 'swap-off'
+										: 'text-white swap-on'
+								} md:mr-4`}
+							/>
 						</button>
 					</span>
 					<span>
