@@ -15,7 +15,7 @@ export const MenuMobile = ({ sections, location, isOpen }: Menu) => {
 					animate={{ opacity: 1, x: 0 }}
 					exit={{ opacity: 0, x: 100 }}
 					transition={{ duration: 0.4 }}
-					className={`absolute z-50  top-[58px] -right-3 border-l ${
+					className={`absolute z-50  top-[60px] -right-3 border-l ${
 						theme == 'light'
 							? 'bg-white border-grey-dark'
 							: 'bg-grey-darkest border-grey-medium'
