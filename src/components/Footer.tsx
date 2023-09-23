@@ -75,13 +75,6 @@ export const Footer: FunctionComponent = () => {
 							<BsLinkedin className='h-5 w-5' />
 						</a>
 					</li>
-					<li
-						className={`font-normal text-sm ${
-							theme == 'light' ? 'text-grey-dark' : 'text-white'
-						}`}
-					>
-						&copy; 2023 Matias Gimenez
-					</li>
 				</ul>
 			</nav>
 		</footer>
