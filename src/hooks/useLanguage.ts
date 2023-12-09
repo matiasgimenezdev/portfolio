@@ -1,4 +1,4 @@
-import { useLanguageStore } from '../context';
+import { useLanguageStore } from '../store';
 
 export function useLanguage() {
 	const language = useLanguageStore((state) => state.language);

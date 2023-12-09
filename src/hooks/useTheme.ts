@@ -1,4 +1,4 @@
-import { useThemeStore } from '../context';
+import { useThemeStore } from '../store';
 
 export function useTheme() {
 	return {
