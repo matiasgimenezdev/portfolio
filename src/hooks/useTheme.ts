@@ -1,8 +1,8 @@
-import { useThemeStore } from '../store';
+import { useThemeStorage } from '../storage';
 
 export function useTheme() {
 	return {
-		theme: useThemeStore((state) => state.theme),
-		updateTheme: useThemeStore((state) => state.updateTheme),
+		theme: useThemeStorage((state) => state.theme),
+		updateTheme: useThemeStorage((state) => state.updateTheme),
 	};
 }

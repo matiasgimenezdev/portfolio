@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { Language } from '../types';
 
-export const useLanguageStore = create<Language>((set) => ({
+export const useLanguageStorage = create<Language>((set) => ({
 	language: 'english',
 	updateLanguage: (newLanguage: string) => set({ language: newLanguage }),
 }));

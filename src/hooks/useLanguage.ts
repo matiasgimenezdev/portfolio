@@ -1,8 +1,8 @@
-import { useLanguageStore } from '../store';
+import { useLanguageStorage } from '../storage';
 
 export function useLanguage() {
-	const language = useLanguageStore((state) => state.language);
-	const updateLanguage = useLanguageStore((state) => state.updateLanguage);
+	const language = useLanguageStorage((state) => state.language);
+	const updateLanguage = useLanguageStorage((state) => state.updateLanguage);
 
 	const handleLanguageSwitch = () => {
 		if (language == 'english') {
