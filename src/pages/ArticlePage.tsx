@@ -4,25 +4,17 @@ import { IoIosArrowRoundBack } from 'react-icons/io';
 import { MainLayout } from '../layout';
 import { Title } from '../components';
 import { Article } from '../types';
-import { useLanguageStore, useThemeStore } from '../store';
 import { articles } from '../data';
+import { useTheme } from '../hooks';
+import { useLanguage } from '../hooks/useLanguage';
 
 export const ArticlePage: FunctionComponent = () => {
 	const { article } = useParams();
 	const [currentArticle, setCurrentArticle] = useState<Article>();
 	const [currentContent, setCurrentContent] = useState<string>('');
 	const navigate = useNavigate();
-	const language = useLanguageStore((state) => state.language);
-	const updateLanguage = useLanguageStore((state) => state.updateLanguage);
-	const theme = useThemeStore((state) => state.theme);
-
-	const handleLanguageSwitch = (): void => {
-		if (language == 'english') {
-			updateLanguage('spanish');
-		} else {
-			updateLanguage('english');
-		}
-	};
+	const { language, handleLanguageSwitch } = useLanguage();
+	const { theme } = useTheme();
 
 	useEffect(() => {
 		const getArticleContent = async () => {

@@ -5,15 +5,14 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { MenuDesktop, MenuMobile } from './';
 import { Menu } from '../types/Menu';
-import { useThemeStore } from '../store';
+import { useTheme } from '../hooks';
 
 export const Navbar: FunctionComponent<Menu> = ({
 	sections,
 	location,
 }: Menu) => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
-	const theme = useThemeStore((state) => state.theme);
-	const updateTheme = useThemeStore((state) => state.updateTheme);
+	const { theme, updateTheme } = useTheme();
 
 	const handleMenu = (): void => {
 		setIsOpen(!isOpen);

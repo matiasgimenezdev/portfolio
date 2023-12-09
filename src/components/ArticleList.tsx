@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 import { ArticleLink } from './ArticleLink';
 import { Article } from '../types';
-import { useThemeStore } from '../store';
 import { articles } from '../data';
+import { useTheme } from '../hooks';
 
 type ArticleListProps = {
 	title: string;
@@ -18,7 +18,7 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 	const [currentPage, setCurrentPage] = useState<number>(1);
 	const [pagesCount, setPagesCount] = useState<number>(1);
 	const [pages, setPages] = useState<Article[][]>([]);
-	const theme = useThemeStore((state) => state.theme);
+	const { theme } = useTheme();
 	const max = 4;
 
 	useEffect(() => {

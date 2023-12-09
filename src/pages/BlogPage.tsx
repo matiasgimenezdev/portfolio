@@ -3,10 +3,10 @@ import { Balancer } from 'react-wrap-balancer';
 import { MainLayout } from '../layout';
 import { ArticleList } from '../components';
 import { Title } from '../components';
-import { useThemeStore } from '../store';
+import { useTheme } from '../hooks';
 
 export const BlogPage: FunctionComponent = () => {
-	const theme = useThemeStore((state) => state.theme);
+	const { theme } = useTheme();
 
 	return (
 		<MainLayout location='blog'>

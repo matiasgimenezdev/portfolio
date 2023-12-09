@@ -1,7 +1,7 @@
 import { ReactNode, FunctionComponent, useEffect } from 'react';
 import { LazyMotion, m, domAnimation } from 'framer-motion';
 import { Navbar, Footer } from '../components';
-import { useThemeStore } from '../store';
+import { useTheme } from '../hooks';
 
 type MainLayoutProps = {
 	children: ReactNode;
@@ -12,7 +12,7 @@ export const MainLayout: FunctionComponent<MainLayoutProps> = ({
 	children,
 	location = '',
 }: MainLayoutProps) => {
-	const theme = useThemeStore((state) => state.theme);
+	const { theme } = useTheme();
 	useEffect(() => {
 		if (theme === 'dark') {
 			document.body.style.background = '#343A40';

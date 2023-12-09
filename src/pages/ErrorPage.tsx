@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import { IoIosArrowRoundBack } from 'react-icons/io';
 import { MainLayout } from '../layout';
 import { Title } from '../components';
-import { useThemeStore } from '../store';
+import { useTheme } from '../hooks';
 
 export const ErrorPage: FunctionComponent = () => {
-	const theme = useThemeStore((state) => state.theme);
+	const { theme } = useTheme();
 
 	return (
 		<MainLayout location='error'>

@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { m, LazyMotion, domAnimation } from 'framer-motion';
-import { useThemeStore } from '../store';
+import { useTheme } from '../hooks';
 
 type ArticleLinkProps = {
 	title: string;
@@ -14,7 +14,7 @@ export const ArticleLink: FunctionComponent<ArticleLinkProps> = ({
 	date,
 	path,
 }) => {
-	const theme = useThemeStore((state) => state.theme);
+	const { theme } = useTheme();
 
 	return (
 		<LazyMotion features={domAnimation}>

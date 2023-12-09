@@ -1,12 +1,12 @@
 import { FunctionComponent } from 'react';
-import { useThemeStore } from '../store';
+import { useTheme } from '../hooks';
 
 type TitleProps = {
 	title: string;
 };
 
 export const Title: FunctionComponent<TitleProps> = ({ title }: TitleProps) => {
-	const theme = useThemeStore((state) => state.theme);
+	const { theme } = useTheme();
 
 	return (
 		<h2

@@ -4,11 +4,11 @@ import { PiGithubLogo } from 'react-icons/pi';
 import { TbWorldShare } from 'react-icons/tb';
 import { MainLayout } from '../layout';
 import { Title } from '../components';
-import { useThemeStore } from '../store';
+import {useTheme} from "../hooks"
 import { projects } from '../data';
 
 export const ProjectsPage: FunctionComponent = () => {
-	const theme = useThemeStore((state) => state.theme);
+	const {theme} = useTheme();
 
 	return (
 		<MainLayout location='projects'>

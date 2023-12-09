@@ -1,10 +1,10 @@
 import Balancer from 'react-wrap-balancer';
 import { FunctionComponent } from 'react';
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
-import { useThemeStore } from '../store';
+import { useTheme } from '../hooks/';
 
 export const Footer: FunctionComponent = () => {
-	const theme = useThemeStore((state) => state.theme);
+	const { theme } = useTheme();
 
 	return (
 		<footer

@@ -2,11 +2,11 @@ import { FunctionComponent } from 'react';
 import { Balancer } from 'react-wrap-balancer';
 import { MainLayout } from '../layout';
 import { Title } from '../components';
-import { useThemeStore } from '../store';
 import { skills } from '../data';
+import { useTheme } from '../hooks';
 
 export const SkillsPage: FunctionComponent = () => {
-	const theme = useThemeStore((state) => state.theme);
+	const { theme } = useTheme();
 
 	return (
 		<MainLayout location='skills'>

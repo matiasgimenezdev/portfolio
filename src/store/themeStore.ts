@@ -14,5 +14,3 @@ export const useThemeStore = create<Theme>((set) => ({
 	theme: theme,
 	updateTheme: (newTheme: string) => set({ theme: newTheme }),
 }));
-
-console.log();
