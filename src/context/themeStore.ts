@@ -10,7 +10,7 @@ if (!theme) {
 	theme = darkModeMediaQuery.matches ? 'dark' : 'light';
 }
 
-export const useThemeStorage = create<Theme>((set) => ({
+export const useThemeStore = create<Theme>((set) => ({
 	theme: theme,
 	updateTheme: (newTheme: string) => set({ theme: newTheme }),
 }));
