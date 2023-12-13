@@ -1,3 +1,4 @@
 import { useTheme } from './useTheme';
+import { useLanguage } from './useLanguage';
 
-export { useTheme };
+export { useTheme, useLanguage };

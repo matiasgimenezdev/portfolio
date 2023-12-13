@@ -11,3 +11,25 @@ export const articles: Article[] = [
 		contentPath: '/articles/hello-world/hello-world',
 	},
 ];
+
+const DELAY = 0;
+
+export const getArticles = (): Promise<Article[]> => {
+	return new Promise((resolve) => {
+		setTimeout(() => {
+			resolve(articles);
+		}, DELAY);
+	});
+};
+
+export const getArticle = (id: string): Promise<Article> => {
+	return new Promise((resolve) => {
+		const article: Article = articles.filter((item) =>
+			item.path.includes(id)
+		)[0];
+
+		setTimeout(() => {
+			resolve(article);
+		}, DELAY);
+	});
+};

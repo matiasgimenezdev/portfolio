@@ -4,6 +4,7 @@ export * from './Footer/Footer';
 export * from './Header/MenuMobile';
 export * from './Blog/ArticleList';
 export * from './Blog/ArticleLink';
+export * from './Blog/Article';
 export * from './Projects/ProjectCard';
 export * from './Skills/SkillItem';
 export * from './Title';

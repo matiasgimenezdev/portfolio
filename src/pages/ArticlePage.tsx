@@ -1,26 +1,22 @@
 import { FunctionComponent, useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import { IoIosArrowRoundBack } from 'react-icons/io';
+import { useNavigate, useParams } from 'react-router-dom';
 import { MainLayout } from '../layout';
-import { Title } from '../components';
-import { Article } from '../types';
-import { articles } from '../data';
-import { useTheme } from '../hooks';
-import { useLanguage } from '../hooks/useLanguage';
+import { Article as ArticleType } from '../types';
+import { getArticle } from '../data';
+import { useLanguage } from '../hooks';
+import { Article } from '../components';
 
 export const ArticlePage: FunctionComponent = () => {
 	const { article } = useParams();
-	const [currentArticle, setCurrentArticle] = useState<Article>();
+	const [currentArticle, setCurrentArticle] = useState<ArticleType>();
 	const [currentContent, setCurrentContent] = useState<string>('');
 	const navigate = useNavigate();
-	const { language, handleLanguageSwitch } = useLanguage();
-	const { theme } = useTheme();
+	const { language } = useLanguage();
+	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
 		const getArticleContent = async () => {
-			const current: Article = articles.filter((item) =>
-				item.path.includes(article ?? '')
-			)[0];
+			const current: ArticleType = await getArticle(article ?? '');
 			if (current) {
 				setCurrentArticle(current);
 				const path: string =
@@ -30,77 +26,27 @@ export const ArticlePage: FunctionComponent = () => {
 				fetch(path)
 					.then((response) => response.text())
 					.then((data) => {
+						const timeoutId: number = setTimeout(() => {
+							setIsLoading(false);
+							clearTimeout(timeoutId);
+						}, 1000);
 						setCurrentContent(data);
 					});
 			} else {
 				navigate('/error');
 			}
 		};
+
 		getArticleContent();
 	}, [currentArticle, currentContent, language, navigate, article]);
 
 	return (
 		<MainLayout>
-			<main
-				className={`flex flex-col items-center pt-16 min-h-60 ${
-					theme == 'light'
-						? 'text-grey-dark bg-white'
-						: 'text-white bg-grey-darkest'
-				}`}
-			>
-				<button
-					className='w-7 h-7 text-center mb-3'
-					onClick={handleLanguageSwitch}
-				>
-					{language === 'english' ? (
-						<img
-							src='/icons/english.svg'
-							alt='USA flag'
-							className='m-auto'
-						/>
-					) : (
-						<img
-							src='/icons/spanish.svg'
-							alt='Spain flag'
-							className='m-auto'
-						/>
-					)}
-				</button>
-				<p>{currentArticle?.fullDate}</p>
-				<Title title={currentArticle ? currentArticle?.title : ''} />
-
-				<ul>
-					{currentArticle?.tags.map((tag) => {
-						return (
-							<span
-								className='bg-grey-lightest py-1 px-3 ml-1 text-grey-darkest rounded-2xl text-xs border border-grey-base'
-								key={tag}
-							>
-								{tag}
-							</span>
-						);
-					})}
-				</ul>
-
-				<p
-					dangerouslySetInnerHTML={{
-						__html: currentArticle ? currentContent : '',
-					}}
-					className={`${
-						theme == 'light' ? 'text-black' : 'text-white'
-					} text font-light mt-4 w-[100%] xs:w-9/12 px-6 block py-2 md:w-[70%] md:text-lg`}
-				/>
-
-				<Link
-					to='/blog'
-					className={`text-md font-semibold ${
-						theme == 'light' ? 'text-grey-darkest' : 'text-white'
-					} mt-4 p-2 px-3 hover:-translate-x-5 transition duration-300 text-lg`}
-				>
-					<IoIosArrowRoundBack className='inline-block text-xl' />{' '}
-					Return to the blog
-				</Link>
-			</main>
+			<Article
+				currentArticle={currentArticle}
+				currentContent={currentContent}
+				isLoading={isLoading}
+			/>
 		</MainLayout>
 	);
 };
