@@ -58,6 +58,7 @@ export const Navbar: FunctionComponent<Menu> = ({
 						<button
 							className='swap swap-rotate swap-active'
 							onClick={handleThemeSwitch}
+							aria-label='theme-switcher'
 						>
 							<PiMoonLight
 								className={`text-3xl mt-1 inline-block ${
@@ -84,6 +85,7 @@ export const Navbar: FunctionComponent<Menu> = ({
 										: 'fill-white'
 								}`}
 								onClick={handleMenu}
+								aria-label='menu'
 							/>
 						}
 					</span>

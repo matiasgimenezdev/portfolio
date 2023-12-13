@@ -59,6 +59,7 @@ export const Footer: FunctionComponent = () => {
 						<a
 							href='https://github.com/matiasgimenezdev'
 							target='_blank'
+							aria-label='Link to Github profile'
 						>
 							<BsGithub className='h-5 w-5' />
 						</a>
@@ -71,6 +72,7 @@ export const Footer: FunctionComponent = () => {
 						<a
 							href='https://linkedin.com/in/matiasgimenezdev/'
 							target='_blank'
+							aria-label='Link to LinkedIn profile'
 						>
 							<BsLinkedin className='h-5 w-5' />
 						</a>
