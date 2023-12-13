@@ -1,12 +1,12 @@
 import { FunctionComponent } from 'react';
 
-type SkillItemProps = {
+type SkillsItemProps = {
 	name: string;
 	alt: string;
 	src: string;
 };
 
-export const SkillItem: FunctionComponent<SkillItemProps> = ({
+export const SkillsItem: FunctionComponent<SkillsItemProps> = ({
 	name,
 	alt,
 	src,

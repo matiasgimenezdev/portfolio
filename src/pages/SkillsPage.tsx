@@ -1,20 +1,21 @@
 import { FunctionComponent, useState, useEffect } from 'react';
 import { Balancer } from 'react-wrap-balancer';
 import { MainLayout } from '../layout';
-import { Title, SkillItem, Loader } from '../components';
+import { Title, Loader, SkillsCard } from '../components';
 import { getSkills } from '../data';
 import { useTheme } from '../hooks';
-import { Skill } from '../types';
+import { SkillCategories } from '../types';
 
 export const SkillsPage: FunctionComponent = () => {
 	const { theme } = useTheme();
-	const [isLoading, setIsLoading] = useState(false);
-	const [skills, setSkills] = useState<Skill[]>([]);
+	const [isLoading, setIsLoading] = useState(true);
+	const [skillCategories, setSkillCategories] = useState<SkillCategories[]>(
+		[]
+	);
 
 	async function fetchProjects() {
-		setIsLoading(true);
-		const projects: Skill[] = await getSkills();
-		setSkills(projects);
+		const categories: SkillCategories[] = await getSkills();
+		setSkillCategories(categories);
 		setIsLoading(false);
 	}
 
@@ -43,27 +44,20 @@ export const SkillsPage: FunctionComponent = () => {
 					keep up with the ever-evolving world of technology.
 				</Balancer>
 
-				<section className='container flex mt-8 justify-center mb-4'>
+				<section className='container flex flex-col mt-8 justify-center mb-4'>
 					{isLoading ? (
 						<Loader />
 					) : (
-						<section
-							className={`grid py-4 px-2 grid-cols-2 w-90 justify-center ${
-								theme == 'light'
-									? 'border border-grey-light text-grey-darkest'
-									: 'border border-grey-medium text-white'
-							} rounded-md md:grid-cols-3 xl:grid-cols-4 `}
-						>
-							{skills.map(({ name, alt, src }) => {
-								return (
-									<SkillItem
-										name={name}
-										alt={alt}
-										src={src}
-									/>
-								);
-							})}
-						</section>
+						skillCategories.map(({ category, skills }) => {
+							console.log(category);
+							return (
+								<SkillsCard
+									key={category}
+									category={category}
+									skills={skills}
+								/>
+							);
+						})
 					)}
 				</section>
 			</main>

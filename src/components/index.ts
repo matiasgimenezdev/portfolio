@@ -6,6 +6,7 @@ export * from './Blog/ArticleList';
 export * from './Blog/ArticleLink';
 export * from './Blog/Article';
 export * from './Projects/ProjectCard';
-export * from './Skills/SkillItem';
+export * from './Skills/SkillsItem';
+export * from './Skills/SkillsCard';
 export * from './Title';
 export * from './Loader';
