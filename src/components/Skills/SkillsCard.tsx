@@ -14,11 +14,11 @@ export const SkillsCard: FunctionComponent<SkillsCardProps> = ({
 }) => {
 	const { theme } = useTheme();
 
-	const sectionStyle = `relative grid mt-8 py-4 px-2 grid-cols-2 w-[40%] ml-auto mr-auto justify-center ${
+	const sectionStyle = `w-[80%] relative grid mt-8 py-4 px-2 grid-cols-2  ml-auto mr-auto justify-center ${
 		theme == 'light'
 			? 'border border-grey-light text-grey-darkest'
 			: 'border border-grey-medium text-white'
-	} rounded-md md:grid-cols-3 xl:grid-cols-4`;
+	} rounded-md md:w-[60%] lg:w-[55%] xl:w-[50%] 2xl:w-[40%] md:grid-cols-3 xl:grid-cols-4`;
 
 	return (
 		<section className={sectionStyle}>
