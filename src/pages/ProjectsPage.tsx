@@ -51,6 +51,7 @@ export const ProjectsPage: FunctionComponent = () => {
 								({ title, image, demoURL, repositoryURL }) => {
 									return (
 										<ProjectCard
+											key={title}
 											title={title}
 											image={image}
 											demoURL={demoURL}
