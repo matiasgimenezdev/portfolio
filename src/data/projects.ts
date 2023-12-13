@@ -9,7 +9,7 @@ const projects: Project[] = [
 	},
 ];
 
-const DELAY = 1000;
+const DELAY = 0;
 
 export const getProjects = (): Promise<Project[]> => {
 	return new Promise((resolve) => {

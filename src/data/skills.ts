@@ -63,7 +63,7 @@ const skills: Skill[] = [
 	},
 ];
 
-const DELAY = 1000;
+const DELAY = 0;
 
 export const getSkills = (): Promise<Skill[]> => {
 	return new Promise((resolve) => {
