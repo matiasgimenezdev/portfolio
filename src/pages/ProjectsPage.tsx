@@ -43,10 +43,11 @@ export const ProjectsPage: FunctionComponent = () => {
 				</Balancer>
 
 				<section className='container flex mt-8 justify-center mb-4'>
-					{isLoading && <Loader />}
-					<section className='grid grid-cols-1 w-90 md:grid-cols-2 xl:grid-cols-3'>
-						{!isLoading &&
-							projects.map(
+					{isLoading ? (
+						<Loader />
+					) : (
+						<section className='grid grid-cols-1 w-90 md:grid-cols-2 xl:grid-cols-3'>
+							{projects.map(
 								({ title, image, demoURL, repositoryURL }) => {
 									return (
 										<ProjectCard
@@ -58,7 +59,8 @@ export const ProjectsPage: FunctionComponent = () => {
 									);
 								}
 							)}
-					</section>
+						</section>
+					)}
 				</section>
 			</main>
 		</MainLayout>
