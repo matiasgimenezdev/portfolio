@@ -17,7 +17,7 @@ export default {
 			dropShadow: {
 				grey: '0 5px 4px rgba(0,0,0,.4) ',
 				white: '0 5px 4px rgba(0,0,0,.5) ',
-				black: '0 4px 4px rgba(0,0,0,.8) ',
+				black: '0 2px 3px rgba(0,0,0,.9) ',
 				figcaption: '0 4px 2px rgba(0,0,0,.8) ',
 			},
 			minHeight: {
