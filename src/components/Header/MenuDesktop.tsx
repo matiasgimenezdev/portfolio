@@ -17,7 +17,7 @@ export const MenuDesktop = ({ sections, location }: Menu) => {
 					<li
 						className={`${
 							location === element.toLowerCase()
-								? `font-bold drop-shadow-black text-white`
+								? `font-bold drop-shadow-black text-white underline underline-offset-4`
 								: `${
 										theme == 'light'
 											? 'text-grey-dark'
