@@ -85,7 +85,7 @@ export const Article: FunctionComponent<ArticleProps> = ({
 							theme == 'light'
 								? 'text-grey-darkest'
 								: 'text-white'
-						} mt-4 p-2 px-3 hover:-translate-x-5 transition duration-300 text-lg`}
+						} hover:underline underline-offset-4 mt-4 p-2 px-3 hover:-translate-x-5 transition duration-300 text-lg`}
 					>
 						<IoIosArrowRoundBack className='inline-block text-xl' />{' '}
 						Return to the blog

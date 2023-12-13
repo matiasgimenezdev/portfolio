@@ -33,7 +33,7 @@ export const HomePage: FunctionComponent = () => {
 							theme == 'light'
 								? 'text-grey-darkest'
 								: 'text-white'
-						}`}
+						} hover:underline underline-offset-4`}
 					>
 						GitHub{' '}
 						<DiGithubBadge className='inline mb-1.5 text-xl ' />

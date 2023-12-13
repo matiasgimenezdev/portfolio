@@ -37,7 +37,7 @@ export const Footer: FunctionComponent = () => {
 				<a
 					href='https://linkedin.com/in/matiasgimenezdev/'
 					target='_blank'
-					className='font-medium text'
+					className='font-medium text hover:underline underline-offset-4'
 				>
 					LinkedIn <BsLinkedin className='inline mb-1' />
 				</a>

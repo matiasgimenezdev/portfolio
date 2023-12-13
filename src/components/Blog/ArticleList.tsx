@@ -174,7 +174,7 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 									: 'border-grey-medium text-grey-base hover:bg-grey-dark'
 							} flex items-center justify-between transition ease-in-out`}
 						>
-							<span className='font-normal text-lg '>
+							<span className='font-normal text-lg'>
 								+ Read more notes ...
 							</span>
 						</p>
