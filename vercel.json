@@ -1,7 +1,3 @@
 {
-	"rewrites": [{ "source": "/(.*)", "destination": "/" }],
-	"images": {
-		"minimumCacheTTL": 31536000,
-		"formats": ["image/webp", "image/png", "image/svg"]
-	}
+	"rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
