@@ -26,7 +26,7 @@ export const MenuMobile = ({ sections, location, isOpen }: Menu) => {
 							<li
 								className={`${
 									location === element.toLowerCase()
-										? `font-bold ${
+										? `font-bold underline underline-offset-4 ${
 												theme == 'light'
 													? 'border-grey-dark drop-shadow-black'
 													: 'border-grey-medium drop-shadow-grey'
