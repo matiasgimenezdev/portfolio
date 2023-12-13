@@ -3,9 +3,9 @@ import { PiMoonLight } from 'react-icons/pi';
 import { BsSun } from 'react-icons/bs';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-import { MenuDesktop, MenuMobile } from './';
-import { Menu } from '../types/Menu';
-import { useTheme } from '../hooks';
+import { MenuDesktop, MenuMobile } from '..';
+import { Menu } from '../../types/Menu';
+import { useTheme } from '../../hooks';
 
 export const Navbar: FunctionComponent<Menu> = ({
 	sections,

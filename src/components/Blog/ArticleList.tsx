@@ -2,9 +2,9 @@ import { FunctionComponent, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 import { ArticleLink } from './ArticleLink';
-import { Article } from '../types';
-import { articles } from '../data';
-import { useTheme } from '../hooks';
+import { Article } from '../../types';
+import { articles } from '../../data';
+import { useTheme } from '../../hooks';
 
 type ArticleListProps = {
 	title: string;

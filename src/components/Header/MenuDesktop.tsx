@@ -1,7 +1,7 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 import { Link } from 'react-router-dom';
-import { Menu } from '../types';
-import { useTheme } from '../hooks';
+import { Menu } from '../../types';
+import { useTheme } from '../../hooks';
 
 export const MenuDesktop = ({ sections, location }: Menu) => {
 	const { theme } = useTheme();

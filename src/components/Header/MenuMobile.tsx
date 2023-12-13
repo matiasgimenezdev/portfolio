@@ -1,8 +1,8 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 import { LazyMotion, m, domAnimation } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Menu } from '../types';
-import { useTheme } from '../hooks';
+import { Menu } from '../../types';
+import { useTheme } from '../../hooks';
 
 export const MenuMobile = ({ sections, location, isOpen }: Menu) => {
 	const { theme } = useTheme();
