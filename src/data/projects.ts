@@ -1,6 +1,6 @@
 import { Project } from '../types';
 
-export const projects: Project[] = [
+const projects: Project[] = [
 	{
 		title: 'Portfolio',
 		image: '/images/projects/portfolio.webp',
@@ -8,3 +8,13 @@ export const projects: Project[] = [
 		repositoryURL: 'https://github.com/matiasgimenezdev/blog-portfolio',
 	},
 ];
+
+const DELAY = 1000;
+
+export const getProjects = (): Promise<Project[]> => {
+	return new Promise((resolve) => {
+		setTimeout(() => {
+			resolve(projects);
+		}, DELAY);
+	});
+};
