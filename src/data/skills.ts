@@ -17,11 +17,6 @@ const skills: Skill[] = [
 		src: '/icons/tailwind.svg',
 	},
 	{
-		name: 'Sass',
-		alt: 'Sass icon',
-		src: '/icons/sass.svg',
-	},
-	{
 		name: 'Javascript',
 		alt: 'Javascript icon',
 		src: '/icons/javascript.svg',
@@ -35,11 +30,6 @@ const skills: Skill[] = [
 		name: 'React',
 		alt: 'React icon',
 		src: '/icons/react.svg',
-	},
-	{
-		name: 'Java',
-		alt: 'Java icon',
-		src: '/icons/java.svg',
 	},
 	{
 		name: 'PHP',
@@ -57,9 +47,9 @@ const skills: Skill[] = [
 		src: '/icons/docker.svg',
 	},
 	{
-		name: 'MySQL',
-		alt: 'MySQL icon',
-		src: '/icons/mysql.svg',
+		name: 'Postgres',
+		alt: 'Postgres icon',
+		src: '/icons/postgres.svg',
 	},
 ];
 

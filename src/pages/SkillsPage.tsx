@@ -48,7 +48,7 @@ export const SkillsPage: FunctionComponent = () => {
 						<Loader />
 					) : (
 						<section
-							className={`grid py-4 px-2 grid-cols-2 w-90 ${
+							className={`grid py-4 px-2 grid-cols-2 w-90 justify-center ${
 								theme == 'light'
 									? 'border border-grey-light text-grey-darkest'
 									: 'border border-grey-medium text-white'
