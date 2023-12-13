@@ -49,7 +49,6 @@ export const SkillsPage: FunctionComponent = () => {
 						<Loader />
 					) : (
 						skillCategories.map(({ category, skills }) => {
-							console.log(category);
 							return (
 								<SkillsCard
 									key={category}
