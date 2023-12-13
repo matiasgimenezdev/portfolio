@@ -1,6 +1,6 @@
-import { Skill } from '../types/Skill';
+import { Skill } from '../types';
 
-export const skills: Skill[] = [
+const skills: Skill[] = [
 	{
 		name: 'HTML',
 		alt: 'HTML icon',
@@ -62,3 +62,13 @@ export const skills: Skill[] = [
 		src: '/icons/mysql.svg',
 	},
 ];
+
+const DELAY = 1000;
+
+export const getSkills = (): Promise<Skill[]> => {
+	return new Promise((resolve) => {
+		setTimeout(() => {
+			resolve(skills);
+		}, DELAY);
+	});
+};

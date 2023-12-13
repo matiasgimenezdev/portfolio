@@ -5,5 +5,6 @@ export * from './Header/MenuMobile';
 export * from './Blog/ArticleList';
 export * from './Blog/ArticleLink';
 export * from './Projects/ProjectCard';
+export * from './Skills/SkillItem';
 export * from './Title';
 export * from './Loader';

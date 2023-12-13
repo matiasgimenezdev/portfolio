@@ -1,13 +1,26 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useState, useEffect } from 'react';
 import { Balancer } from 'react-wrap-balancer';
 import { MainLayout } from '../layout';
-import { Title } from '../components';
-import { skills } from '../data';
+import { Title, SkillItem, Loader } from '../components';
+import { getSkills } from '../data';
 import { useTheme } from '../hooks';
+import { Skill } from '../types';
 
 export const SkillsPage: FunctionComponent = () => {
 	const { theme } = useTheme();
+	const [isLoading, setIsLoading] = useState(false);
+	const [skills, setSkills] = useState<Skill[]>([]);
 
+	async function fetchProjects() {
+		setIsLoading(true);
+		const projects: Skill[] = await getSkills();
+		setSkills(projects);
+		setIsLoading(false);
+	}
+
+	useEffect(() => {
+		fetchProjects();
+	}, []);
 	return (
 		<MainLayout location='skills'>
 			<main
@@ -31,31 +44,27 @@ export const SkillsPage: FunctionComponent = () => {
 				</Balancer>
 
 				<section className='container flex mt-8 justify-center mb-4'>
-					<section
-						className={`grid py-4 px-2 grid-cols-2 w-90 ${
-							theme == 'light'
-								? 'border border-grey-light text-grey-darkest'
-								: 'border border-grey-medium text-white'
-						} rounded-md md:grid-cols-3 xl:grid-cols-4 `}
-					>
-						{skills.map(({ name, alt, src }) => {
-							return (
-								<article
-									key={name}
-									className='flex py-4 px-4 gap-2 justify-center items-center text-center'
-								>
-									<img
-										className='h-10 w-10 max-w-10'
-										src={src}
+					{isLoading ? (
+						<Loader />
+					) : (
+						<section
+							className={`grid py-4 px-2 grid-cols-2 w-90 ${
+								theme == 'light'
+									? 'border border-grey-light text-grey-darkest'
+									: 'border border-grey-medium text-white'
+							} rounded-md md:grid-cols-3 xl:grid-cols-4 `}
+						>
+							{skills.map(({ name, alt, src }) => {
+								return (
+									<SkillItem
+										name={name}
 										alt={alt}
+										src={src}
 									/>
-									<span className='basis-9/12 text-left font-medium text-md'>
-										{name}
-									</span>
-								</article>
-							);
-						})}
-					</section>
+								);
+							})}
+						</section>
+					)}
 				</section>
 			</main>
 		</MainLayout>
