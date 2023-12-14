@@ -26,7 +26,7 @@ export const SkillsPage: FunctionComponent = () => {
 	return (
 		<MainLayout location='skills'>
 			<main
-				className={`flex flex-col items-center pt-16 min-h-60 ${
+				className={`flex flex-col items-center pt-16 min-h-[50vh] ${
 					theme == 'light' ? 'bg-white' : 'bg-grey-darkest'
 				}`}
 			>
