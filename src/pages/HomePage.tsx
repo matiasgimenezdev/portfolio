@@ -19,7 +19,7 @@ export const HomePage: FunctionComponent = () => {
 				<Balancer
 					className={`${
 						theme == 'light' ? 'text-grey-darkest' : 'text-white'
-					} text-center font-light text-md w-9/12 px-4 block  md:w-1/3 md:text-xl`}
+					} text-center font-light text-md w-9/12 px-4 block  md:w-1/2 md:text-xl`}
 				>
 					<Title title='Hello, there 👋! My name is Matias.' />
 					<p>
