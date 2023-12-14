@@ -29,12 +29,13 @@ export const JobsList: FunctionComponent = () => {
 
 			{jobs.map(({ title, from, to, description, skills }) => {
 				return (
-					<p
+					<article
 						className={`relative pb-6 px-2 border-b ${
 							theme == 'light'
 								? 'border-grey-light text-grey-dark'
 								: 'border-grey-medium text-white'
 						}`}
+						key={title}
 					>
 						<span className='absolute top-4 italic text-sm'>
 							{from} - {to}
@@ -43,16 +44,19 @@ export const JobsList: FunctionComponent = () => {
 							{title}
 						</p>
 						<p className='pt-2'>{description}</p>
-						<section className='mt-4 select-none flex flex-wrap gap-2 '>
+						<p className='mt-4 select-none flex flex-wrap gap-2 '>
 							{skills.map((skill) => {
 								return (
-									<span className='bg-grey-lightest py-1 px-3 mr-2 text-grey-darkest rounded-2xl text-xs border border-grey-base'>
+									<span
+										key={skill}
+										className='bg-grey-lightest py-1 px-3 mr-2 text-grey-darkest rounded-2xl text-xs border border-grey-base'
+									>
 										{skill}
 									</span>
 								);
 							})}
-						</section>
-					</p>
+						</p>
+					</article>
 				);
 			})}
 		</section>
