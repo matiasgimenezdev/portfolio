@@ -7,7 +7,7 @@ Made with:
 -   [Tailwind CSS](https://tailwindcss.com/)
 -   [TypeScript](https://www.typescriptlang.org/)
 
-## Todo
+## Backlog
 
 -   [x] Dark theme
     -   [x] ThemeToggle
@@ -32,7 +32,7 @@ Made with:
     -   [x] Home
         -   [x] Bio/intro
         -   [x] Latest notes
-        -   [ ] Work experience
+        -   [x] Work experience
     -   [x] Blog
         -   [x] Lista de artículos paginada
         -   [x] Articulo
