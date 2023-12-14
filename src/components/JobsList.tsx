@@ -43,7 +43,7 @@ export const JobsList: FunctionComponent = () => {
 						<p
 							className={`text-base py-0 pt-12 md:text-md font-medium lg:text-xl ${
 								theme == 'light'
-									? 'text-cyan-600'
+									? 'text-[#0A66C2]'
 									: 'text-cyan-300'
 							}`}
 						>
