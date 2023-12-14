@@ -192,9 +192,9 @@ export const ArticleList: FunctionComponent<ArticleListProps> = ({
 	};
 
 	return (
-		<section className='px-6 w-full md:p-10 xl:w-1/2 xl:px-20 xl:py-10'>
+		<section className='px-6 w-full md:p-10 xl:w-1/2 xl:px-20 xl:py-8'>
 			<h4
-				className={`text-xl py-4 px-2 border-b font-bold ${
+				className={`text-xl pb-4 px-2 border-b font-bold ${
 					theme == 'light'
 						? 'text-grey-dark border-grey-light'
 						: 'text-white border-grey-medium'

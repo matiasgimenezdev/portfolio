@@ -17,31 +17,41 @@ export const Footer: FunctionComponent = () => {
 					theme == 'light' ? 'text-grey-darkest' : 'text-white'
 				} font-light text-md w-9/12 px-4 block mt-10 md:w-1/3 md:text-xl`}
 			>
-				I am currently doing the fourth year of an Information Systems
-				degree in Argentina. <br /> <br /> I consider myself passionate
-				about technology and software development, so I try to keep
-				learning day by day. <br />
+				{location.pathname !== '/' && (
+					<p className='pb-6'>
+						I am currently doing the fourth year of an Information
+						Systems degree in Argentina.
+					</p>
+				)}
+				<p>
+					I consider myself passionate about technology and software
+					development, so I try to keep learning day by day.{' '}
+				</p>
 				<span
 					className={`font-normal text-xl  mt-8 block ${
 						theme == 'light' ? 'text-grey-darkest' : 'text-white'
 					}`}
 				>
-					<span>💡</span> <br />
-					"Living, learning & leveling up <br />
-					one day at a time"
+					<span>💡</span>
+					<p>
+						"Living, learning & leveling up one <br />
+						day at a time."
+					</p>
 				</span>
-				<br />
-				I'm looking for my first software development job.
-				<br />
-				Here is my{' '}
-				<a
-					href='https://linkedin.com/in/matiasgimenezdev/'
-					target='_blank'
-					className='font-medium text hover:underline underline-offset-4'
-				>
-					LinkedIn <BsLinkedin className='inline mb-1' />
-				</a>
-				.
+				{location.pathname !== '/' && (
+					<p className='pt-6'>
+						I'm looking for my first software development job.{' '}
+						<br />
+						Here is my{' '}
+						<a
+							href='https://linkedin.com/in/matiasgimenezdev/'
+							target='_blank'
+							className='font-medium text hover:underline underline-offset-4'
+						>
+							LinkedIn <BsLinkedin className='inline mb-1' />
+						</a>
+					</p>
+				)}
 			</Balancer>
 			<nav
 				className={`w-full max-h-18 py-6 mt-10 border-t ${
