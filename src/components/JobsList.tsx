@@ -41,7 +41,7 @@ export const JobsList: FunctionComponent = () => {
 							{from} - {to}
 						</span>
 						<p
-							className={`text-lg py-0 pt-12 font-medium lg:text-xl ${
+							className={`text-base py-0 pt-12 md:text-md font-medium lg:text-xl ${
 								theme == 'light'
 									? 'text-cyan-600'
 									: 'text-cyan-300'
@@ -49,7 +49,7 @@ export const JobsList: FunctionComponent = () => {
 						>
 							{title}
 						</p>
-						<p className='pt-2'>{description}</p>
+						<p className='pt-2 text-sm '>{description}</p>
 						<p className='mt-4 select-none flex flex-wrap gap-2 '>
 							{skills.map((skill) => {
 								return (
