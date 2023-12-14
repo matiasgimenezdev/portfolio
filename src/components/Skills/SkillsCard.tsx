@@ -30,7 +30,7 @@ export const SkillsCard: FunctionComponent<SkillsCardProps> = ({
 				{category}
 			</span>
 			{skills.map(({ name, alt, src }) => {
-				return <SkillsItem name={name} alt={alt} src={src} />;
+				return <SkillsItem name={name} alt={alt} src={src} key={src} />;
 			})}
 		</section>
 	);
