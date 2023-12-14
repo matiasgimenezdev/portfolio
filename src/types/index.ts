@@ -5,3 +5,4 @@ export * from './Skill';
 export * from './SkillCategories';
 export * from './Theme';
 export * from './Language';
+export * from './Job';
