@@ -4,7 +4,7 @@ import { useTheme } from '../hooks';
 export const JobsList: FunctionComponent = () => {
 	const { theme } = useTheme();
 	return (
-		<section className='px-6 w-full md:p-10 xl:w-1/2 xl:px-20 py-6'>
+		<section className='px-6 w-full md:p-10 md:pt-2 xl:w-1/2 xl:px-20 py-6'>
 			<h4
 				className={`text-xl py-4 px-2 border-b font-bold ${
 					theme === 'light'
