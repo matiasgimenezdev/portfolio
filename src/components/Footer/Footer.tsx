@@ -47,9 +47,9 @@ export const Footer: FunctionComponent = () => {
 					}`}
 				>
 					<span>💡</span>
-					<p>
+					<p className='text-sm md:text-base'>
 						"Living, learning & leveling up one <br />
-						day at a time."
+						day at a time"
 					</p>
 				</span>
 			</Balancer>
