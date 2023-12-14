@@ -50,12 +50,12 @@ export const JobsList: FunctionComponent = () => {
 							{title}
 						</p>
 						<p className='pt-2 text-sm '>{description}</p>
-						<p className='mt-4 select-none flex flex-wrap gap-2 '>
+						<p className='mt-4 select-none flex flex-wrap gap-2'>
 							{skills.map((skill) => {
 								return (
 									<span
 										key={skill}
-										className='bg-grey-lightest py-1 px-3 mr-2 text-grey-darkest rounded-2xl text-xs border border-grey-base'
+										className='bg-grey-lightest py-1 px-3 text-grey-darkest rounded-2xl text-xs border border-grey-base'
 									>
 										{skill}
 									</span>
