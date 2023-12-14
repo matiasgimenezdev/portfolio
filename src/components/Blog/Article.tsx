@@ -25,7 +25,7 @@ export const Article: FunctionComponent<ArticleProps> = ({
 				theme == 'light'
 					? 'text-grey-dark bg-white'
 					: 'text-white bg-grey-darkest'
-			} ${!isLoading ? 'min-h-60 pt-16' : 'min-h-[35vh] pt-32'}`}
+			} ${!isLoading ? 'min-h-60 pt-16' : 'min-h-[45vh] pt-32'}`}
 		>
 			{isLoading ? (
 				<Loader />

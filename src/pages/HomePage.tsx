@@ -45,7 +45,7 @@ export const HomePage: FunctionComponent = () => {
 						I am currently doing the fourth year of an Information
 						Systems degree in Argentina.
 					</p>
-					<p className='pt-2'>
+					<p className='pt-2 pb-12 md:pb-2'>
 						I'm looking for my first software development job.{' '}
 						<br />
 						Here is my{' '}

@@ -21,11 +21,13 @@ export const BlogPage: FunctionComponent = () => {
 					} text-center font-light text-md w-9/12 px-4 block md:w-1/3 md:text-xl`}
 				>
 					<Title title='Welcome to my blog!' />
-					What is this? This is my blog.
-					<br /> Here you'll find a mix of experiences, tips, and
-					discoveries I've had while building cool stuff with lines of
-					code. <br /> Thanks for getting here{' '}
-					<span className='text-lg'>🤍</span>.
+					<p className='pb-12 md:pb-6'>
+						What is this? This is my blog.
+						<br /> Here you'll find a mix of experiences, tips, and
+						discoveries I've had while building cool stuff with
+						lines of code. <br /> Thanks for getting here{' '}
+						<span className='text-lg'>🤍</span>.
+					</p>
 				</Balancer>
 				<ArticleList title='All my notes' paginated={true} />
 			</main>

@@ -8,7 +8,7 @@ export const Footer: FunctionComponent = () => {
 
 	return (
 		<footer
-			className={`flex flex-col items-center pt-2 ${
+			className={`flex flex-col items-center  ${
 				theme == 'light' ? 'bg-white' : 'bg-grey-darkest'
 			}`}
 		>

@@ -35,16 +35,19 @@ export const SkillsPage: FunctionComponent = () => {
 					}`}
 				>
 					<Title title='Skills & Technologies' />
-					I'm excited to share with you the different skills I've
-					acquired throughout my
-					<span className='font-light'> -still brief-</span> journey
-					as a software developer.
-					<br /> With a passion for learning and a commitment to
-					excellence, I continually strive to expand my knowledge and
-					keep up with the ever-evolving world of technology.
+					<p>
+						{' '}
+						I'm excited to share with you the different skills I've
+						acquired throughout my
+						<span className='font-light'> -still brief-</span>{' '}
+						journey as a software developer.
+						<br /> With a passion for learning and a commitment to
+						excellence, I continually strive to expand my knowledge
+						and keep up with the ever-evolving world of technology.
+					</p>
 				</Balancer>
 
-				<section className='container flex flex-col mt-8 justify-center mb-4'>
+				<section className='container flex flex-col mt-2 justify-center mb-4'>
 					{isLoading ? (
 						<Loader />
 					) : (
