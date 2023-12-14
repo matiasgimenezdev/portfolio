@@ -58,7 +58,7 @@ export const HomePage: FunctionComponent = () => {
 					</p>
 				</Balancer>
 				<ArticleList title='Latest notes' />
-				<JobsList />
+				{/* <JobsList /> */}
 			</main>
 		</MainLayout>
 	);
