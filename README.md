@@ -32,6 +32,7 @@ Made with:
     -   [x] Home
         -   [x] Bio/intro
         -   [x] Latest notes
+        -   [ ] Work experience
     -   [x] Blog
         -   [x] Lista de artículos paginada
         -   [x] Articulo
