@@ -10,3 +10,4 @@ export * from './Skills/SkillsItem';
 export * from './Skills/SkillsCard';
 export * from './Title';
 export * from './Loader';
+export * from './JobsList';
