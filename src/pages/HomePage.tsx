@@ -3,7 +3,8 @@ import { Balancer } from 'react-wrap-balancer';
 import { DiGithubBadge } from 'react-icons/di';
 import { BsLinkedin } from 'react-icons/bs';
 import { MainLayout } from '../layout';
-import { ArticleList, JobsList, Title } from '../components';
+// import { ArticleList, JobsList, Title } from '../components';
+import { ArticleList, Title } from '../components';
 import { useTheme } from '../hooks';
 
 export const HomePage: FunctionComponent = () => {
