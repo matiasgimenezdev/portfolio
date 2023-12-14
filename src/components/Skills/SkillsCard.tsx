@@ -24,7 +24,9 @@ export const SkillsCard: FunctionComponent<SkillsCardProps> = ({
 		<section className={sectionStyle}>
 			<span
 				className={`absolute font-medium -left-2 -top-3 text-xl rounded-md ${
-					theme == 'light' ? 'bg-white' : 'bg-grey-darkest'
+					theme == 'light'
+						? 'bg-white text-cyan-600'
+						: 'bg-grey-darkest text-cyan-300'
 				}`}
 			>
 				{category}

@@ -40,7 +40,13 @@ export const JobsList: FunctionComponent = () => {
 						<span className='absolute top-4 italic text-sm'>
 							{from} - {to}
 						</span>
-						<p className='text-lg py-0 pt-12 font-medium lg:text-xl'>
+						<p
+							className={`text-lg py-0 pt-12 font-medium lg:text-xl ${
+								theme == 'light'
+									? 'text-cyan-600'
+									: 'text-cyan-300'
+							}`}
+						>
 							{title}
 						</p>
 						<p className='pt-2'>{description}</p>
