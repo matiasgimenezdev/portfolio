@@ -18,10 +18,24 @@ export const Footer: FunctionComponent = () => {
 				} font-light text-md w-9/12 px-4 block mt-10 md:w-1/3 md:text-xl`}
 			>
 				{location.pathname !== '/' && (
-					<p className='pb-6'>
-						I am currently doing the fourth year of an Information
-						Systems degree in Argentina.
-					</p>
+					<>
+						<p className='pb-2'>
+							I am currently doing the fourth year of an
+							Information Systems degree in Argentina.
+						</p>
+						<p className='pb-2'>
+							I'm looking for my first software development job.{' '}
+							<br />
+							Here is my{' '}
+							<a
+								href='https://linkedin.com/in/matiasgimenezdev/'
+								target='_blank'
+								className='font-medium text hover:underline underline-offset-4'
+							>
+								LinkedIn <BsLinkedin className='inline mb-1' />
+							</a>
+						</p>
+					</>
 				)}
 				<p>
 					I consider myself passionate about technology and software
@@ -38,20 +52,6 @@ export const Footer: FunctionComponent = () => {
 						day at a time."
 					</p>
 				</span>
-				{location.pathname !== '/' && (
-					<p className='pt-6'>
-						I'm looking for my first software development job.{' '}
-						<br />
-						Here is my{' '}
-						<a
-							href='https://linkedin.com/in/matiasgimenezdev/'
-							target='_blank'
-							className='font-medium text hover:underline underline-offset-4'
-						>
-							LinkedIn <BsLinkedin className='inline mb-1' />
-						</a>
-					</p>
-				)}
 			</Balancer>
 			<nav
 				className={`w-full max-h-18 py-6 mt-10 border-t ${
