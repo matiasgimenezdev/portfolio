@@ -6,22 +6,23 @@ import { getSkills } from '../data';
 import { useTheme } from '../hooks';
 import { SkillCategories } from '../types';
 
+let skillCategories: SkillCategories[] = [];
+
 export const SkillsPage: FunctionComponent = () => {
 	const { theme } = useTheme();
-	const [isLoading, setIsLoading] = useState(true);
-	const [skillCategories, setSkillCategories] = useState<SkillCategories[]>(
-		[]
-	);
+	const [isLoading, setIsLoading] = useState(false);
 
 	async function fetchProjects() {
-		const categories: SkillCategories[] = await getSkills();
-		setSkillCategories(categories);
+		if (skillCategories.length > 0) return;
+		setIsLoading(true);
+		skillCategories = await getSkills();
 		setIsLoading(false);
 	}
 
 	useEffect(() => {
 		fetchProjects();
 	}, []);
+
 	return (
 		<MainLayout location='skills'>
 			<main

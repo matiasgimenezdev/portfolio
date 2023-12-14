@@ -6,15 +6,16 @@ import { getProjects } from '../data';
 import { Project } from '../types';
 import { ProjectCard, Title, Loader } from '../components';
 
+let projects: Project[] = [];
+
 export const ProjectsPage: FunctionComponent = () => {
 	const { theme } = useTheme();
 	const [isLoading, setIsLoading] = useState(false);
-	const [projects, setProjects] = useState<Project[]>([]);
 
 	async function fetchProjects() {
+		if (projects.length > 0) return;
 		setIsLoading(true);
-		const projects: Project[] = await getProjects();
-		setProjects(projects);
+		projects = await getProjects();
 		setIsLoading(false);
 	}
 
