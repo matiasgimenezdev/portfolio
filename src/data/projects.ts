@@ -7,6 +7,13 @@ const projects: Project[] = [
 		demoURL: '/',
 		repositoryURL: 'https://github.com/matiasgimenezdev/blog-portfolio',
 	},
+	{
+		title: 'Labyrinth store',
+		image: '/images/projects/labyrinth-store.webp',
+		demoURL: 'https://labyrinth-ecommerce.vercel.app/',
+		repositoryURL:
+			'https://github.com/matiasgimenezdev/labyrinth-ecommerce',
+	},
 ];
 
 const DELAY = 900;
