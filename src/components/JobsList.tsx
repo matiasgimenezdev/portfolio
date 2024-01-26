@@ -4,7 +4,7 @@ import { Job } from '../types';
 
 const jobs: Job[] = [
 	{
-		title: `Front-end developer | CIDETIC - Universidad Nacional de Luján`,
+		title: `Front-end developer | CIDETIC (Universidad Nacional de Luján)`,
 		from: 'Aug 2022',
 		to: 'Today',
 		description: `Development of websites for teaching staff with the main objective of improving teaching functions
