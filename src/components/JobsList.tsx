@@ -4,11 +4,13 @@ import { Job } from '../types';
 
 const jobs: Job[] = [
 	{
-		title: 'Facilitador CIDETIC at Universidad Nacional de Luján',
+		title: `Front-end developer at CIDETIC (Universidad Nacional de Luján)`,
 		from: 'Aug 2022',
 		to: 'Today',
-		description:
-			'Development of websites for teaching staff in different areas of the University.',
+		description: `Development of websites for teaching staff with the main objective of improving teaching functions
+			in different subjects of the university. This process involves communication with interested users,
+			seeking to understand their specific needs and provide personalized solutions.
+			`,
 		skills: ['Frontend', 'HTML5', 'CSS3', 'Javascript', 'GIT'],
 	},
 ];
@@ -49,7 +51,7 @@ export const JobsList: FunctionComponent = () => {
 						>
 							{title}
 						</p>
-						<p className='pt-2 text-sm '>{description}</p>
+						<p className='pt-2'>{description}</p>
 						<p className='mt-4 select-none flex flex-wrap gap-2'>
 							{skills.map((skill) => {
 								return (
