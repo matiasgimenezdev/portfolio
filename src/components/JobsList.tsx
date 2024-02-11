@@ -43,10 +43,10 @@ export const JobsList: FunctionComponent = () => {
 							{from} - {to}
 						</span>
 						<p
-							className={`text-base py-0 pt-12 md:text-md font-medium lg:text-xl ${
+							className={`sm:text-lg py-0 pt-12 md:text-md font-medium lg:text-xl ${
 								theme == 'light'
 									? 'text-[#0A66C2]'
-									: 'text-cyan-300'
+									: 'text-[#b1cbff]'
 							}`}
 						>
 							{title}

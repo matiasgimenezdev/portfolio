@@ -41,17 +41,17 @@ export const Footer: FunctionComponent = () => {
 					I consider myself passionate about technology and software
 					development, so I try to keep learning day by day.{' '}
 				</p>
-				<span
-					className={`font-normal text-xl  mt-8 block ${
+				<div
+					className={`font-normal text-lg  mt-8 block ${
 						theme == 'light' ? 'text-grey-darkest' : 'text-white'
 					}`}
 				>
 					<span>💡</span>
-					<p className='text-sm md:text-base'>
-						"Living, learning & leveling up one <br />
-						day at a time"
+					<p className='text-base'>
+						Living, learning & leveling up one <br />
+						day at a time...
 					</p>
-				</span>
+				</div>
 			</Balancer>
 			<nav
 				className={`w-full max-h-18 py-6 mt-10 border-t ${

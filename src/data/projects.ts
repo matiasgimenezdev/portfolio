@@ -8,7 +8,7 @@ const projects: Project[] = [
 		repositoryURL: 'https://github.com/matiasgimenezdev/blog-portfolio',
 	},
 	{
-		title: 'Labyrinth store',
+		title: 'Labyrinth',
 		image: '/images/projects/labyrinth-store.webp',
 		demoURL: 'https://labyrinth-ecommerce.vercel.app/',
 		repositoryURL:

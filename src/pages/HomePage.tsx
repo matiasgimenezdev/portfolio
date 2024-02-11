@@ -25,8 +25,7 @@ export const HomePage: FunctionComponent = () => {
 					<p>
 						This is my personal site made using React, Typescript,
 						and TailwindCSS. <br />
-						It's a work in progress. You can check out the source
-						code on my{' '}
+						You can check out the source code on my{' '}
 						<a
 							href='https://github.com/matiasgimenezdev'
 							target='_blank'

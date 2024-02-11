@@ -15,7 +15,7 @@ const skillCategories: SkillCategories[] = [
 				src: '/icons/css.svg',
 			},
 			{
-				name: 'Tailwind',
+				name: 'TailwindCSS',
 				alt: 'TailwindCSS icon',
 				src: '/icons/tailwind.svg',
 			},
@@ -44,11 +44,11 @@ const skillCategories: SkillCategories[] = [
 				alt: 'Node.js icon',
 				src: '/icons/node.svg',
 			},
-			{
-				name: 'PHP',
-				alt: 'PHP icon',
-				src: '/icons/php.svg',
-			},
+			// {
+			// 	name: 'PHP',
+			// 	alt: 'PHP icon',
+			// 	src: '/icons/php.svg',
+			// },
 			{
 				name: 'Postgres',
 				alt: 'Postgres icon',
@@ -65,7 +65,7 @@ const skillCategories: SkillCategories[] = [
 		category: 'Tools',
 		skills: [
 			{
-				name: 'GIT',
+				name: 'Git',
 				alt: 'GIT icon',
 				src: '/icons/git.svg',
 			},
