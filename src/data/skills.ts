@@ -2,7 +2,7 @@ import { SkillCategories } from '../types';
 
 const skillCategories: SkillCategories[] = [
 	{
-		category: 'Frontend',
+		category: 'Programming languages',
 		skills: [
 			{
 				name: 'HTML',
@@ -15,11 +15,6 @@ const skillCategories: SkillCategories[] = [
 				src: '/icons/css.svg',
 			},
 			{
-				name: 'TailwindCSS',
-				alt: 'TailwindCSS icon',
-				src: '/icons/tailwind.svg',
-			},
-			{
 				name: 'Javascript',
 				alt: 'Javascript icon',
 				src: '/icons/javascript.svg',
@@ -30,29 +25,54 @@ const skillCategories: SkillCategories[] = [
 				src: '/icons/typescript.svg',
 			},
 			{
-				name: 'React',
-				alt: 'React icon',
-				src: '/icons/react.svg',
+				name: 'PHP',
+				alt: 'PHP icon',
+				src: '/icons/php.svg',
 			},
 		],
 	},
 	{
-		category: 'Backend',
+		category: 'Frameworks & Libraries',
 		skills: [
+			{
+				name: 'React',
+				alt: 'React icon',
+				src: '/icons/react.svg',
+			},
 			{
 				name: 'Node.js',
 				alt: 'Node.js icon',
 				src: '/icons/node.svg',
 			},
-			// {
-			// 	name: 'PHP',
-			// 	alt: 'PHP icon',
-			// 	src: '/icons/php.svg',
-			// },
+			{
+				name: 'Express',
+				alt: 'Express icon',
+				src: '/icons/express.svg',
+			},
+			{
+				name: 'TailwindCSS',
+				alt: 'TailwindCSS icon',
+				src: '/icons/tailwind.svg',
+			},
+		],
+	},
+	{
+		category: 'Databases',
+		skills: [
 			{
 				name: 'Postgres',
 				alt: 'Postgres icon',
 				src: '/icons/postgres.svg',
+			},
+			{
+				name: 'MySQL',
+				alt: 'MySQL icon',
+				src: '/icons/mysql.svg',
+			},
+			{
+				name: 'MongoDB',
+				alt: 'MongoDB icon',
+				src: '/icons/mongo.svg',
 			},
 			{
 				name: 'Firebird',
@@ -70,14 +90,14 @@ const skillCategories: SkillCategories[] = [
 				src: '/icons/git.svg',
 			},
 			{
-				name: 'Github',
-				alt: 'Github icon',
-				src: '/icons/github.svg',
-			},
-			{
 				name: 'Docker',
 				alt: 'Docker icon',
 				src: '/icons/docker.svg',
+			},
+			{
+				name: 'Github',
+				alt: 'Github icon',
+				src: '/icons/github.svg',
 			},
 			{
 				name: 'Terminal',
