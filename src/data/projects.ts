@@ -9,10 +9,16 @@ const projects: Project[] = [
 	},
 	{
 		title: 'Labyrinth',
-		image: '/images/projects/labyrinth-store.webp',
+		image: '/images/projects/labyrinth.webp',
 		demoURL: 'https://labyrinth-ecommerce.vercel.app/',
 		repositoryURL:
 			'https://github.com/matiasgimenezdev/labyrinth-ecommerce',
+	},
+	{
+		title: 'Progressio',
+		image: '/images/projects/progressio.png',
+		demoURL: 'https://progressio.vercel.app/',
+		repositoryURL: 'https://github.com/matiasgimenezdev/progressio',
 	},
 ];
 
