@@ -32,7 +32,7 @@ const skillCategories: SkillCategories[] = [
 		],
 	},
 	{
-		category: 'Frameworks & Libraries',
+		category: 'Frameworks',
 		skills: [
 			{
 				name: 'React',
@@ -70,11 +70,6 @@ const skillCategories: SkillCategories[] = [
 				src: '/icons/mysql.svg',
 			},
 			{
-				name: 'MongoDB',
-				alt: 'MongoDB icon',
-				src: '/icons/mongo.svg',
-			},
-			{
 				name: 'Firebird',
 				alt: 'Firebird icon',
 				src: '/icons/firebird.png',
@@ -93,6 +88,16 @@ const skillCategories: SkillCategories[] = [
 				name: 'Docker',
 				alt: 'Docker icon',
 				src: '/icons/docker.svg',
+			},
+			{
+				name: 'Terraform',
+				alt: 'Terraform icon',
+				src: '/icons/terraform.svg',
+			},
+			{
+				name: 'Kubernetes',
+				alt: 'Kubernetes icon',
+				src: '/icons/kubernetes.svg',
 			},
 			{
 				name: 'Github',
