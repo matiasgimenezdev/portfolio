@@ -25,6 +25,11 @@ const skillCategories: SkillCategories[] = [
 				src: '/icons/typescript.svg',
 			},
 			{
+				name: 'Node.js',
+				alt: 'Node.js icon',
+				src: '/icons/node.svg',
+			},
+			{
 				name: 'PHP',
 				alt: 'PHP icon',
 				src: '/icons/php.svg',
@@ -38,11 +43,6 @@ const skillCategories: SkillCategories[] = [
 				name: 'React',
 				alt: 'React icon',
 				src: '/icons/react.svg',
-			},
-			{
-				name: 'Node.js',
-				alt: 'Node.js icon',
-				src: '/icons/node.svg',
 			},
 			{
 				name: 'Express',
@@ -63,6 +63,11 @@ const skillCategories: SkillCategories[] = [
 				name: 'Postgres',
 				alt: 'Postgres icon',
 				src: '/icons/postgres.svg',
+			},
+			{
+				name: 'Redis',
+				alt: 'Redis icon',
+				src: '/icons/redis.svg',
 			},
 			{
 				name: 'MySQL',
@@ -100,9 +105,9 @@ const skillCategories: SkillCategories[] = [
 				src: '/icons/kubernetes.svg',
 			},
 			{
-				name: 'Github',
-				alt: 'Github icon',
-				src: '/icons/github.svg',
+				name: 'Cloud',
+				alt: 'GCP icon',
+				src: '/icons/gcp.svg',
 			},
 			{
 				name: 'Terminal',
