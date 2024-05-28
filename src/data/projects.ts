@@ -14,12 +14,6 @@ const projects: Project[] = [
 		repositoryURL:
 			'https://github.com/matiasgimenezdev/labyrinth-ecommerce',
 	},
-	{
-		title: 'Progressio',
-		image: '/images/projects/progressio.png',
-		demoURL: 'https://progressio.vercel.app/',
-		repositoryURL: 'https://github.com/matiasgimenezdev/progressio',
-	},
 ];
 
 const DELAY = 900;

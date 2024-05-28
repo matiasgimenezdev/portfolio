@@ -105,7 +105,7 @@ const skillCategories: SkillCategories[] = [
 				src: '/icons/kubernetes.svg',
 			},
 			{
-				name: 'Cloud',
+				name: 'Google Cloud',
 				alt: 'GCP icon',
 				src: '/icons/gcp.svg',
 			},
