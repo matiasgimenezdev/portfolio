@@ -110,9 +110,9 @@ const skillCategories: SkillCategories[] = [
 				src: '/icons/gcp.svg',
 			},
 			{
-				name: 'Terminal',
-				alt: 'Terminal icon',
-				src: '/icons/terminal.svg',
+				name: 'Selenium',
+				alt: 'Selenium icon',
+				src: '/icons/selenium.svg',
 			},
 		],
 	},
