@@ -2,7 +2,7 @@ import { SkillCategories } from '../types';
 
 const skillCategories: SkillCategories[] = [
 	{
-		category: 'Programming languages',
+		category: 'Languages & frameworks',
 		skills: [
 			{
 				name: 'HTML',
@@ -15,6 +15,11 @@ const skillCategories: SkillCategories[] = [
 				src: '/icons/css.svg',
 			},
 			{
+				name: 'TailwindCSS',
+				alt: 'TailwindCSS icon',
+				src: '/icons/tailwind.svg',
+			},
+			{
 				name: 'Javascript',
 				alt: 'Javascript icon',
 				src: '/icons/javascript.svg',
@@ -25,24 +30,14 @@ const skillCategories: SkillCategories[] = [
 				src: '/icons/typescript.svg',
 			},
 			{
-				name: 'Node.js',
-				alt: 'Node.js icon',
-				src: '/icons/node.svg',
-			},
-			{
-				name: 'PHP',
-				alt: 'PHP icon',
-				src: '/icons/php.svg',
-			},
-		],
-	},
-	{
-		category: 'Frameworks',
-		skills: [
-			{
 				name: 'React',
 				alt: 'React icon',
 				src: '/icons/react.svg',
+			},
+			{
+				name: 'Node.js',
+				alt: 'Node.js icon',
+				src: '/icons/node.svg',
 			},
 			{
 				name: 'Express',
@@ -50,9 +45,14 @@ const skillCategories: SkillCategories[] = [
 				src: '/icons/express.svg',
 			},
 			{
-				name: 'TailwindCSS',
-				alt: 'TailwindCSS icon',
-				src: '/icons/tailwind.svg',
+				name: 'PHP',
+				alt: 'PHP icon',
+				src: '/icons/php.svg',
+			},
+			{
+				name: 'Java',
+				alt: 'Java icon',
+				src: '/icons/java.svg',
 			},
 		],
 	},
@@ -60,7 +60,7 @@ const skillCategories: SkillCategories[] = [
 		category: 'Databases',
 		skills: [
 			{
-				name: 'Postgres',
+				name: 'PostgreSQL',
 				alt: 'Postgres icon',
 				src: '/icons/postgres.svg',
 			},
@@ -82,22 +82,12 @@ const skillCategories: SkillCategories[] = [
 		],
 	},
 	{
-		category: 'Tools',
+		category: 'Infrastructure',
 		skills: [
-			{
-				name: 'Git',
-				alt: 'GIT icon',
-				src: '/icons/git.svg',
-			},
 			{
 				name: 'Docker',
 				alt: 'Docker icon',
 				src: '/icons/docker.svg',
-			},
-			{
-				name: 'Terraform',
-				alt: 'Terraform icon',
-				src: '/icons/terraform.svg',
 			},
 			{
 				name: 'Kubernetes',
@@ -105,14 +95,49 @@ const skillCategories: SkillCategories[] = [
 				src: '/icons/kubernetes.svg',
 			},
 			{
+				name: 'RabbitMQ',
+				alt: 'RabbitMQ icon',
+				src: '/icons/rabbitmq.svg',
+			},
+			{
+				name: 'Terraform',
+				alt: 'Terraform icon',
+				src: '/icons/terraform.svg',
+			},
+			{
+				name: 'Github actions',
+				alt: 'Github actions icon',
+				src: '/icons/github-actions.png',
+			},
+			{
 				name: 'Google Cloud',
 				alt: 'GCP icon',
 				src: '/icons/gcp.svg',
 			},
+		],
+	},
+	{
+		category: 'Testing',
+		skills: [
 			{
 				name: 'Selenium',
 				alt: 'Selenium icon',
 				src: '/icons/selenium.svg',
+			},
+			{
+				name: 'Jest',
+				alt: 'Jest icon',
+				src: '/icons/jest.svg',
+			},
+		],
+	},
+	{
+		category: 'Additional tools',
+		skills: [
+			{
+				name: 'Git',
+				alt: 'Git icon',
+				src: '/icons/git.svg',
 			},
 		],
 	},
