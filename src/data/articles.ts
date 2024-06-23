@@ -2,9 +2,9 @@ import { Article } from '../types';
 
 export const articles: Article[] = [
 	{
-		title: 'Hello world 👋',
-		date: 'Jul 1',
-		fullDate: 'July 1, 2023',
+		title: 'Looking for my first job 💼',
+		date: 'Jun 23',
+		fullDate: 'June 23, 2024',
 		tags: ['blog'],
 		path: '/blog/hello-world',
 		id: 'hello-world',
