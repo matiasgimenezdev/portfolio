@@ -2,7 +2,7 @@ import { SkillCategories } from '../types';
 
 const skillCategories: SkillCategories[] = [
 	{
-		category: 'Languages & frameworks',
+		category: 'Frontend',
 		skills: [
 			{
 				name: 'HTML',
@@ -34,6 +34,11 @@ const skillCategories: SkillCategories[] = [
 				alt: 'React icon',
 				src: '/icons/react.svg',
 			},
+		],
+	},
+	{
+		category: 'Backend',
+		skills: [
 			{
 				name: 'Node.js',
 				alt: 'Node.js icon',
@@ -45,20 +50,20 @@ const skillCategories: SkillCategories[] = [
 				src: '/icons/express.svg',
 			},
 			{
+				name: 'Python',
+				alt: 'Python icon',
+				src: '/icons/python.svg',
+			},
+			{
+				name: 'FastAPI',
+				alt: 'FastAPI icon',
+				src: '/icons/fastapi.svg',
+			},
+			{
 				name: 'PHP',
 				alt: 'PHP icon',
 				src: '/icons/php.svg',
 			},
-			{
-				name: 'Java',
-				alt: 'Java icon',
-				src: '/icons/java.svg',
-			},
-		],
-	},
-	{
-		category: 'Databases',
-		skills: [
 			{
 				name: 'PostgreSQL',
 				alt: 'Postgres icon',
@@ -70,14 +75,9 @@ const skillCategories: SkillCategories[] = [
 				src: '/icons/redis.svg',
 			},
 			{
-				name: 'MySQL',
-				alt: 'MySQL icon',
-				src: '/icons/mysql.svg',
-			},
-			{
-				name: 'Firebird',
-				alt: 'Firebird icon',
-				src: '/icons/firebird.png',
+				name: 'RabbitMQ',
+				alt: 'RabbitMQ icon',
+				src: '/icons/rabbitmq.svg',
 			},
 		],
 	},
@@ -94,18 +94,14 @@ const skillCategories: SkillCategories[] = [
 				alt: 'Kubernetes icon',
 				src: '/icons/kubernetes.svg',
 			},
-			{
-				name: 'RabbitMQ',
-				alt: 'RabbitMQ icon',
-				src: '/icons/rabbitmq.svg',
-			},
+
 			{
 				name: 'Terraform',
 				alt: 'Terraform icon',
 				src: '/icons/terraform.svg',
 			},
 			{
-				name: 'Github actions',
+				name: 'GitHub Actions',
 				alt: 'Github actions icon',
 				src: '/icons/github-actions.png',
 			},
@@ -120,14 +116,14 @@ const skillCategories: SkillCategories[] = [
 		category: 'Testing',
 		skills: [
 			{
-				name: 'Selenium',
-				alt: 'Selenium icon',
-				src: '/icons/selenium.svg',
-			},
-			{
 				name: 'Jest',
 				alt: 'Jest icon',
 				src: '/icons/jest.svg',
+			},
+			{
+				name: 'Selenium',
+				alt: 'Selenium icon',
+				src: '/icons/selenium.svg',
 			},
 		],
 	},
