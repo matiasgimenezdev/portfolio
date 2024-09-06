@@ -60,11 +60,6 @@ const skillCategories: SkillCategories[] = [
 				src: '/icons/fastapi.svg',
 			},
 			{
-				name: 'PHP',
-				alt: 'PHP icon',
-				src: '/icons/php.svg',
-			},
-			{
 				name: 'PostgreSQL',
 				alt: 'Postgres icon',
 				src: '/icons/postgres.svg',
@@ -82,8 +77,13 @@ const skillCategories: SkillCategories[] = [
 		],
 	},
 	{
-		category: 'Infrastructure',
+		category: 'Tools',
 		skills: [
+			{
+				name: 'Git',
+				alt: 'Git icon',
+				src: '/icons/git.svg',
+			},
 			{
 				name: 'Docker',
 				alt: 'Docker icon',
@@ -94,21 +94,10 @@ const skillCategories: SkillCategories[] = [
 				alt: 'Kubernetes icon',
 				src: '/icons/kubernetes.svg',
 			},
-
-			{
-				name: 'Terraform',
-				alt: 'Terraform icon',
-				src: '/icons/terraform.svg',
-			},
 			{
 				name: 'GitHub Actions',
 				alt: 'Github actions icon',
-				src: '/icons/github-actions.png',
-			},
-			{
-				name: 'Google Cloud',
-				alt: 'GCP icon',
-				src: '/icons/gcp.svg',
+				src: '/icons/github.svg',
 			},
 		],
 	},
@@ -121,19 +110,9 @@ const skillCategories: SkillCategories[] = [
 				src: '/icons/jest.svg',
 			},
 			{
-				name: 'Selenium',
-				alt: 'Selenium icon',
-				src: '/icons/selenium.svg',
-			},
-		],
-	},
-	{
-		category: 'Additional tools',
-		skills: [
-			{
-				name: 'Git',
-				alt: 'Git icon',
-				src: '/icons/git.svg',
+				name: 'Pytest',
+				alt: 'Pytest icon',
+				src: '/icons/pytest.svg',
 			},
 		],
 	},
