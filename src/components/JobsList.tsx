@@ -11,7 +11,7 @@ const jobs: Job[] = [
 		skills: ['Python', 'React.js'],
 	},
 	{
-		title: `Software developer | Universidad Nacional de Luján`,
+		title: `Frontend developer | Universidad Nacional de Luján`,
 		from: 'Aug 2022',
 		to: 'Aug 2024',
 		description: `Development of websites for teaching staff with the main objective of improving teaching functions
