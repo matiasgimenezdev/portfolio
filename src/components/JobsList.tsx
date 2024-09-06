@@ -4,14 +4,21 @@ import { Job } from '../types';
 
 const jobs: Job[] = [
 	{
-		title: `Software developer | CIDETIC (Universidad Nacional de Luján)`,
-		from: 'Aug 2022',
+		title: `Full-stack developer | PwC`,
+		from: 'Aug 2024',
 		to: 'Today',
+		description: ``,
+		skills: ['Python', 'React.js'],
+	},
+	{
+		title: `Software developer | Universidad Nacional de Luján`,
+		from: 'Aug 2022',
+		to: 'Aug 2024',
 		description: `Development of websites for teaching staff with the main objective of improving teaching functions
 			in different subjects of the university. This process involves communication with interested users,
 			seeking to understand their specific needs and provide personalized solutions.
 			`,
-		skills: ['Frontend', 'HTML5', 'CSS3', 'Javascript', 'GIT'],
+		skills: ['HTML5', 'CSS3', 'Javascript'],
 	},
 ];
 
