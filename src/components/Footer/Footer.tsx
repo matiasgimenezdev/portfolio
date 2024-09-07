@@ -28,7 +28,7 @@ export const Footer: FunctionComponent = () => {
 							<br />
 							Here is my{' '}
 							<a
-								href='https://linkedin.com/in/matiasgimenezdev/'
+								href='https://linkedin.com/in/matiagimenez/'
 								target='_blank'
 								className='font-medium text hover:underline underline-offset-4'
 							>
@@ -67,7 +67,7 @@ export const Footer: FunctionComponent = () => {
 						}`}
 					>
 						<a
-							href='https://github.com/matiasgimenezdev'
+							href='https://github.com/matiagimenez'
 							target='_blank'
 							aria-label='Link to Github profile'
 						>
@@ -80,7 +80,7 @@ export const Footer: FunctionComponent = () => {
 						}`}
 					>
 						<a
-							href='https://linkedin.com/in/matiasgimenezdev/'
+							href='https://linkedin.com/in/matiagimenez/'
 							target='_blank'
 							aria-label='Link to LinkedIn profile'
 						>

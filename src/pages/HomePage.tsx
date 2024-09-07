@@ -27,7 +27,7 @@ export const HomePage: FunctionComponent = () => {
 						and TailwindCSS. <br />
 						You can check out the source code on my{' '}
 						<a
-							href='https://github.com/matiasgimenezdev'
+							href='https://github.com/matiagimenez'
 							target='_blank'
 							className={`font-medium ${
 								theme == 'light'
@@ -48,7 +48,7 @@ export const HomePage: FunctionComponent = () => {
 						<br />
 						Here is my{' '}
 						<a
-							href='https://linkedin.com/in/matiasgimenezdev/'
+							href='https://linkedin.com/in/matiagimenez/'
 							target='_blank'
 							className='font-medium text hover:underline underline-offset-4'
 						>

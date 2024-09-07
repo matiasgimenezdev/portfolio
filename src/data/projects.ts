@@ -5,14 +5,13 @@ const projects: Project[] = [
 		title: 'Portfolio',
 		image: '/images/projects/portfolio.webp',
 		demoURL: '/',
-		repositoryURL: 'https://github.com/matiasgimenezdev/blog-portfolio',
+		repositoryURL: 'https://github.com/matiagimenez/blog-portfolio',
 	},
 	{
 		title: 'Labyrinth',
 		image: '/images/projects/labyrinth.webp',
 		demoURL: 'https://labyrinth-ecommerce.vercel.app/',
-		repositoryURL:
-			'https://github.com/matiasgimenezdev/labyrinth-ecommerce',
+		repositoryURL: 'https://github.com/matiagimenez/labyrinth-ecommerce',
 	},
 ];
 
